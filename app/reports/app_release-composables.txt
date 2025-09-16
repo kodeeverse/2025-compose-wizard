@@ -1,0 +1,4 @@
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.Greeting(
+  stable name: String
+  stable modifier: Modifier? = @static <expression>
+)

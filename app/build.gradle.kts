@@ -33,8 +33,15 @@ android {
 
 kotlin {
   compilerOptions {
+    allWarningsAsErrors = true
+    extraWarnings = true
     jvmTarget = JvmTarget.JVM_21
   }
+}
+
+composeCompiler {
+  metricsDestination = project.layout.projectDirectory.dir("reports")
+  reportsDestination = project.layout.projectDirectory.dir("reports")
 }
 
 dependencies {

@@ -1,0 +1,2 @@
+readonly fun <get-content>()
+readonly inline fun <get-currentRecomposeScopeLabel>()
