@@ -1,2 +1,9 @@
-readonly fun <get-content>()
 readonly inline fun <get-currentRecomposeScopeLabel>()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun InlineLambdaComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineLambdaComposableDemo()
+inline scheme("[0, [0]]") fun InlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
+)
+restartable skippable scheme("[0, [0]]") fun NonInlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
+)

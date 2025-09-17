@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-  id("com.android.application")
-  kotlin("android")
-  kotlin("plugin.compose")
+  id("com.android.application") version "8.13.0"
+  kotlin("android") version "2.2.20"
+  kotlin("plugin.compose") version "2.2.20"
 }
 
 android {
@@ -45,10 +45,9 @@ composeCompiler {
 }
 
 dependencies {
-  implementation(libs.androidx.activity)
-  implementation(libs.androidx.core)
+  implementation("androidx.activity:activity-ktx:1.11.0")
+  implementation("androidx.activity:activity-compose:1.11.0")
 
-  implementation(libs.compose.activity)
-  implementation(libs.compose.runtime)
-  implementation(libs.compose.material3)
+  implementation("androidx.compose.runtime:runtime:1.9.1")
+  implementation("androidx.compose.material3:material3:1.5.0-alpha04")
 }

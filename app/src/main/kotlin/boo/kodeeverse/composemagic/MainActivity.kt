@@ -8,8 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -33,6 +35,9 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo
+import boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo
+import boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo
 import boo.kodeeverse.composemagic.restartability.FinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo
@@ -42,15 +47,23 @@ import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
 
-private enum class RestartabilityDemo(val content: @Composable () -> Unit) {
-  DelegatingComposable(content = { DelegatingComposableDemo() }),
-  FunctionalComposable(content = { FunctionalComposableDemo() }),
-  InlineComposable(content = { InlineComposableDemo() }),
-  NonInlineComposable(content = { NonInlineComposableDemo() }),
-  LocalComposable(content = { LocalComposableDemo() }),
-  ReturnValueComposable(content = { ReturnValueComposableDemo() }),
-  OpenComposable(content = { OpenComposableDemo() }),
-  FinalComposable(content = { FinalComposableDemo() }),
+private enum class Demo(val category: String, val content: @Composable () -> Unit) {
+  InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
+  NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
+  NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
+
+  DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
+  FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),
+  InlineComposable(category = "restartability", content = { InlineComposableDemo() }),
+  NonInlineComposable(category = "restartability", content = { NonInlineComposableDemo() }),
+  LocalComposable(category = "restartability", content = { LocalComposableDemo() }),
+  ReturnValueComposable(category = "restartability", content = { ReturnValueComposableDemo() }),
+  OpenComposable(category = "restartability", content = { OpenComposableDemo() }),
+  FinalComposable(category = "restartability", content = { FinalComposableDemo() });
+
+  companion object {
+    val Groups = entries.groupBy(Demo::category)
+  }
 }
 
 class MainActivity : ComponentActivity() {
@@ -59,16 +72,16 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
 
     setContent {
-      var restartabilityDemo by remember { mutableStateOf<RestartabilityDemo?>(null) }
+      var demo by remember { mutableStateOf<Demo?>(null) }
       val scrollState = rememberLazyListState()
 
-      BackHandler(restartabilityDemo != null) {
-        restartabilityDemo = null
+      BackHandler(demo != null) {
+        demo = null
       }
 
       Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         when {
-          restartabilityDemo == null -> {
+          demo == null -> {
             LazyColumn(
               modifier = Modifier
                 .fillMaxSize()
@@ -77,27 +90,34 @@ class MainActivity : ComponentActivity() {
               verticalArrangement = Arrangement.spacedBy(5.dp),
               horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-              stickyHeader {
-                Text(
-                  RestartabilityDemo::class.simpleName!!,
-                  modifier = Modifier
-                    .fillMaxWidth()
-                    .background(color = Color.LightGray)
-                    .padding(vertical = 15.dp, horizontal = 30.dp),
-                  fontSize = 20.sp,
-                  fontWeight = FontWeight.Bold,
-                )
-              }
+              for ((category, demos) in Demo.Groups) {
+                stickyHeader {
+                  Text(
+                    category,
+                    modifier = Modifier
+                      .fillMaxWidth()
+                      .background(color = Color.Gray)
+                      .padding(vertical = 15.dp, horizontal = 30.dp),
+                    color = Color.White,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                  )
+                }
 
-              items(RestartabilityDemo.entries) { demo ->
-                Button(onClick = { restartabilityDemo = demo }) {
-                  Text(demo.name)
+                items(demos) { entry ->
+                  Button(onClick = { demo = entry }) {
+                    Text(entry.name)
+                  }
+                }
+
+                item {
+                  Spacer(Modifier.height(30.dp))
                 }
               }
             }
           }
 
-          restartabilityDemo != null -> {
+          demo != null -> {
             Box(
               modifier = Modifier
                 .fillMaxSize()
@@ -109,7 +129,7 @@ class MainActivity : ComponentActivity() {
                 IntOffset(x, y)
               },
             ) {
-              restartabilityDemo!!.content()
+              demo!!.content()
             }
           }
         }
@@ -121,4 +141,3 @@ class MainActivity : ComponentActivity() {
 val currentRecomposeScopeLabel: String
   @Composable @ReadOnlyComposable
   inline get() = currentRecomposeScope.toString().substringAfterLast('@')
-
