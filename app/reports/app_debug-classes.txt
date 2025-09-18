@@ -1,3 +1,0 @@
-unstable class boo.kodeeverse.composemagic.MainActivity {
-  <runtime stability> = Unstable
-}
