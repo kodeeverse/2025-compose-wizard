@@ -56,4 +56,3 @@ import kotlin.reflect.KProperty
       .padding(horizontal = 20.dp, vertical = 10.dp),
   )
 }
-

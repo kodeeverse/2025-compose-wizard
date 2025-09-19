@@ -34,6 +34,8 @@ import java.lang.System.currentTimeMillis
 @Stable private class StableClass : IStable
 @Immutable private class ImmutableClass : IStable
 
+private class UnstableClass(var value: Any = Any())
+
 @Composable fun StableInlineConstructorCallDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -126,6 +128,29 @@ import java.lang.System.currentTimeMillis
   }
 }
 
+@Composable fun UnstableConstructorCallDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    UnstableConstructorCall()
+  }
+}
+
 @Composable private fun StableInlineConstructorCall(value: IStable = StableInlineClass()) {
   used(value)
 
@@ -158,6 +183,15 @@ import java.lang.System.currentTimeMillis
 
   Text(
     "ImmutableConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    fontWeight = FontWeight.Bold,
+  )
+}
+
+@Composable private fun UnstableConstructorCall(value: UnstableClass = UnstableClass()) {
+  used(value)
+
+  Text(
+    "UnstableConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }

@@ -1,16 +1,60 @@
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.StableInlineConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.UnstableInlineConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.StableConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.ImmutableConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.StableInlineConstructorCall(
-  value: IStable? = @dynamic <expression>
+readonly inline fun <get-currentRecomposeScopeLabel>()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun InlineLambdaComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NoInlineLambdaComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineLambdaComposableDemo()
+inline scheme("[0, [0]]") fun InlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
 )
-restartable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.UnstableInlineConstructorCall(
-  value: IStable? = @dynamic <expression>
+inline scheme("[0, [0]]") fun NoInlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.StableConstructorCall(
-  value: IStable? = @dynamic <expression>
+restartable skippable scheme("[0, [0]]") fun NonInlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stableCall.ImmutableConstructorCall(
-  value: IStable? = @static <expression>
+readonly fun <get-delegatingContent>()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun DelegatingComposableDemo()
+restartable skippable fun getValue(
+  unused stable <this>: DelegatingComposable
+  unused unstable thisRef: Any?
+  unused unstable property: KProperty<*>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Content(
+  stable <this>: <no name provided>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun FunctionalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun InlineComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineComposableDemo()
+inline scheme("[androidx.compose.ui.UiComposable]") fun InlineComposable()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineComposable()
+scheme("[androidx.compose.ui.UiComposable]") fun Local()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun LocalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ReturnValueComposableDemo()
+scheme("[androidx.compose.ui.UiComposable]") fun ReturnValueComposable()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun FinalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun OpenComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Content(
+  unused stable <this>: FinalComposable
+)
+scheme("[androidx.compose.ui.UiComposable]") fun Content(
+  unused stable <this>: OpenComposable
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableInlineConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableInlineConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ImmutableConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableInlineConstructorCall(
+  value: IStable? = @dynamic StableInlineClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableInlineConstructorCall(
+  value: IStable? = @dynamic UnstableInlineClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableConstructorCall(
+  value: IStable? = @dynamic StableClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ImmutableConstructorCall(
+  value: IStable? = @static ImmutableClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableConstructorCall(
+  unstable value: UnstableClass? = @dynamic UnstableClass()
 )
