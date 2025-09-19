@@ -1,13 +1,21 @@
 readonly inline fun <get-currentRecomposeScopeLabel>()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun InlineLambdaComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NoInlineLambdaComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineLambdaComposableDemo()
-inline scheme("[0, [0]]") fun InlineLambdaComposable(
-  stable content: Function2<Composer, Int, Unit>
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableInlineConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableInlineConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ImmutableConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableConstructorCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableInlineConstructorCall(
+  value: IStable? = @dynamic StableInlineClass()
 )
-inline scheme("[0, [0]]") fun NoInlineLambdaComposable(
-  stable content: Function2<Composer, Int, Unit>
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableInlineConstructorCall(
+  value: IStable? = @dynamic UnstableInlineClass()
 )
-restartable skippable scheme("[0, [0]]") fun NonInlineLambdaComposable(
-  stable content: Function2<Composer, Int, Unit>
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableConstructorCall(
+  value: IStable? = @dynamic StableClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ImmutableConstructorCall(
+  value: IStable? = @static ImmutableClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableConstructorCall(
+  unstable value: UnstableClass? = @dynamic UnstableClass()
 )
