@@ -1,11 +1,11 @@
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableAndAlwaysSameCallDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableAndAlwaysSameCallDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValueViaArgumentDemo(
-  unstable value: UnstableMarker? = @dynamic StableClass()
+  stable value: StableClass? = @dynamic StableClass()
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValueViaPropDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenImmutableValueViaArgumentDemo(
-  unstable value: UnstableMarker? = @static ImmutableClass()
+  stable value: ImmutableClass? = @static ImmutableClass()
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenImmutableValueViaPropDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableButAlwaysSameCall(

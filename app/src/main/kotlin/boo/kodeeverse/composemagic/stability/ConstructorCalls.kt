@@ -91,7 +91,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
   }
 }
 
-@Composable fun GivenStableValueViaArgumentDemo(value: UnstableMarker = StableClass()) {
+@Composable fun GivenStableValueViaArgumentDemo(value: StableClass = StableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -138,7 +138,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
   }
 }
 
-@Composable fun GivenImmutableValueViaArgumentDemo(value: UnstableMarker = ImmutableClass()) {
+@Composable fun GivenImmutableValueViaArgumentDemo(value: ImmutableClass = ImmutableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
