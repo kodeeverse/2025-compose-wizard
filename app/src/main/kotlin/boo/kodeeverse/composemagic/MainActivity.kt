@@ -52,6 +52,8 @@ import boo.kodeeverse.composemagic.stability.GivenStableAndAlwaysSameClassDemo
 import boo.kodeeverse.composemagic.stability.GivenStableClassViaArgumentDemo
 import boo.kodeeverse.composemagic.stability.GivenStableClassViaPropDemo
 import boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClassDemo
+import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
@@ -64,6 +66,9 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   GivenStableClassViaProp(category = "stability - ConstructorCalls", content = { GivenStableClassViaPropDemo() }),
   GivenImmutableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaArgumentDemo() }),
   GivenImmutableClassViaProp(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaPropDemo() }),
+
+  StableCallArgument(category = "stability - StableCalls", content = { StableCallArgumentDemo() }),
+  UnstableCallArgument(category = "stability - StableCalls", content = { UnstableCallArgumentDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),
