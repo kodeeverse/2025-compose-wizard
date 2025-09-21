@@ -22,7 +22,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
+import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 import kotlin.reflect.KProperty
 
@@ -34,7 +34,7 @@ import kotlin.reflect.KProperty
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     val delegatingContent by DelegatingComposable
@@ -46,7 +46,7 @@ import kotlin.reflect.KProperty
 @Composable private operator fun DelegatingComposable.getValue(thisRef: Any?, property: KProperty<*>) {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("DelegatingComposable @ $currentRecomposeScopeLabel", fontWeight = FontWeight.Bold)
+  Text("DelegatingComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
   Text(
     "count: $count",
     modifier = Modifier

@@ -23,7 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
+import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
 @Composable fun InlineComposableDemo() {
@@ -32,7 +32,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     InlineComposable()
@@ -45,7 +45,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     NonInlineComposable()
@@ -55,7 +55,7 @@ import java.lang.System.currentTimeMillis
 @Composable private inline fun InlineComposable() {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("InlineComposable @ $currentRecomposeScopeLabel", fontWeight = FontWeight.Bold)
+  Text("InlineComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
   Text(
     "count: $count",
     modifier = Modifier
@@ -69,7 +69,7 @@ import java.lang.System.currentTimeMillis
 @Composable private fun NonInlineComposable() {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("NonInlineComposable @ $currentRecomposeScopeLabel", fontWeight = FontWeight.Bold)
+  Text("NonInlineComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
   Text(
     "count: $count",
     modifier = Modifier

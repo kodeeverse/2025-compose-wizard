@@ -21,7 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
+import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
 private interface VirtualComposable {
@@ -34,7 +34,7 @@ private interface VirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { FinalComposable() }.Content()
@@ -47,7 +47,7 @@ private interface VirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { OpenComposable() }.Content()
@@ -58,7 +58,7 @@ private class FinalComposable : VirtualComposable {
   @Composable override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text("FinalComposable @ $currentRecomposeScopeLabel", fontWeight = FontWeight.Bold)
+    Text("FinalComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
     Text(
       "count: $count",
       modifier = Modifier
@@ -74,7 +74,7 @@ private open class OpenComposable : VirtualComposable {
   @Composable override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text("OpenComposable @ $currentRecomposeScopeLabel", fontWeight = FontWeight.Bold)
+    Text("OpenComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
     Text(
       "count: $count",
       modifier = Modifier

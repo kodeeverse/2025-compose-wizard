@@ -23,27 +23,26 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
+import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
-abstract class UnstableMarker {
+abstract class UnstableMarker() {
   var createdAt: Long = currentTimeMillis()
 }
 
-class UnstableButAlwaysSame : UnstableMarker() {
+class UnstableAndAlwaysSameClass : UnstableMarker() {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
-@Stable class StableClass : UnstableMarker() {
+@Stable class StableClass : UnstableMarker()
+
+@Stable class StableAndAlwaysSameClass : UnstableMarker() {
   override fun equals(other: Any?): Boolean = true
-  override fun hashCode(): Int = 0
+  override fun hashCode(): Int = 1
 }
 
-@Immutable class ImmutableClass : UnstableMarker() {
-  override fun equals(other: Any?): Boolean = true
-  override fun hashCode(): Int = 0
-}
+@Immutable class ImmutableClass : UnstableMarker()
 
 @Composable fun UnstableAndAlwaysSameCallDemo() {
   var count by remember { mutableIntStateOf(0) }
@@ -53,7 +52,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -64,7 +63,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableButAlwaysSameCall(UnstableButAlwaysSame())
+    UnstableAndAlwaysSameCall(UnstableAndAlwaysSameClass())
   }
 }
 
@@ -76,7 +75,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -87,7 +86,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCall(StableClass())
+    StableAndAlwaysSameCall(StableAndAlwaysSameClass())
   }
 }
 
@@ -99,7 +98,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT argument @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT argument @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -123,7 +122,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT prop @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT prop @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -146,7 +145,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT argumemt @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT argumemt @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -170,7 +169,7 @@ class UnstableButAlwaysSame : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT prop @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT prop @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -185,30 +184,39 @@ class UnstableButAlwaysSame : UnstableMarker() {
   }
 }
 
-@Composable private fun UnstableButAlwaysSameCall(value: UnstableButAlwaysSame) {
+@Composable private fun UnstableAndAlwaysSameCall(value: UnstableAndAlwaysSameClass) {
   Text(
-    "UnstableButAlwaysSameCall @ $currentRecomposeScopeLabel (${value.createdAt})",
+    "UnstableAndAlwaysSameCall @ $currentRecomposeScopeHash (${value.createdAt})",
+    fontWeight = FontWeight.Bold,
+  )
+}
+
+@Composable private fun StableAndAlwaysSameCall(value: StableAndAlwaysSameClass) {
+  Text(
+    "StableAndAlwaysSameCall @ $currentRecomposeScopeHash (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
 @Composable private fun StableCall(value: StableClass) {
   Text(
-    "StableCall @ $currentRecomposeScopeLabel (${value.createdAt})",
+    "StableCall @ $currentRecomposeScopeHash (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
+// value를 StableClass로 받으면 리컴포지션 스킴됨
 @Composable private fun GivenStableValue(value: UnstableMarker) {
   Text(
-    "GivenStableValue @ $currentRecomposeScopeLabel (${value.createdAt})",
+    "GivenStableValue @ $currentRecomposeScopeHash (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
+// value를 ImmutableClass로 받아도 리컴포지션 스킴됨
 @Composable private fun GivenImmutableValue(value: UnstableMarker) {
   Text(
-    "GivenImmutableValue @ $currentRecomposeScopeLabel (${value.createdAt})",
+    "GivenImmutableValue @ $currentRecomposeScopeHash (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }

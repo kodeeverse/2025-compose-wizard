@@ -1,11 +1,3 @@
-unstable class UnstableMarker {
-  stable var createdAt: Long
+unstable class MainActivity {
   <runtime stability> = Unstable
-}
-unstable class UnstableButAlwaysSame {
-  <runtime stability> = Unstable
-}
-stable class StableClass {
-}
-stable class ImmutableClass {
 }

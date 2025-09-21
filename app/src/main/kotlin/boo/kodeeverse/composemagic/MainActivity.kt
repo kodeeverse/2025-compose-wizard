@@ -58,7 +58,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-  UnstableButAlwaysSameCall(category = "stability - ConstructorCalls", content = { UnstableAndAlwaysSameCallDemo() }),
+  UnstableAndAlwaysSameCall(category = "stability - ConstructorCalls", content = { UnstableAndAlwaysSameCallDemo() }),
   StableAndAlwaysSameCall(category = "stability - ConstructorCalls", content = { StableAndAlwaysSameCallDemo() }),
   GivenStableValueViaArgument(category = "stability - ConstructorCalls", content = { GivenStableValueViaArgumentDemo() }),
   GivenStableValueViaProp(category = "stability - ConstructorCalls", content = { GivenStableValueViaPropDemo() }),
@@ -151,6 +151,6 @@ class MainActivity : ComponentActivity() {
   }
 }
 
-val currentRecomposeScopeLabel: String
+val currentRecomposeScopeHash: String
   @Composable @ReadOnlyComposable
   inline get() = currentRecomposeScope.toString().substringAfterLast('@')

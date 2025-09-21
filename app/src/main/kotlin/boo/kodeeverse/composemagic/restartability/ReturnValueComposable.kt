@@ -23,7 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
+import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
 @Composable fun ReturnValueComposableDemo() {
@@ -32,7 +32,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     ReturnValueComposable()
@@ -42,7 +42,7 @@ import java.lang.System.currentTimeMillis
 @Composable private fun ReturnValueComposable(): Int {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("ReturnValueComposable @ $currentRecomposeScopeLabel", fontWeight = FontWeight.Bold)
+  Text("ReturnValueComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
   Text(
     "count: $count",
     modifier = Modifier

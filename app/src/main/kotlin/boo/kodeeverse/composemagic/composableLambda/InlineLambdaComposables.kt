@@ -23,7 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
+import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
 @Composable fun InlineLambdaComposableDemo() {
@@ -34,7 +34,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -47,7 +47,7 @@ import java.lang.System.currentTimeMillis
 
     InlineLambdaComposable {
       Text(
-        "InlineLambdaComposable @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+        "InlineLambdaComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
         fontWeight = FontWeight.Bold,
       )
     }
@@ -62,7 +62,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -75,7 +75,7 @@ import java.lang.System.currentTimeMillis
 
     NoInlineLambdaComposable {
       Text(
-        "NoInlineLambdaComposable @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+        "NoInlineLambdaComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
         fontWeight = FontWeight.Bold,
       )
     }
@@ -90,7 +90,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -103,7 +103,7 @@ import java.lang.System.currentTimeMillis
 
     NonInlineLambdaComposable {
       Text(
-        "NonInlineLambdaComposable @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+        "NonInlineLambdaComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
         fontWeight = FontWeight.Bold,
       )
     }
