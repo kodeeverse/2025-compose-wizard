@@ -48,20 +48,18 @@ import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
 import boo.kodeeverse.composemagic.stableCall.ImmutableConstructorCallDemo
 import boo.kodeeverse.composemagic.stableCall.StableConstructorCallDemo
-import boo.kodeeverse.composemagic.stableCall.StableInlineConstructorCallDemo
+import boo.kodeeverse.composemagic.stableCall.UnstableClassWithIStableCallDemo
 import boo.kodeeverse.composemagic.stableCall.UnstableConstructorCallDemo
-import boo.kodeeverse.composemagic.stableCall.UnstableInlineConstructorCallDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
   NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-  StableInlineConstructorCall(category = "stableCall", content = { StableInlineConstructorCallDemo() }),
-  UnstableInlineConstructorCall(category = "stableCall", content = { UnstableInlineConstructorCallDemo() }),
   StableConstructorCall(category = "stableCall", content = { StableConstructorCallDemo() }),
   ImmutableConstructorCall(category = "stableCall", content = { ImmutableConstructorCallDemo() }),
   UnstableConstructorCall(category = "stableCall", content = { UnstableConstructorCallDemo() }),
+  UnstableClassWithIStableCall(category = "stableCall", content = { UnstableClassWithIStableCallDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),

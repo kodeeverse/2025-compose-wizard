@@ -26,61 +26,21 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
 import java.lang.System.currentTimeMillis
 
-/*@Stable */private interface IStable
+@Stable private interface IStable
 
-@JvmInline private value class StableInlineClass(val value: Int = 0) : IStable
-@JvmInline private value class UnstableInlineClass(val value: Any = Any()) : IStable
-
-@Stable private class StableClass : IStable
-@Immutable private class ImmutableClass : IStable
-
-private class UnstableClass(var value: Any = Any())
-
-@Composable fun StableInlineConstructorCallDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    StableInlineConstructorCall()
-  }
+@Stable private class StableClass {
+  override fun equals(other: Any?): Boolean = true
+  override fun hashCode(): Int = 0
 }
 
-@Composable fun UnstableInlineConstructorCallDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    UnstableInlineConstructorCall()
-  }
+@Immutable private class ImmutableClass {
+  override fun equals(other: Any?): Boolean = true
+  override fun hashCode(): Int = 0
 }
+
+private class UnstableClass(var unstableMarker: Any = Any())
+
+private class UnstableClassWithIStable(var unstableMarker: Any = Any()) : IStable
 
 @Composable fun StableConstructorCallDemo() {
   var count by remember { mutableIntStateOf(0) }
@@ -101,7 +61,7 @@ private class UnstableClass(var value: Any = Any())
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableConstructorCall()
+    StableConstructorCall(StableClass())
   }
 }
 
@@ -124,7 +84,7 @@ private class UnstableClass(var value: Any = Any())
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ImmutableConstructorCall()
+    ImmutableConstructorCall(ImmutableClass())
   }
 }
 
@@ -147,29 +107,34 @@ private class UnstableClass(var value: Any = Any())
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableConstructorCall()
+    UnstableConstructorCall(UnstableClass())
   }
 }
 
-@Composable private fun StableInlineConstructorCall(value: IStable = StableInlineClass()) {
-  used(value)
+@Composable fun UnstableClassWithIStableCallDemo() {
+  var count by remember { mutableIntStateOf(0) }
 
-  Text(
-    "StableInlineConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-  )
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    UnstableClassWithIStableCall(UnstableClassWithIStable())
+  }
 }
 
-@Composable private fun UnstableInlineConstructorCall(value: IStable = UnstableInlineClass()) {
-  used(value)
-
-  Text(
-    "UnstableInlineConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-  )
-}
-
-@Composable private fun StableConstructorCall(value: IStable = StableClass()) {
+@Composable private fun StableConstructorCall(value: StableClass) {
   used(value)
 
   Text(
@@ -178,7 +143,7 @@ private class UnstableClass(var value: Any = Any())
   )
 }
 
-@Composable private fun ImmutableConstructorCall(value: IStable = ImmutableClass()) {
+@Composable private fun ImmutableConstructorCall(value: ImmutableClass) {
   used(value)
 
   Text(
@@ -187,7 +152,7 @@ private class UnstableClass(var value: Any = Any())
   )
 }
 
-@Composable private fun UnstableConstructorCall(value: UnstableClass = UnstableClass()) {
+@Composable private fun UnstableConstructorCall(value: UnstableClass) {
   used(value)
 
   Text(
@@ -196,4 +161,13 @@ private class UnstableClass(var value: Any = Any())
   )
 }
 
-private fun used(a: Any) {}
+@Composable private fun UnstableClassWithIStableCall(value: UnstableClassWithIStable) {
+  used(value)
+
+  Text(
+    "UnstableClassWithIStableCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    fontWeight = FontWeight.Bold,
+  )
+}
+
+internal fun used(a: Any) {}
