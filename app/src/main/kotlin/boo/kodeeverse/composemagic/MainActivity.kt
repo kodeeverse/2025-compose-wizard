@@ -46,10 +46,12 @@ import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
+import boo.kodeeverse.composemagic.stableCall.GivenImmutableValueViaArgumentDemo
+import boo.kodeeverse.composemagic.stableCall.GivenImmutableValueViaPropDemo
+import boo.kodeeverse.composemagic.stableCall.GivenStableValueViaArgumentDemo
+import boo.kodeeverse.composemagic.stableCall.GivenStableValueViaPropDemo
 import boo.kodeeverse.composemagic.stableCall.StableCallDemo
 import boo.kodeeverse.composemagic.stableCall.UnstableButAlwaysSameCallDemo
-import boo.kodeeverse.composemagic.stableCall.WithinImmutableClassDemo
-import boo.kodeeverse.composemagic.stableCall.WithinStableClassDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
@@ -58,8 +60,10 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
 
   UnstableButAlwaysSameCall(category = "stableCall", content = { UnstableButAlwaysSameCallDemo() }),
   StableCall(category = "stableCall", content = { StableCallDemo() }),
-  WithinStableClass(category = "stableCall", content = { WithinStableClassDemo() }),
-  WithinImmutableClass(category = "stableCall", content = { WithinImmutableClassDemo() }),
+  GivenStableValueViaArgument(category = "stableCall", content = { GivenStableValueViaArgumentDemo() }),
+  GivenStableValueViaProp(category = "stableCall", content = { GivenStableValueViaPropDemo() }),
+  GivenImmutableValueViaArgument(category = "stableCall", content = { GivenImmutableValueViaArgumentDemo() }),
+  GivenImmutableValueViaProp(category = "stableCall", content = { GivenImmutableValueViaPropDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),

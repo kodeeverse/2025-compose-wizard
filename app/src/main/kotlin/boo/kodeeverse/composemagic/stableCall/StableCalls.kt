@@ -26,19 +26,21 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
 import java.lang.System.currentTimeMillis
 
+abstract class UnstableMarker {
+  var a: Any = 1
+}
+
 class UnstableButAlwaysSame(var unstableMarker: Any = Any()) {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
-interface UnknownStabilityMarker
-
-@Stable class StableClass : UnknownStabilityMarker {
+@Stable class StableClass : UnstableMarker() {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
-@Immutable class ImmutableClass : UnknownStabilityMarker {
+@Immutable class ImmutableClass : UnstableMarker() {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
@@ -89,7 +91,7 @@ interface UnknownStabilityMarker
   }
 }
 
-@Composable fun WithinStableClassDemo(value: UnknownStabilityMarker = StableClass()) {
+@Composable fun GivenStableValueViaArgumentDemo(value: UnstableMarker = StableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -97,7 +99,7 @@ interface UnknownStabilityMarker
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT argument @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -108,19 +110,20 @@ interface UnknownStabilityMarker
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    WithinStableClass(value)
+    GivenStableValue(value)
   }
 }
 
-@Composable fun WithinImmutableClassDemo(value: UnknownStabilityMarker = ImmutableClass()) {
+@Composable fun GivenStableValueViaPropDemo() {
   var count by remember { mutableIntStateOf(0) }
+  val value: UnstableMarker = remember { StableClass() }
 
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text("ROOT prop @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -131,7 +134,54 @@ interface UnknownStabilityMarker
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    WithinImmutableClass(value)
+    GivenStableValue(value)
+  }
+}
+
+@Composable fun GivenImmutableValueViaArgumentDemo(value: UnstableMarker = ImmutableClass()) {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text("ROOT argumemt @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    GivenImmutableValue(value)
+  }
+}
+
+@Composable fun GivenImmutableValueViaPropDemo() {
+  var count by remember { mutableIntStateOf(0) }
+  val value: UnstableMarker = remember { ImmutableClass() }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text("ROOT prop @ $currentRecomposeScopeLabel (${currentTimeMillis()})")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    GivenImmutableValue(value)
   }
 }
 
@@ -153,20 +203,20 @@ interface UnknownStabilityMarker
   )
 }
 
-@Composable private fun WithinStableClass(value: UnknownStabilityMarker) {
+@Composable private fun GivenStableValue(value: UnstableMarker) {
   used(value)
 
   Text(
-    "WithinStableClass @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "GivenStableValue @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }
 
-@Composable private fun WithinImmutableClass(value: UnknownStabilityMarker) {
+@Composable private fun GivenImmutableValue(value: UnstableMarker) {
   used(value)
 
   Text(
-    "WithinImmutableClass @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "GivenImmutableValue @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }

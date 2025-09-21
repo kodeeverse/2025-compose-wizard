@@ -1,60 +1,22 @@
-readonly inline fun <get-currentRecomposeScopeLabel>()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun InlineLambdaComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NoInlineLambdaComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineLambdaComposableDemo()
-inline scheme("[0, [0]]") fun InlineLambdaComposable(
-  stable content: Function2<Composer, Int, Unit>
-)
-inline scheme("[0, [0]]") fun NoInlineLambdaComposable(
-  stable content: Function2<Composer, Int, Unit>
-)
-restartable skippable scheme("[0, [0]]") fun NonInlineLambdaComposable(
-  stable content: Function2<Composer, Int, Unit>
-)
-readonly fun <get-delegatingContent>()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun DelegatingComposableDemo()
-restartable skippable fun getValue(
-  unused stable <this>: DelegatingComposable
-  unused unstable thisRef: Any?
-  unused unstable property: KProperty<*>
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Content(
-  stable <this>: <no name provided>
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun FunctionalComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun InlineComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineComposableDemo()
-inline scheme("[androidx.compose.ui.UiComposable]") fun InlineComposable()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun NonInlineComposable()
-scheme("[androidx.compose.ui.UiComposable]") fun Local()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun LocalComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ReturnValueComposableDemo()
-scheme("[androidx.compose.ui.UiComposable]") fun ReturnValueComposable()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun FinalComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun OpenComposableDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Content(
-  unused stable <this>: FinalComposable
-)
-scheme("[androidx.compose.ui.UiComposable]") fun Content(
-  unused stable <this>: OpenComposable
-)
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableButAlwaysSameCallDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinStableClassDemo(
-  value: UnknownStabilityMarker? = @dynamic StableClass()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValueViaArgumentDemo(
+  unstable value: UnstableMarker? = @dynamic StableClass()
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinImmutableClassDemo(
-  value: UnknownStabilityMarker? = @static ImmutableClass()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValueViaPropDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenImmutableValueViaArgumentDemo(
+  unstable value: UnstableMarker? = @static ImmutableClass()
 )
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenImmutableValueViaPropDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableButAlwaysSameCall(
   unstable value: UnstableButAlwaysSame
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableCall(
   stable value: StableClass
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinStableClass(
-  value: UnknownStabilityMarker
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValue(
+  unstable value: UnstableMarker
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinImmutableClass(
-  value: UnknownStabilityMarker
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenImmutableValue(
+  unstable value: UnstableMarker
 )
