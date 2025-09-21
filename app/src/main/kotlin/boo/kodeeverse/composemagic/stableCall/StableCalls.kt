@@ -26,23 +26,24 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
 import java.lang.System.currentTimeMillis
 
-@Stable private interface IStable
-
-@Stable private class StableClass {
+class UnstableButAlwaysSame(var unstableMarker: Any = Any()) {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
-@Immutable private class ImmutableClass {
+interface UnknownStabilityMarker
+
+@Stable class StableClass : UnknownStabilityMarker {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
-private class UnstableClass(var unstableMarker: Any = Any())
+@Immutable class ImmutableClass : UnknownStabilityMarker {
+  override fun equals(other: Any?): Boolean = true
+  override fun hashCode(): Int = 0
+}
 
-private class UnstableClassWithIStable(var unstableMarker: Any = Any()) : IStable
-
-@Composable fun StableConstructorCallDemo() {
+@Composable fun UnstableButAlwaysSameCallDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -61,11 +62,11 @@ private class UnstableClassWithIStable(var unstableMarker: Any = Any()) : IStabl
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableConstructorCall(StableClass())
+    UnstableButAlwaysSameCall(UnstableButAlwaysSame())
   }
 }
 
-@Composable fun ImmutableConstructorCallDemo() {
+@Composable fun StableCallDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -84,11 +85,11 @@ private class UnstableClassWithIStable(var unstableMarker: Any = Any()) : IStabl
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ImmutableConstructorCall(ImmutableClass())
+    StableCall(StableClass())
   }
 }
 
-@Composable fun UnstableConstructorCallDemo() {
+@Composable fun WithinStableClassDemo(value: UnknownStabilityMarker = StableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -107,11 +108,11 @@ private class UnstableClassWithIStable(var unstableMarker: Any = Any()) : IStabl
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableConstructorCall(UnstableClass())
+    WithinStableClass(value)
   }
 }
 
-@Composable fun UnstableClassWithIStableCallDemo() {
+@Composable fun WithinImmutableClassDemo(value: UnknownStabilityMarker = ImmutableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -130,42 +131,42 @@ private class UnstableClassWithIStable(var unstableMarker: Any = Any()) : IStabl
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableClassWithIStableCall(UnstableClassWithIStable())
+    WithinImmutableClass(value)
   }
 }
 
-@Composable private fun StableConstructorCall(value: StableClass) {
+@Composable private fun UnstableButAlwaysSameCall(value: UnstableButAlwaysSame) {
   used(value)
 
   Text(
-    "StableConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "UnstableButAlwaysSameCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }
 
-@Composable private fun ImmutableConstructorCall(value: ImmutableClass) {
+@Composable private fun StableCall(value: StableClass) {
   used(value)
 
   Text(
-    "ImmutableConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "StableCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }
 
-@Composable private fun UnstableConstructorCall(value: UnstableClass) {
+@Composable private fun WithinStableClass(value: UnknownStabilityMarker) {
   used(value)
 
   Text(
-    "UnstableConstructorCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "WithinStableClass @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }
 
-@Composable private fun UnstableClassWithIStableCall(value: UnstableClassWithIStable) {
+@Composable private fun WithinImmutableClass(value: UnknownStabilityMarker) {
   used(value)
 
   Text(
-    "UnstableClassWithIStableCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "WithinImmutableClass @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
   )
 }

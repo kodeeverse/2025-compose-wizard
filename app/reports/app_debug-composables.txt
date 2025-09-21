@@ -38,19 +38,23 @@ restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Content(
 scheme("[androidx.compose.ui.UiComposable]") fun Content(
   unused stable <this>: OpenComposable
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ImmutableConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableConstructorCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableClassWithIStableCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableConstructorCall(
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableButAlwaysSameCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinStableClassDemo(
+  value: UnknownStabilityMarker? = @dynamic StableClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinImmutableClassDemo(
+  value: UnknownStabilityMarker? = @static ImmutableClass()
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableButAlwaysSameCall(
+  unstable value: UnstableButAlwaysSame
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableCall(
   stable value: StableClass
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun ImmutableConstructorCall(
-  stable value: ImmutableClass
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinStableClass(
+  value: UnknownStabilityMarker
 )
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableConstructorCall(
-  unstable value: UnstableClass
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableClassWithIStableCall(
-  stable value: UnstableClassWithIStable
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun WithinImmutableClass(
+  value: UnknownStabilityMarker
 )

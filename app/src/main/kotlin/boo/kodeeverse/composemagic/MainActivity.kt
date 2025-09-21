@@ -46,20 +46,20 @@ import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
-import boo.kodeeverse.composemagic.stableCall.ImmutableConstructorCallDemo
-import boo.kodeeverse.composemagic.stableCall.StableConstructorCallDemo
-import boo.kodeeverse.composemagic.stableCall.UnstableClassWithIStableCallDemo
-import boo.kodeeverse.composemagic.stableCall.UnstableConstructorCallDemo
+import boo.kodeeverse.composemagic.stableCall.StableCallDemo
+import boo.kodeeverse.composemagic.stableCall.UnstableButAlwaysSameCallDemo
+import boo.kodeeverse.composemagic.stableCall.WithinImmutableClassDemo
+import boo.kodeeverse.composemagic.stableCall.WithinStableClassDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
   NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-  StableConstructorCall(category = "stableCall", content = { StableConstructorCallDemo() }),
-  ImmutableConstructorCall(category = "stableCall", content = { ImmutableConstructorCallDemo() }),
-  UnstableConstructorCall(category = "stableCall", content = { UnstableConstructorCallDemo() }),
-  UnstableClassWithIStableCall(category = "stableCall", content = { UnstableClassWithIStableCallDemo() }),
+  UnstableButAlwaysSameCall(category = "stableCall", content = { UnstableButAlwaysSameCallDemo() }),
+  StableCall(category = "stableCall", content = { StableCallDemo() }),
+  WithinStableClass(category = "stableCall", content = { WithinStableClassDemo() }),
+  WithinImmutableClass(category = "stableCall", content = { WithinImmutableClassDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),

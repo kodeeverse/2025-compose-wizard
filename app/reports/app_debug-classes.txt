@@ -1,3 +1,11 @@
 unstable class MainActivity {
   <runtime stability> = Unstable
 }
+unstable class UnstableButAlwaysSame {
+  unstable var unstableMarker: Any
+  <runtime stability> = Unstable
+}
+stable class StableClass {
+}
+stable class ImmutableClass {
+}
