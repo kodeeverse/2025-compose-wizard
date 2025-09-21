@@ -23,6 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
@@ -44,7 +45,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
 
 @Immutable class ImmutableClass : UnstableMarker()
 
-@Composable fun UnstableAndAlwaysSameCallDemo() {
+@Composable fun GivenUnstableAndAlwaysSameClassDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -63,11 +64,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableAndAlwaysSameCall(UnstableAndAlwaysSameClass())
+    GivenUnstableAndAlwaysSameClass(UnstableAndAlwaysSameClass())
   }
 }
 
-@Composable fun StableAndAlwaysSameCallDemo() {
+@Composable fun GivenStableAndAlwaysSameClassDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -86,11 +87,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableAndAlwaysSameCall(StableAndAlwaysSameClass())
+    GivenStableAndAlwaysSameClass(StableAndAlwaysSameClass())
   }
 }
 
-@Composable fun GivenStableValueViaArgumentDemo(value: StableClass = StableClass()) {
+@Composable fun GivenStableClassViaArgumentDemo(value: StableClass = StableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -109,13 +110,13 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenStableValue(value)
+    GivenStableClass(value)
   }
 }
 
-@Composable fun GivenStableValueViaPropDemo() {
+@Composable fun GivenStableClassViaPropDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value: UnstableMarker = remember { StableClass() }
+  val value = StableClass()
 
   Column(
     modifier = Modifier.wrapContentSize(),
@@ -133,11 +134,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenStableValue(value)
+    GivenStableClass(value)
   }
 }
 
-@Composable fun GivenImmutableValueViaArgumentDemo(value: ImmutableClass = ImmutableClass()) {
+@Composable fun GivenImmutableClassViaArgumentDemo(value: ImmutableClass = ImmutableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -156,13 +157,13 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenImmutableValue(value)
+    GivenImmutableClass(value)
   }
 }
 
-@Composable fun GivenImmutableValueViaPropDemo() {
+@Composable fun GivenImmutableClassViaPropDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value: UnstableMarker = remember { ImmutableClass() }
+  val value = ImmutableClass()
 
   Column(
     modifier = Modifier.wrapContentSize(),
@@ -180,43 +181,36 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenImmutableValue(value)
+    GivenImmutableClass(value)
   }
 }
 
-@Composable private fun UnstableAndAlwaysSameCall(value: UnstableAndAlwaysSameClass) {
+@Composable private fun GivenUnstableAndAlwaysSameClass(value: UnstableAndAlwaysSameClass) {
   Text(
-    "UnstableAndAlwaysSameCall @ $currentRecomposeScopeHash (${value.createdAt})",
+    "GivenUnstableAndAlwaysSameClass @ $currentRecomposeScopeHash (${value.createdAt})",
+    fontWeight = FontWeight.Bold,
+    fontSize = 13.sp,
+  )
+}
+
+@Composable private fun GivenStableAndAlwaysSameClass(value: StableAndAlwaysSameClass) {
+  Text(
+    "GivenStableAndAlwaysSameClass @ $currentRecomposeScopeHash (${value.createdAt})",
+    fontWeight = FontWeight.Bold,
+    fontSize = 14.sp,
+  )
+}
+
+@Composable private fun GivenStableClass(value: StableClass) {
+  Text(
+    "GivenStableClass @ $currentRecomposeScopeHash (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
-@Composable private fun StableAndAlwaysSameCall(value: StableAndAlwaysSameClass) {
+@Composable private fun GivenImmutableClass(value: ImmutableClass) {
   Text(
-    "StableAndAlwaysSameCall @ $currentRecomposeScopeHash (${value.createdAt})",
-    fontWeight = FontWeight.Bold,
-  )
-}
-
-@Composable private fun StableCall(value: StableClass) {
-  Text(
-    "StableCall @ $currentRecomposeScopeHash (${value.createdAt})",
-    fontWeight = FontWeight.Bold,
-  )
-}
-
-// value를 StableClass로 받으면 리컴포지션 스킴됨
-@Composable private fun GivenStableValue(value: UnstableMarker) {
-  Text(
-    "GivenStableValue @ $currentRecomposeScopeHash (${value.createdAt})",
-    fontWeight = FontWeight.Bold,
-  )
-}
-
-// value를 ImmutableClass로 받아도 리컴포지션 스킴됨
-@Composable private fun GivenImmutableValue(value: UnstableMarker) {
-  Text(
-    "GivenImmutableValue @ $currentRecomposeScopeHash (${value.createdAt})",
+    "GivenImmutableClass @ $currentRecomposeScopeHash (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
