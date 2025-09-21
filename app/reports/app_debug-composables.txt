@@ -1,4 +1,3 @@
-readonly inline fun <get-currentRecomposeScopeLabel>()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableAndAlwaysSameCallDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableAndAlwaysSameCallDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValueViaArgumentDemo(

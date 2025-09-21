@@ -46,24 +46,24 @@ import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
-import boo.kodeeverse.composemagic.stableCall.GivenImmutableValueViaArgumentDemo
-import boo.kodeeverse.composemagic.stableCall.GivenImmutableValueViaPropDemo
-import boo.kodeeverse.composemagic.stableCall.GivenStableValueViaArgumentDemo
-import boo.kodeeverse.composemagic.stableCall.GivenStableValueViaPropDemo
-import boo.kodeeverse.composemagic.stableCall.StableAndAlwaysSameCallDemo
-import boo.kodeeverse.composemagic.stableCall.UnstableAndAlwaysSameCallDemo
+import boo.kodeeverse.composemagic.stability.GivenImmutableValueViaArgumentDemo
+import boo.kodeeverse.composemagic.stability.GivenImmutableValueViaPropDemo
+import boo.kodeeverse.composemagic.stability.GivenStableValueViaArgumentDemo
+import boo.kodeeverse.composemagic.stability.GivenStableValueViaPropDemo
+import boo.kodeeverse.composemagic.stability.StableAndAlwaysSameCallDemo
+import boo.kodeeverse.composemagic.stability.UnstableAndAlwaysSameCallDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
   NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-  UnstableButAlwaysSameCall(category = "stableCall", content = { UnstableAndAlwaysSameCallDemo() }),
-  StableAndAlwaysSameCall(category = "stableCall", content = { StableAndAlwaysSameCallDemo() }),
-  GivenStableValueViaArgument(category = "stableCall", content = { GivenStableValueViaArgumentDemo() }),
-  GivenStableValueViaProp(category = "stableCall", content = { GivenStableValueViaPropDemo() }),
-  GivenImmutableValueViaArgument(category = "stableCall", content = { GivenImmutableValueViaArgumentDemo() }),
-  GivenImmutableValueViaProp(category = "stableCall", content = { GivenImmutableValueViaPropDemo() }),
+  UnstableButAlwaysSameCall(category = "stability - ConstructorCalls", content = { UnstableAndAlwaysSameCallDemo() }),
+  StableAndAlwaysSameCall(category = "stability - ConstructorCalls", content = { StableAndAlwaysSameCallDemo() }),
+  GivenStableValueViaArgument(category = "stability - ConstructorCalls", content = { GivenStableValueViaArgumentDemo() }),
+  GivenStableValueViaProp(category = "stability - ConstructorCalls", content = { GivenStableValueViaPropDemo() }),
+  GivenImmutableValueViaArgument(category = "stability - ConstructorCalls", content = { GivenImmutableValueViaArgumentDemo() }),
+  GivenImmutableValueViaProp(category = "stability - ConstructorCalls", content = { GivenImmutableValueViaPropDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),

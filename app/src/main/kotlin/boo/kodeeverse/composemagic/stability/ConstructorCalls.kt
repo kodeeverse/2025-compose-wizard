@@ -1,4 +1,4 @@
-package boo.kodeeverse.composemagic.stableCall
+package boo.kodeeverse.composemagic.stability
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -27,7 +27,7 @@ import boo.kodeeverse.composemagic.currentRecomposeScopeLabel
 import java.lang.System.currentTimeMillis
 
 abstract class UnstableMarker {
-  var a: Any = 1
+  var createdAt: Long = currentTimeMillis()
 }
 
 class UnstableButAlwaysSame : UnstableMarker() {
@@ -36,15 +36,11 @@ class UnstableButAlwaysSame : UnstableMarker() {
 }
 
 @Stable class StableClass : UnstableMarker() {
-  val createdAt = currentTimeMillis()
-
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
 @Immutable class ImmutableClass : UnstableMarker() {
-  val createdAt = currentTimeMillis()
-
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
@@ -190,33 +186,29 @@ class UnstableButAlwaysSame : UnstableMarker() {
 }
 
 @Composable private fun UnstableButAlwaysSameCall(value: UnstableButAlwaysSame) {
-  used(value)
-
   Text(
-    "UnstableButAlwaysSameCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "UnstableButAlwaysSameCall @ $currentRecomposeScopeLabel (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
 @Composable private fun StableCall(value: StableClass) {
-  used(value)
-
   Text(
-    "StableCall @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "StableCall @ $currentRecomposeScopeLabel (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
 @Composable private fun GivenStableValue(value: UnstableMarker) {
   Text(
-    "GivenStableValue @ $currentRecomposeScopeLabel (${(value as StableClass).createdAt})",
+    "GivenStableValue @ $currentRecomposeScopeLabel (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
 @Composable private fun GivenImmutableValue(value: UnstableMarker) {
   Text(
-    "GivenImmutableValue @ $currentRecomposeScopeLabel (${(value as ImmutableClass).createdAt})",
+    "GivenImmutableValue @ $currentRecomposeScopeLabel (${value.createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
