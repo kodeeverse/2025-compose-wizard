@@ -50,16 +50,16 @@ import boo.kodeeverse.composemagic.stableCall.GivenImmutableValueViaArgumentDemo
 import boo.kodeeverse.composemagic.stableCall.GivenImmutableValueViaPropDemo
 import boo.kodeeverse.composemagic.stableCall.GivenStableValueViaArgumentDemo
 import boo.kodeeverse.composemagic.stableCall.GivenStableValueViaPropDemo
-import boo.kodeeverse.composemagic.stableCall.StableCallDemo
-import boo.kodeeverse.composemagic.stableCall.UnstableButAlwaysSameCallDemo
+import boo.kodeeverse.composemagic.stableCall.StableAndAlwaysSameCallDemo
+import boo.kodeeverse.composemagic.stableCall.UnstableAndAlwaysSameCallDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
   NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-  UnstableButAlwaysSameCall(category = "stableCall", content = { UnstableButAlwaysSameCallDemo() }),
-  StableCall(category = "stableCall", content = { StableCallDemo() }),
+  UnstableButAlwaysSameCall(category = "stableCall", content = { UnstableAndAlwaysSameCallDemo() }),
+  StableAndAlwaysSameCall(category = "stableCall", content = { StableAndAlwaysSameCallDemo() }),
   GivenStableValueViaArgument(category = "stableCall", content = { GivenStableValueViaArgumentDemo() }),
   GivenStableValueViaProp(category = "stableCall", content = { GivenStableValueViaPropDemo() }),
   GivenImmutableValueViaArgument(category = "stableCall", content = { GivenImmutableValueViaArgumentDemo() }),

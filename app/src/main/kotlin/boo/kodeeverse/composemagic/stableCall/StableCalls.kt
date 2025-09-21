@@ -30,22 +30,26 @@ abstract class UnstableMarker {
   var a: Any = 1
 }
 
-class UnstableButAlwaysSame(var unstableMarker: Any = Any()) {
+class UnstableButAlwaysSame : UnstableMarker() {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
 @Stable class StableClass : UnstableMarker() {
+  val createdAt = currentTimeMillis()
+
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
 @Immutable class ImmutableClass : UnstableMarker() {
+  val createdAt = currentTimeMillis()
+
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 0
 }
 
-@Composable fun UnstableButAlwaysSameCallDemo() {
+@Composable fun UnstableAndAlwaysSameCallDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -68,7 +72,7 @@ class UnstableButAlwaysSame(var unstableMarker: Any = Any()) {
   }
 }
 
-@Composable fun StableCallDemo() {
+@Composable fun StableAndAlwaysSameCallDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -204,19 +208,15 @@ class UnstableButAlwaysSame(var unstableMarker: Any = Any()) {
 }
 
 @Composable private fun GivenStableValue(value: UnstableMarker) {
-  used(value)
-
   Text(
-    "GivenStableValue @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "GivenStableValue @ $currentRecomposeScopeLabel (${(value as StableClass).createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }
 
 @Composable private fun GivenImmutableValue(value: UnstableMarker) {
-  used(value)
-
   Text(
-    "GivenImmutableValue @ $currentRecomposeScopeLabel (${currentTimeMillis()})",
+    "GivenImmutableValue @ $currentRecomposeScopeLabel (${(value as ImmutableClass).createdAt})",
     fontWeight = FontWeight.Bold,
   )
 }

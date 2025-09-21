@@ -1,12 +1,16 @@
+unstable class MainActivity {
+  <runtime stability> = Unstable
+}
 unstable class UnstableMarker {
   unstable var a: Any
   <runtime stability> = Unstable
 }
 unstable class UnstableButAlwaysSame {
-  unstable var unstableMarker: Any
   <runtime stability> = Unstable
 }
 stable class StableClass {
+  stable val createdAt: Long
 }
 stable class ImmutableClass {
+  stable val createdAt: Long
 }

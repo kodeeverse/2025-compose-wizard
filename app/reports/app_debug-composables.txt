@@ -1,5 +1,6 @@
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableButAlwaysSameCallDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableCallDemo()
+readonly inline fun <get-currentRecomposeScopeLabel>()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun UnstableAndAlwaysSameCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun StableAndAlwaysSameCallDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun GivenStableValueViaArgumentDemo(
   unstable value: UnstableMarker? = @dynamic StableClass()
 )
