@@ -46,12 +46,19 @@ import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
+import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
+import boo.kodeeverse.composemagic.stability.EmptyMapCallDemo
+import boo.kodeeverse.composemagic.stability.EmptySetCallDemo
 import boo.kodeeverse.composemagic.stability.GivenImmutableClassViaArgumentDemo
 import boo.kodeeverse.composemagic.stability.GivenImmutableClassViaPropDemo
 import boo.kodeeverse.composemagic.stability.GivenStableAndAlwaysSameClassDemo
 import boo.kodeeverse.composemagic.stability.GivenStableClassViaArgumentDemo
 import boo.kodeeverse.composemagic.stability.GivenStableClassViaPropDemo
 import boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClassDemo
+import boo.kodeeverse.composemagic.stability.ListOfCallDemo
+import boo.kodeeverse.composemagic.stability.MapOfCallDemo
+import boo.kodeeverse.composemagic.stability.PairOfCallDemo
+import boo.kodeeverse.composemagic.stability.SetOfCallDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableParameterDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
@@ -72,6 +79,14 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
 
   StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
   UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
+
+  EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
+  ListOfCall(category = "stability - KnownStableCallArguments", content = { ListOfCallDemo() }),
+  EmptyMapCall(category = "stability - KnownStableCallArguments", content = { EmptyMapCallDemo() }),
+  MapOfCall(category = "stability - KnownStableCallArguments", content = { MapOfCallDemo() }),
+  EmptySetCall(category = "stability - KnownStableCallArguments", content = { EmptySetCallDemo() }),
+  SetOfCall(category = "stability - KnownStableCallArguments", content = { SetOfCallDemo() }),
+  PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() }),
 
   StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
   UnstableParameter(category = "stability - StableParameters", content = { UnstableParameterDemo() }),

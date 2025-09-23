@@ -1,12 +1,1 @@
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableParameterDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableParameterDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableParameter(
-  stable value: Int
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableParameter(
-  unstable value: List<*>
-)
-restartable skippable fun boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgument(
-  unstable value: Any
-)
+readonly inline fun boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>()
