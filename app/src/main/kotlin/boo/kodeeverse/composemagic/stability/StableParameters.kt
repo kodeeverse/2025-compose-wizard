@@ -23,6 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
@@ -51,6 +52,7 @@ import java.lang.System.currentTimeMillis
 
 private val list = mutableListOf(0)
 
+// Bug but Feature: strong-skipping으로 인해 list가 변경되어도 리컴포지션되지 않음
 @Composable fun UnstableParameterDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -127,5 +129,6 @@ private val list = mutableListOf(0)
   Text(
     "UnstableParameterButStableArgument @ $currentRecomposeScopeHash (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
+    fontSize = 12.sp,
   )
 }
