@@ -1,0 +1,135 @@
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun InlineComposableDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1036276479)
+  sourceInformation($composer, "C(InlineComposableDemo)29@1195L324:InlineComposables.kt#5mdrpd")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-1036276479, $changed, -1, "boo.kodeeverse.composemagic.restartability.InlineComposableDemo (InlineComposables.kt:28)")
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -1669488168, "C34@1381L25,34@1367L66,35@1438L53,37@1497L18:InlineComposables.kt#5mdrpd")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      InlineComposable($composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    InlineComposableDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun NonInlineComposableDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1873035408)
+  sourceInformation($composer, "C(NonInlineComposableDemo)42@1569L327:InlineComposables.kt#5mdrpd")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1873035408, $changed, -1, "boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo (InlineComposables.kt:41)")
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 327520626, "C47@1755L25,47@1741L66,48@1812L53,50@1871L21:InlineComposables.kt#5mdrpd")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      NonInlineComposable($composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    NonInlineComposableDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun InlineComposable($composer: Composer?, $changed: Int) {
+  sourceInformationMarkerStart($composer, 1447179108, "CC(InlineComposable)55@1967L33,57@2030L25,57@2004L83,62@2197L11,58@2090L215:InlineComposables.kt#5mdrpd")
+  var count by {
+    val count$delegate = <block>{
+      sourceInformationMarkerStart($composer, -830279803, "CC(remember):InlineComposables.kt#9igjgp")
+      val tmp0_group = $composer.cache(false) {
+        mutableIntStateOf(0)
+      }
+      sourceInformationMarkerEnd($composer)
+      tmp0_group
+    }
+    get() {
+      return count$delegate.getValue(null, ::count$delegate)
+    }
+    set(<set-?>: Int) {
+      return count$delegate.setValue(null, ::count$delegate, <set-?>)
+    }
+  }
+  Text("InlineComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+  Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+    onClick = sourceInformationMarkerStart($composer, -830272465, "CC(remember):InlineComposables.kt#9igjgp")
+    val tmp1_group = $composer.cache(false) {
+      {
+        <get-count>()++
+      }
+    }
+    sourceInformationMarkerEnd($composer)
+    tmp1_group
+  ).background(
+    color = Companion.Green
+  ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+  sourceInformationMarkerEnd($composer)
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun NonInlineComposable($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(728295027)
+  sourceInformation($composer, "C(NonInlineComposable)69@2372L33,71@2438L25,71@2409L86,76@2605L11,72@2498L215:InlineComposables.kt#5mdrpd")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(728295027, $changed, -1, "boo.kodeeverse.composemagic.restartability.NonInlineComposable (InlineComposables.kt:68)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -188146892, "CC(remember):InlineComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Text("NonInlineComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+      onClick = sourceInformationMarkerStart($composer, -188139458, "CC(remember):InlineComposables.kt#9igjgp")
+      val tmp1_group = $composer.cache(false) {
+        {
+          <get-count>()++
+        }
+      }
+      sourceInformationMarkerEnd($composer)
+      tmp1_group
+    ).background(
+      color = Companion.Green
+    ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    NonInlineComposable($composer, updateChangedFlags($changed or 0b0001))
+  }
+}

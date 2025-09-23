@@ -1,0 +1,488 @@
+@StabilityInferred(parameters = 0)
+abstract class UnstableMarker {
+  var createdAt: Long = currentTimeMillis()
+  static val $stable: Int = 8
+}
+@StabilityInferred(parameters = 0)
+class UnstableAndAlwaysSameClass : UnstableMarker {
+  override fun equals(other: Any?): Boolean {
+    return true
+  }
+  override fun hashCode(): Int {
+    return 0
+  }
+  static val $stable: Int = 8
+}
+@Stable
+class StableClass : UnstableMarker {
+  static val $stable: Int = 0
+}
+@Stable
+class StableAndAlwaysSameClass : UnstableMarker {
+  override fun equals(other: Any?): Boolean {
+    return true
+  }
+  override fun hashCode(): Int {
+    return 1
+  }
+  static val $stable: Int = 0
+}
+@Immutable
+class ImmutableClass : UnstableMarker {
+  static val $stable: Int = 0
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun GivenUnstableAndAlwaysSameClassDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-299127152)
+  sourceInformation($composer, "C(GivenUnstableAndAlwaysSameClassDemo)48@1768L33,50@1805L601:ConstructorCalls.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-299127152, $changed, -1, "boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClassDemo (ConstructorCalls.kt:47)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 301617681, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1129403424, "C55@1991L25,55@1977L66,60@2163L11,56@2048L229,64@2282L53,66@2341L61:ConstructorCalls.kt#b558il")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -1487582747, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      GivenUnstableAndAlwaysSameClass(UnstableAndAlwaysSameClass(), $composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenUnstableAndAlwaysSameClassDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun GivenStableAndAlwaysSameClassDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1694384585)
+  sourceInformation($composer, "C(GivenStableAndAlwaysSameClassDemo)71@2479L33,73@2516L597:ConstructorCalls.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1694384585, $changed, -1, "boo.kodeeverse.composemagic.stability.GivenStableAndAlwaysSameClassDemo (ConstructorCalls.kt:70)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 510982858, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 126865227, "C78@2702L25,78@2688L66,83@2874L11,79@2759L229,87@2993L53,89@3052L57:ConstructorCalls.kt#b558il")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 1528118622, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      GivenStableAndAlwaysSameClass(StableAndAlwaysSameClass(), $composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenStableAndAlwaysSameClassDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun GivenStableClassViaArgumentDemo(value: StableClass?, $composer: Composer?, $changed: Int, $default: Int) {
+  $composer = $composer.startRestartGroup(-620647761)
+  sourceInformation($composer, "C(GivenStableClassViaArgumentDemo)N(value)94@3218L33,96@3255L572:ConstructorCalls.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($default and 0b0001 == 0 && $composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    $composer.startDefaults()
+    if ($changed and 0b0001 == 0 || $composer.defaultsInvalid) {
+      if ($default and 0b0001 != 0) {
+        value = StableClass()
+        $dirty = $dirty and 0b1110.inv()
+      }
+    } else {
+      $composer.skipToGroupEnd()
+      if ($default and 0b0001 != 0) {
+        $dirty = $dirty and 0b1110.inv()
+      }
+    }
+    $composer.endDefaults()
+    if (isTraceInProgress()) {
+      traceEventStart(-620647761, $dirty, -1, "boo.kodeeverse.composemagic.stability.GivenStableClassViaArgumentDemo (ConstructorCalls.kt:93)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 557958704, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1044506482, "C101@3450L25,101@3427L75,106@3622L11,102@3507L229,110@3741L53,112@3800L23:ConstructorCalls.kt#b558il")
+      Text("ROOT argument @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -381942384, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      GivenStableClass(value as StableClass, $composer, 0b1110 and $dirty)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenStableClassViaArgumentDemo(value, $composer, updateChangedFlags($changed or 0b0001), $default)
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun GivenStableClassViaPropDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(207978492)
+  sourceInformation($composer, "C(GivenStableClassViaPropDemo)117@3894L33,120@3959L568:ConstructorCalls.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(207978492, $changed, -1, "boo.kodeeverse.composemagic.stability.GivenStableClassViaPropDemo (ConstructorCalls.kt:116)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -1996130435, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    val value = StableClass()
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -667988683, "C125@4150L25,125@4131L71,130@4322L11,126@4207L229,134@4441L53,136@4500L23:ConstructorCalls.kt#b558il")
+      Text("ROOT prop @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 117005041, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      GivenStableClass(value, $composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenStableClassViaPropDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun GivenImmutableClassViaArgumentDemo(value: ImmutableClass?, $composer: Composer?, $changed: Int, $default: Int) {
+  $composer = $composer.startRestartGroup(-1578680977)
+  sourceInformation($composer, "C(GivenImmutableClassViaArgumentDemo)N(value)141@4641L33,143@4678L575:ConstructorCalls.kt#b558il")
+  val $dirty = $changed
+  if ($default and 0b0001 != 0) {
+    $dirty = $dirty or 0b0110
+  } else if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if ($default and 0b0001 != 0) {
+      value = ImmutableClass()
+    }
+    if (isTraceInProgress()) {
+      traceEventStart(-1578680977, $dirty, -1, "boo.kodeeverse.composemagic.stability.GivenImmutableClassViaArgumentDemo (ConstructorCalls.kt:140)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -988960240, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 47037839, "C148@4873L25,148@4850L75,153@5045L11,149@4930L229,157@5164L53,159@5223L26:ConstructorCalls.kt#b558il")
+      Text("ROOT argumemt @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -1661044784, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      GivenImmutableClass(value as ImmutableClass, $composer, 0b1110 and $dirty)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenImmutableClassViaArgumentDemo(value, $composer, updateChangedFlags($changed or 0b0001), $default)
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun GivenImmutableClassViaPropDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(2009429267)
+  sourceInformation($composer, "C(GivenImmutableClassViaPropDemo)164@5323L33,167@5391L571:ConstructorCalls.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(2009429267, $changed, -1, "boo.kodeeverse.composemagic.stability.GivenImmutableClassViaPropDemo (ConstructorCalls.kt:163)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -1673755852, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    val value = ImmutableClass()
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -1123454609, "C172@5582L25,172@5563L71,177@5754L11,173@5639L229,181@5873L53,183@5932L26:ConstructorCalls.kt#b558il")
+      Text("ROOT prop @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -728971404, "CC(remember):ConstructorCalls.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      GivenImmutableClass(value, $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenImmutableClassViaPropDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun GivenUnstableAndAlwaysSameClass(value: UnstableAndAlwaysSameClass, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(972723027)
+  sourceInformation($composer, "C(GivenUnstableAndAlwaysSameClass)N(value)189@6107L25,188@6061L154:ConstructorCalls.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changedInstance(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(972723027, $dirty, -1, "boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClass (ConstructorCalls.kt:187)")
+    }
+    val tmp0_text = "GivenUnstableAndAlwaysSameClass @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${value.createdAt})"
+    val tmp1_fontWeight = Companion.Bold
+    val tmp2_fontSize = 13.sp
+    Text(tmp0_text, null, <unsafe-coerce>(0L), null, tmp2_fontSize, null, tmp1_fontWeight, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000110000000000000, 0, 0b00111111111110101110)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenUnstableAndAlwaysSameClass(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun GivenStableAndAlwaysSameClass(value: StableAndAlwaysSameClass, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-874321997)
+  sourceInformation($composer, "C(GivenStableAndAlwaysSameClass)N(value)197@6354L25,196@6310L152:ConstructorCalls.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-874321997, $dirty, -1, "boo.kodeeverse.composemagic.stability.GivenStableAndAlwaysSameClass (ConstructorCalls.kt:195)")
+    }
+    val tmp0_text = "GivenStableAndAlwaysSameClass @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${value.createdAt})"
+    val tmp1_fontWeight = Companion.Bold
+    val tmp2_fontSize = 14.sp
+    Text(tmp0_text, null, <unsafe-coerce>(0L), null, tmp2_fontSize, null, tmp1_fontWeight, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000110000000000000, 0, 0b00111111111110101110)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenStableAndAlwaysSameClass(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun GivenStableClass(value: StableClass, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(725758973)
+  sourceInformation($composer, "C(GivenStableClass)N(value)205@6562L25,204@6531L117:ConstructorCalls.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(725758973, $dirty, -1, "boo.kodeeverse.composemagic.stability.GivenStableClass (ConstructorCalls.kt:203)")
+    }
+    Text("GivenStableClass @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${value.createdAt})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenStableClass(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun GivenImmutableClass(value: ImmutableClass, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-2143261805)
+  sourceInformation($composer, "C(GivenImmutableClass)N(value)212@6757L25,211@6723L120:ConstructorCalls.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-2143261805, $dirty, -1, "boo.kodeeverse.composemagic.stability.GivenImmutableClass (ConstructorCalls.kt:210)")
+    }
+    Text("GivenImmutableClass @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${value.createdAt})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    GivenImmutableClass(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+internal fun used(a: Any) { }

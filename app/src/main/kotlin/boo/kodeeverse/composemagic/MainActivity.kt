@@ -53,7 +53,10 @@ import boo.kodeeverse.composemagic.stability.GivenStableClassViaArgumentDemo
 import boo.kodeeverse.composemagic.stability.GivenStableClassViaPropDemo
 import boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClassDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableParameterDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableParameterDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
@@ -67,8 +70,12 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   GivenImmutableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaArgumentDemo() }),
   GivenImmutableClassViaProp(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaPropDemo() }),
 
-  StableCallArgument(category = "stability - StableCalls", content = { StableCallArgumentDemo() }),
-  UnstableCallArgument(category = "stability - StableCalls", content = { UnstableCallArgumentDemo() }),
+  StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
+  UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
+
+  StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
+  UnstableParameter(category = "stability - StableParameters", content = { UnstableParameterDemo() }),
+  UnstableParameterButStableArgument(category = "stability - StableParameters", content = { UnstableParameterButStableArgumentDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),
