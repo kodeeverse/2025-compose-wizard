@@ -44,7 +44,7 @@ fun DelegatingComposableDemo($composer: Composer?, $changed: Int) {
 @Composable
 private fun DelegatingComposable.getValue(thisRef: Any?, property: KProperty<*>, $composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-52904002)
-  sourceInformation($composer, "C(getValue)N(thisRef,property)46@1781L33,48@1848L25,48@1818L87,53@2015L11,49@1908L215:DelegatingComposable.kt#5mdrpd")
+  sourceInformation($composer, "C(getValue)N(thisRef,property)46@1781L33,49@1853L25,48@1818L125,56@2053L11,52@1946L215:DelegatingComposable.kt#5mdrpd")
   if ($composer.shouldExecute($changed and 0b0001 != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
       traceEventStart(-52904002, $changed, -1, "boo.kodeeverse.composemagic.restartability.getValue (DelegatingComposable.kt:45)")
@@ -65,9 +65,9 @@ private fun DelegatingComposable.getValue(thisRef: Any?, property: KProperty<*>,
         return count$delegate.setValue(null, ::count$delegate, <set-?>)
       }
     }
-    Text("DelegatingComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    Text("DelegatingComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
     Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-      onClick = sourceInformationMarkerStart($composer, 698872009, "CC(remember):DelegatingComposable.kt#9igjgp")
+      onClick = sourceInformationMarkerStart($composer, 698873225, "CC(remember):DelegatingComposable.kt#9igjgp")
       val tmp1_group = $composer.cache(false) {
         {
           <get-count>()++

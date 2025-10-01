@@ -57,13 +57,15 @@ import boo.kodeeverse.composemagic.stability.GivenStableClassViaPropDemo
 import boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClassDemo
 import boo.kodeeverse.composemagic.stability.ListOfCallDemo
 import boo.kodeeverse.composemagic.stability.MapOfCallDemo
+import boo.kodeeverse.composemagic.stability.NewInstanceAndPersistentUnstableParameterDemo
 import boo.kodeeverse.composemagic.stability.PairOfCallDemo
+import boo.kodeeverse.composemagic.stability.SameInstanceAndMutableUnstableParameterDemo
 import boo.kodeeverse.composemagic.stability.SetOfCallDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableParameterButUnstableArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableParameterDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo
-import boo.kodeeverse.composemagic.stability.UnstableParameterDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
@@ -89,7 +91,9 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() }),
 
   StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
-  UnstableParameter(category = "stability - StableParameters", content = { UnstableParameterDemo() }),
+  SameInstanceAndMutableUnstableParameter(category = "stability - StableParameters", content = { SameInstanceAndMutableUnstableParameterDemo() }),
+  NewInstanceAndPersistentUnstableParameter(category = "stability - StableParameters", content = { NewInstanceAndPersistentUnstableParameterDemo() }),
+  StableParameterButUnstableArgument(category = "stability - StableParameters", content = { StableParameterButUnstableArgumentDemo() }),
   UnstableParameterButStableArgument(category = "stability - StableParameters", content = { UnstableParameterButStableArgumentDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),

@@ -36,7 +36,10 @@ import java.lang.System.currentTimeMillis
     @Composable fun Local() {
       var count by remember { mutableIntStateOf(0) }
 
-      Text("LocalComposable.Local @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+      Text(
+        "LocalComposable.Local @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+        fontWeight = FontWeight.Bold,
+      )
       Text(
         "count: $count",
         modifier = Modifier

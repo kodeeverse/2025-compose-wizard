@@ -58,7 +58,10 @@ private class FinalComposable : VirtualComposable {
   @Composable override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text("FinalComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+    Text(
+      "FinalComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      fontWeight = FontWeight.Bold,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -74,7 +77,10 @@ private open class OpenComposable : VirtualComposable {
   @Composable override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text("OpenComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+    Text(
+      "OpenComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      fontWeight = FontWeight.Bold,
+    )
     Text(
       "count: $count",
       modifier = Modifier

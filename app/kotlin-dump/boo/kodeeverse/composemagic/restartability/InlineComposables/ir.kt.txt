@@ -53,7 +53,7 @@ fun NonInlineComposableDemo($composer: Composer?, $changed: Int) {
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 private fun InlineComposable($composer: Composer?, $changed: Int) {
-  sourceInformationMarkerStart($composer, 1447179108, "CC(InlineComposable)55@1967L33,57@2030L25,57@2004L83,62@2197L11,58@2090L215:InlineComposables.kt#5mdrpd")
+  sourceInformationMarkerStart($composer, 1447179108, "CC(InlineComposable)55@1967L33,58@2035L25,57@2004L121,65@2235L11,61@2128L215:InlineComposables.kt#5mdrpd")
   var count by {
     val count$delegate = <block>{
       sourceInformationMarkerStart($composer, -830279803, "CC(remember):InlineComposables.kt#9igjgp")
@@ -70,9 +70,9 @@ private fun InlineComposable($composer: Composer?, $changed: Int) {
       return count$delegate.setValue(null, ::count$delegate, <set-?>)
     }
   }
-  Text("InlineComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+  Text("InlineComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
   Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-    onClick = sourceInformationMarkerStart($composer, -830272465, "CC(remember):InlineComposables.kt#9igjgp")
+    onClick = sourceInformationMarkerStart($composer, -830271249, "CC(remember):InlineComposables.kt#9igjgp")
     val tmp1_group = $composer.cache(false) {
       {
         <get-count>()++
@@ -89,10 +89,10 @@ private fun InlineComposable($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 private fun NonInlineComposable($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(728295027)
-  sourceInformation($composer, "C(NonInlineComposable)69@2372L33,71@2438L25,71@2409L86,76@2605L11,72@2498L215:InlineComposables.kt#5mdrpd")
+  sourceInformation($composer, "C(NonInlineComposable)72@2410L33,75@2481L25,74@2447L124,82@2681L11,78@2574L215:InlineComposables.kt#5mdrpd")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(728295027, $changed, -1, "boo.kodeeverse.composemagic.restartability.NonInlineComposable (InlineComposables.kt:68)")
+      traceEventStart(728295027, $changed, -1, "boo.kodeeverse.composemagic.restartability.NonInlineComposable (InlineComposables.kt:71)")
     }
     var count by {
       val count$delegate = <block>{
@@ -110,9 +110,9 @@ private fun NonInlineComposable($composer: Composer?, $changed: Int) {
         return count$delegate.setValue(null, ::count$delegate, <set-?>)
       }
     }
-    Text("NonInlineComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    Text("NonInlineComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
     Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-      onClick = sourceInformationMarkerStart($composer, -188139458, "CC(remember):InlineComposables.kt#9igjgp")
+      onClick = sourceInformationMarkerStart($composer, -188138242, "CC(remember):InlineComposables.kt#9igjgp")
       val tmp1_group = $composer.cache(false) {
         {
           <get-count>()++

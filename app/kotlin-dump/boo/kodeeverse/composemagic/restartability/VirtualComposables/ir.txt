@@ -439,7 +439,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
               ARG key: CONST Int type=kotlin.Int value=116226904
           CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
             ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.FinalComposable.Content' type=androidx.compose.runtime.Composer? origin=null
-            ARG sourceInformation: CONST String type=kotlin.String value="C(Content)58@2074L33,60@2138L25,60@2113L82,65@2315L11,61@2200L229:VirtualComposables.kt#5mdrpd"
+            ARG sourceInformation: CONST String type=kotlin.String value="C(Content)58@2074L33,61@2145L25,60@2113L126,68@2359L11,64@2244L229:VirtualComposables.kt#5mdrpd"
         WHEN type=kotlin.Unit origin=IF
           BRANCH
             if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -505,6 +505,9 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                   CALL 'public final fun <get-currentRecomposeScopeHash> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.String [inline] declared in boo.kodeeverse.composemagic' type=kotlin.String origin=GET_PROPERTY
                     ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.FinalComposable.Content' type=androidx.compose.runtime.Composer? origin=null
                     ARG $changed: CONST Int type=kotlin.Int value=0
+                  CONST String type=kotlin.String value=" ("
+                  CALL 'public open fun currentTimeMillis (): kotlin.Long declared in java.lang.System' type=kotlin.Long origin=null
+                  CONST String type=kotlin.String value=")"
                 ARG modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                   CONST Null type=kotlin.Nothing? value=null
                 ARG color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
@@ -573,7 +576,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                       ARG onClick: BLOCK type=kotlin.Function0<kotlin.Unit> origin=null
                         CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.FinalComposable.Content' type=androidx.compose.runtime.Composer? origin=null
-                          ARG key: CONST Int type=kotlin.Int value=24913827
+                          ARG key: CONST Int type=kotlin.Int value=24915235
                           ARG sourceInformation: CONST String type=kotlin.String value="CC(remember):VirtualComposables.kt#9igjgp"
                         VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:kotlin.Function0<kotlin.Unit> [val]
                           CALL 'public final fun cache <T> (<this>: androidx.compose.runtime.Composer, invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.cache>): T of androidx.compose.runtime.cache [inline] declared in androidx.compose.runtime' type=kotlin.Function0<kotlin.Unit> origin=null
@@ -728,7 +731,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             ARG key: CONST Int type=kotlin.Int value=2145971540
           CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
             ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.OpenComposable.Content' type=androidx.compose.runtime.Composer? origin=null
-            ARG sourceInformation: CONST String type=kotlin.String value="C(Content)74@2549L33,76@2612L25,76@2588L81,81@2789L11,77@2674L229:VirtualComposables.kt#5mdrpd"
+            ARG sourceInformation: CONST String type=kotlin.String value="C(Content)77@2593L33,80@2663L25,79@2632L125,87@2877L11,83@2762L229:VirtualComposables.kt#5mdrpd"
         WHEN type=kotlin.Unit origin=IF
           BRANCH
             if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
@@ -736,7 +739,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
               ARG key: CONST Int type=kotlin.Int value=2145971540
               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.OpenComposable.Content' type=kotlin.Int origin=null
               ARG dirty2: CONST Int type=kotlin.Int value=-1
-              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.OpenComposable.Content (VirtualComposables.kt:73)"
+              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.OpenComposable.Content (VirtualComposables.kt:76)"
         LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
           VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
             BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -780,6 +783,9 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             CALL 'public final fun <get-currentRecomposeScopeHash> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.String [inline] declared in boo.kodeeverse.composemagic' type=kotlin.String origin=GET_PROPERTY
               ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.OpenComposable.Content' type=androidx.compose.runtime.Composer? origin=null
               ARG $changed: CONST Int type=kotlin.Int value=0
+            CONST String type=kotlin.String value=" ("
+            CALL 'public open fun currentTimeMillis (): kotlin.Long declared in java.lang.System' type=kotlin.Long origin=null
+            CONST String type=kotlin.String value=")"
           ARG modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
             CONST Null type=kotlin.Nothing? value=null
           ARG color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
@@ -848,7 +854,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                 ARG onClick: BLOCK type=kotlin.Function0<kotlin.Unit> origin=null
                   CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.OpenComposable.Content' type=androidx.compose.runtime.Composer? origin=null
-                    ARG key: CONST Int type=kotlin.Int value=694356607
+                    ARG key: CONST Int type=kotlin.Int value=694358015
                     ARG sourceInformation: CONST String type=kotlin.String value="CC(remember):VirtualComposables.kt#9igjgp"
                   VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:kotlin.Function0<kotlin.Unit> [val]
                     CALL 'public final fun cache <T> (<this>: androidx.compose.runtime.Composer, invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.cache>): T of androidx.compose.runtime.cache [inline] declared in androidx.compose.runtime' type=kotlin.Function0<kotlin.Unit> origin=null

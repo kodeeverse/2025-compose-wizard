@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
@@ -20,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
@@ -40,7 +42,14 @@ fun interface FunctionalComposable {
     val local = FunctionalComposable {
       var count by remember { mutableIntStateOf(0) }
 
-      Text("FunctionalComposable.Local @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+      Text(
+        "FunctionalComposable.Local @ $currentRecomposeScopeHash\n(${currentTimeMillis()})",
+        modifier = Modifier
+          .fillMaxWidth()
+          .wrapContentWidth(),
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.Center,
+      )
       Text(
         "count: $count",
         modifier = Modifier

@@ -69,7 +69,7 @@ private class FinalComposable : VirtualComposable {
   @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
   override fun Content($composer: Composer?, $changed: Int) {
     $composer = $composer.startRestartGroup(116226904)
-    sourceInformation($composer, "C(Content)58@2074L33,60@2138L25,60@2113L82,65@2315L11,61@2200L229:VirtualComposables.kt#5mdrpd")
+    sourceInformation($composer, "C(Content)58@2074L33,61@2145L25,60@2113L126,68@2359L11,64@2244L229:VirtualComposables.kt#5mdrpd")
     if ($composer.shouldExecute($changed and 0b0001 != 0, $changed and 0b0001)) {
       if (isTraceInProgress()) {
         traceEventStart(116226904, $changed, -1, "boo.kodeeverse.composemagic.restartability.FinalComposable.Content (VirtualComposables.kt:57)")
@@ -90,9 +90,9 @@ private class FinalComposable : VirtualComposable {
           return count$delegate.setValue(null, ::count$delegate, <set-?>)
         }
       }
-      Text("FinalComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+      Text("FinalComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-        onClick = sourceInformationMarkerStart($composer, 24913827, "CC(remember):VirtualComposables.kt#9igjgp")
+        onClick = sourceInformationMarkerStart($composer, 24915235, "CC(remember):VirtualComposables.kt#9igjgp")
         val tmp1_group = $composer.cache(false) {
           {
             <get-count>()++
@@ -120,9 +120,9 @@ private open class OpenComposable : VirtualComposable {
   @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
   override fun Content($composer: Composer?, $changed: Int) {
     $composer.startReplaceGroup(2145971540)
-    sourceInformation($composer, "C(Content)74@2549L33,76@2612L25,76@2588L81,81@2789L11,77@2674L229:VirtualComposables.kt#5mdrpd")
+    sourceInformation($composer, "C(Content)77@2593L33,80@2663L25,79@2632L125,87@2877L11,83@2762L229:VirtualComposables.kt#5mdrpd")
     if (isTraceInProgress()) {
-      traceEventStart(2145971540, $changed, -1, "boo.kodeeverse.composemagic.restartability.OpenComposable.Content (VirtualComposables.kt:73)")
+      traceEventStart(2145971540, $changed, -1, "boo.kodeeverse.composemagic.restartability.OpenComposable.Content (VirtualComposables.kt:76)")
     }
     var count by {
       val count$delegate = <block>{
@@ -140,9 +140,9 @@ private open class OpenComposable : VirtualComposable {
         return count$delegate.setValue(null, ::count$delegate, <set-?>)
       }
     }
-    Text("OpenComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    Text("OpenComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
     Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-      onClick = sourceInformationMarkerStart($composer, 694356607, "CC(remember):VirtualComposables.kt#9igjgp")
+      onClick = sourceInformationMarkerStart($composer, 694358015, "CC(remember):VirtualComposables.kt#9igjgp")
       val tmp1_group = $composer.cache(false) {
         {
           <get-count>()++

@@ -15,7 +15,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
             ARG key: CONST Int type=kotlin.Int value=-879546662
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(InlineLambdaComposableDemo)29@1216L33,31@1253L716:InlineLambdaComposables.kt#ectame"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(InlineLambdaComposableDemo)31@1323L33,33@1360L716:InlineLambdaComposables.kt#ectame"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -35,7 +35,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                   ARG key: CONST Int type=kotlin.Int value=-879546662
                   ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo (InlineLambdaComposables.kt:28)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo (InlineLambdaComposables.kt:30)"
             LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
               VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
                 BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -95,7 +95,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                         ARG key: CONST Int type=kotlin.Int value=-256357545
-                        ARG sourceInformation: CONST String type=kotlin.String value="C36@1439L25,36@1425L66,41@1611L11,37@1496L229,45@1730L53,47@1789L176:InlineLambdaComposables.kt#ectame"
+                        ARG sourceInformation: CONST String type=kotlin.String value="C38@1546L25,38@1532L66,43@1718L11,39@1603L229,47@1837L53,49@1896L176:InlineLambdaComposables.kt#ectame"
                       COMPOSITE type=kotlin.Unit origin=null
                         CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG text: STRING_CONCATENATION type=kotlin.String
@@ -285,7 +285,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                                   CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                                     ARG key: CONST Int type=kotlin.Int value=2001352014
-                                    ARG sourceInformation: CONST String type=kotlin.String value="C49@1861L25,48@1820L139:InlineLambdaComposables.kt#ectame"
+                                    ARG sourceInformation: CONST String type=kotlin.String value="C51@1968L25,50@1927L139:InlineLambdaComposables.kt#ectame"
                                   COMPOSITE type=kotlin.Unit origin=null
                                     CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                                       ARG text: STRING_CONCATENATION type=kotlin.String
@@ -407,7 +407,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
             ARG key: CONST Int type=kotlin.Int value=1522780825
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(NoInlineLambdaComposableDemo)57@2037L33,59@2074L720:InlineLambdaComposables.kt#ectame"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(NoInlineLambdaComposableDemo)59@2144L33,61@2181L844:InlineLambdaComposables.kt#ectame"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -427,7 +427,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                   ARG key: CONST Int type=kotlin.Int value=1522780825
                   ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo (InlineLambdaComposables.kt:56)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo (InlineLambdaComposables.kt:58)"
             LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
               VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
                 BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -486,8 +486,8 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                     BLOCK type=kotlin.Unit origin=null
                       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                        ARG key: CONST Int type=kotlin.Int value=-1648240332
-                        ARG sourceInformation: CONST String type=kotlin.String value="C64@2260L25,64@2246L66,69@2432L11,65@2317L229,73@2551L53,75@2610L180:InlineLambdaComposables.kt#ectame"
+                        ARG key: CONST Int type=kotlin.Int value=-1648236488
+                        ARG sourceInformation: CONST String type=kotlin.String value="C66@2367L25,66@2353L66,71@2539L11,67@2424L229,75@2658L53,77@2717L304:InlineLambdaComposables.kt#ectame"
                       COMPOSITE type=kotlin.Unit origin=null
                         CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG text: STRING_CONCATENATION type=kotlin.String
@@ -723,7 +723,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
             ARG key: CONST Int type=kotlin.Int value=311352361
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(NonInlineLambdaComposableDemo)85@2863L33,87@2900L722:InlineLambdaComposables.kt#ectame"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(NonInlineLambdaComposableDemo)91@3094L33,93@3131L846:InlineLambdaComposables.kt#ectame"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -743,7 +743,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                   ARG key: CONST Int type=kotlin.Int value=311352361
                   ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo (InlineLambdaComposables.kt:84)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo (InlineLambdaComposables.kt:90)"
             LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
               VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
                 BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -802,8 +802,8 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                     BLOCK type=kotlin.Unit origin=null
                       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                        ARG key: CONST Int type=kotlin.Int value=1358580878
-                        ARG sourceInformation: CONST String type=kotlin.String value="C92@3086L25,92@3072L66,97@3258L11,93@3143L229,101@3377L53,103@3436L182:InlineLambdaComposables.kt#ectame"
+                        ARG key: CONST Int type=kotlin.Int value=1358584722
+                        ARG sourceInformation: CONST String type=kotlin.String value="C98@3317L25,98@3303L66,103@3489L11,99@3374L229,107@3608L53,109@3667L306:InlineLambdaComposables.kt#ectame"
                       COMPOSITE type=kotlin.Unit origin=null
                         CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG text: STRING_CONCATENATION type=kotlin.String
@@ -1036,7 +1036,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposable' type=androidx.compose.runtime.Composer? origin=null
         ARG key: CONST Int type=kotlin.Int value=-2125141330
-        ARG sourceInformation: CONST String type=kotlin.String value="CC(InlineLambdaComposable)N(content)113@3717L9:InlineLambdaComposables.kt#ectame"
+        ARG sourceInformation: CONST String type=kotlin.String value="CC(InlineLambdaComposable)N(content)123@4072L9:InlineLambdaComposables.kt#ectame"
       CALL 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Unit origin=null
         ARG <this>: GET_VAR 'content: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposable' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=VARIABLE_AS_FUNCTION
         ARG p1: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposable' type=androidx.compose.runtime.Composer? origin=null
@@ -1056,7 +1056,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposable' type=androidx.compose.runtime.Composer? origin=null
         ARG key: CONST Int type=kotlin.Int value=1229945103
-        ARG sourceInformation: CONST String type=kotlin.String value="CC(NoInlineLambdaComposable)N(content)117@3832L9:InlineLambdaComposables.kt#ectame"
+        ARG sourceInformation: CONST String type=kotlin.String value="CC(NoInlineLambdaComposable)N(content)127@4187L9:InlineLambdaComposables.kt#ectame"
       CALL 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Unit origin=null
         ARG <this>: GET_VAR 'content: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> [noinline] declared in boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposable' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=VARIABLE_AS_FUNCTION
         ARG p1: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposable' type=androidx.compose.runtime.Composer? origin=null
@@ -1080,7 +1080,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
             ARG key: CONST Int type=kotlin.Int value=871175551
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(NonInlineLambdaComposable)N(content)121@3932L9:InlineLambdaComposables.kt#ectame"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(NonInlineLambdaComposable)N(content)131@4287L9:InlineLambdaComposables.kt#ectame"
       VAR name:$dirty type:kotlin.Int [val]
         GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable' type=kotlin.Int origin=null
       WHEN type=kotlin.Unit origin=IF
@@ -1123,7 +1123,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                   ARG key: CONST Int type=kotlin.Int value=871175551
                   ARG dirty1: GET_VAR 'val $dirty: kotlin.Int [val] declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable (InlineLambdaComposables.kt:120)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable (InlineLambdaComposables.kt:130)"
             CALL 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Unit origin=null
               ARG <this>: GET_VAR 'content: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=VARIABLE_AS_FUNCTION
               ARG p1: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable' type=androidx.compose.runtime.Composer? origin=null
@@ -1188,7 +1188,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C77@2686L25,76@2643L141:InlineLambdaComposables.kt#ectame"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C79@2793L25,78@2750L265:InlineLambdaComposables.kt#ectame"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -1210,18 +1210,19 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                               ARG key: CONST Int type=kotlin.Int value=-1916130134
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous> (InlineLambdaComposables.kt:76)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous> (InlineLambdaComposables.kt:78)"
                         CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG text: STRING_CONCATENATION type=kotlin.String
                             CONST String type=kotlin.String value="NoInlineLambdaComposable @ "
                             CALL 'public final fun <get-currentRecomposeScopeHash> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.String [inline] declared in boo.kodeeverse.composemagic' type=kotlin.String origin=GET_PROPERTY
                               ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                               ARG $changed: CONST Int type=kotlin.Int value=0
-                            CONST String type=kotlin.String value=" ("
+                            CONST String type=kotlin.String value="\n("
                             CALL 'public open fun currentTimeMillis (): kotlin.Long declared in java.lang.System' type=kotlin.Long origin=null
                             CONST String type=kotlin.String value=")"
-                          ARG modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
+                          ARG modifier: CALL 'public final fun wrapContentWidth (<this>: androidx.compose.ui.Modifier, align: androidx.compose.ui.Alignment.Horizontal, unbounded: kotlin.Boolean): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
+                            ARG <this>: CALL 'public final fun fillMaxWidth (<this>: androidx.compose.ui.Modifier, fraction: kotlin.Float): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
+                              ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[androidx.compose.ui.Modifier]' type=androidx.compose.ui.Modifier.Companion
                           ARG color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
                             CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
                               TYPE_ARG T: kotlin.Long
@@ -1247,8 +1248,8 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                               ARG v: CONST Long type=kotlin.Long value=0
                           ARG textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
-                          ARG textAlign: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
+                          ARG textAlign: CALL 'public final fun <get-Center> (): androidx.compose.ui.text.style.TextAlign declared in androidx.compose.ui.text.style.TextAlign.Companion' type=androidx.compose.ui.text.style.TextAlign origin=GET_PROPERTY
+                            ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[kotlin.Any]' type=androidx.compose.ui.text.style.TextAlign.Companion
                           ARG lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
                             CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
                               TYPE_ARG T: kotlin.Long
@@ -1270,9 +1271,9 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                           ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                          ARG $changed: CONST Int type=kotlin.Int value=1572864
+                          ARG $changed: CONST Int type=kotlin.Int value=1572912
                           ARG $changed1: CONST Int type=kotlin.Int value=0
-                          ARG $default: CONST Int type=kotlin.Int value=262078
+                          ARG $default: CONST Int type=kotlin.Int value=261052
                         WHEN type=kotlin.Unit origin=IF
                           BRANCH
                             if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
@@ -1304,7 +1305,7 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C105@3514L25,104@3470L142:InlineLambdaComposables.kt#ectame"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C111@3745L25,110@3701L266:InlineLambdaComposables.kt#ectame"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -1326,18 +1327,19 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                               ARG key: CONST Int type=kotlin.Int value=1582973028
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous> (InlineLambdaComposables.kt:104)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous> (InlineLambdaComposables.kt:110)"
                         CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG text: STRING_CONCATENATION type=kotlin.String
                             CONST String type=kotlin.String value="NonInlineLambdaComposable @ "
                             CALL 'public final fun <get-currentRecomposeScopeHash> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.String [inline] declared in boo.kodeeverse.composemagic' type=kotlin.String origin=GET_PROPERTY
                               ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                               ARG $changed: CONST Int type=kotlin.Int value=0
-                            CONST String type=kotlin.String value=" ("
+                            CONST String type=kotlin.String value="\n("
                             CALL 'public open fun currentTimeMillis (): kotlin.Long declared in java.lang.System' type=kotlin.Long origin=null
                             CONST String type=kotlin.String value=")"
-                          ARG modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
+                          ARG modifier: CALL 'public final fun wrapContentWidth (<this>: androidx.compose.ui.Modifier, align: androidx.compose.ui.Alignment.Horizontal, unbounded: kotlin.Boolean): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
+                            ARG <this>: CALL 'public final fun fillMaxWidth (<this>: androidx.compose.ui.Modifier, fraction: kotlin.Float): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
+                              ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[androidx.compose.ui.Modifier]' type=androidx.compose.ui.Modifier.Companion
                           ARG color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
                             CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
                               TYPE_ARG T: kotlin.Long
@@ -1363,8 +1365,8 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                               ARG v: CONST Long type=kotlin.Long value=0
                           ARG textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
-                          ARG textAlign: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
+                          ARG textAlign: CALL 'public final fun <get-Center> (): androidx.compose.ui.text.style.TextAlign declared in androidx.compose.ui.text.style.TextAlign.Companion' type=androidx.compose.ui.text.style.TextAlign origin=GET_PROPERTY
+                            ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[kotlin.Any]' type=androidx.compose.ui.text.style.TextAlign.Companion
                           ARG lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
                             CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
                               TYPE_ARG T: kotlin.Long
@@ -1386,9 +1388,9 @@ FILE fqName:boo.kodeeverse.composemagic.composableLambda fileName:/Users/jisungb
                           ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                          ARG $changed: CONST Int type=kotlin.Int value=1572864
+                          ARG $changed: CONST Int type=kotlin.Int value=1572912
                           ARG $changed1: CONST Int type=kotlin.Int value=0
-                          ARG $default: CONST Int type=kotlin.Int value=262078
+                          ARG $default: CONST Int type=kotlin.Int value=261052
                         WHEN type=kotlin.Unit origin=IF
                           BRANCH
                             if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null

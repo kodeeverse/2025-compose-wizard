@@ -6,13 +6,13 @@ interface FunctionalComposable {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun FunctionalComposableDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-143764742)
-  sourceInformation($composer, "C(FunctionalComposableDemo)31@1230L771:FunctionalComposable.kt#5mdrpd")
+  sourceInformation($composer, "C(FunctionalComposableDemo)33@1337L945:FunctionalComposable.kt#5mdrpd")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-143764742, $changed, -1, "boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo (FunctionalComposable.kt:30)")
+      traceEventStart(-143764742, $changed, -1, "boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo (FunctionalComposable.kt:32)")
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 653293964, "C36@1416L25,36@1402L66,37@1473L53,53@1988L9:FunctionalComposable.kt#5mdrpd")
+      sourceInformationMarkerStart($composer, 653299358, "C38@1523L25,38@1509L66,39@1580L53,62@2269L9:FunctionalComposable.kt#5mdrpd")
       Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
       HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
       val local = <block>{
@@ -21,14 +21,14 @@ fun FunctionalComposableDemo($composer: Composer?, $changed: Int) {
           @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
           override fun Content($composer: Composer?, $changed: Int) {
             $composer = $composer.startRestartGroup(-1005546584)
-            sourceInformation($composer, "C(Content)40@1586L33,42@1663L25,42@1627L93,47@1850L11,43@1727L243:FunctionalComposable.kt#5mdrpd")
+            sourceInformation($composer, "C(Content)42@1693L33,45@1779L25,44@1734L267,56@2131L11,52@2008L243:FunctionalComposable.kt#5mdrpd")
             val $dirty = $changed
             if ($changed and 0b0110 == 0) {
               $dirty = $dirty or if ($composer.changed(<this>)) 0b0100 else 0b0010
             }
             if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
               if (isTraceInProgress()) {
-                traceEventStart(-1005546584, $dirty, -1, "boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo.<anonymous>.<no name provided>.Content (FunctionalComposable.kt:40)")
+                traceEventStart(-1005546584, $dirty, -1, "boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo.<anonymous>.<no name provided>.Content (FunctionalComposable.kt:42)")
               }
               var count by {
                 val count$delegate = <block>{
@@ -46,9 +46,10 @@ fun FunctionalComposableDemo($composer: Composer?, $changed: Int) {
                   return count$delegate.setValue(null, ::count$delegate, <set-?>)
                 }
               }
-              Text("FunctionalComposable.Local @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+              Text("FunctionalComposable.Local @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+(${currentTimeMillis()})", Companion.fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000110000, 0, 0b00111111101110111100)
               Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-                onClick = sourceInformationMarkerStart($composer, 37383507, "CC(remember):FunctionalComposable.kt#9igjgp")
+                onClick = sourceInformationMarkerStart($composer, 37389075, "CC(remember):FunctionalComposable.kt#9igjgp")
                 val tmp1_group = $composer.cache(false) {
                   {
                     <get-count>()++

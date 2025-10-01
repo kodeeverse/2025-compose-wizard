@@ -2,19 +2,19 @@
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun LocalComposableDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(658037824)
-  sourceInformation($composer, "C(LocalComposableDemo)27@1157L749:LocalComposable.kt#5mdrpd")
+  sourceInformation($composer, "C(LocalComposableDemo)27@1157L799:LocalComposable.kt#5mdrpd")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
       traceEventStart(658037824, $changed, -1, "boo.kodeeverse.composemagic.restartability.LocalComposableDemo (LocalComposable.kt:26)")
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1293146972, "C32@1343L25,32@1329L66,33@1400L53,49@1895L7:LocalComposable.kt#5mdrpd")
+      sourceInformationMarkerStart($composer, 1293148522, "C32@1343L25,32@1329L66,33@1400L53,52@1945L7:LocalComposable.kt#5mdrpd")
       Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
       HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
       @Composable
       @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
       fun Local($composer: Composer?, $changed: Int) {
-        sourceInformationMarkerStart($composer, 750711959, "C(Local)36@1504L33,38@1576L25,38@1545L88,43@1763L11,39@1640L243:LocalComposable.kt#5mdrpd")
+        sourceInformationMarkerStart($composer, 750711959, "C(Local)36@1504L33,39@1585L25,38@1545L138,46@1813L11,42@1690L243:LocalComposable.kt#5mdrpd")
         if (isTraceInProgress()) {
           traceEventStart(750711959, $changed, -1, "boo.kodeeverse.composemagic.restartability.LocalComposableDemo.<anonymous>.Local (LocalComposable.kt:35)")
         }
@@ -34,9 +34,9 @@ fun LocalComposableDemo($composer: Composer?, $changed: Int) {
             return count$delegate.setValue(null, ::count$delegate, <set-?>)
           }
         }
-        Text("LocalComposable.Local @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+        Text("LocalComposable.Local @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
         Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-          onClick = sourceInformationMarkerStart($composer, -120303774, "CC(remember):LocalComposable.kt#9igjgp")
+          onClick = sourceInformationMarkerStart($composer, -120302174, "CC(remember):LocalComposable.kt#9igjgp")
           val tmp1_group = $composer.cache(false) {
             {
               <get-count>()++

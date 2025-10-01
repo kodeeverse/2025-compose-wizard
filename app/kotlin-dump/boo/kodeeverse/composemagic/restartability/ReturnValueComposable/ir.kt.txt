@@ -27,7 +27,7 @@ fun ReturnValueComposableDemo($composer: Composer?, $changed: Int) {
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 private fun ReturnValueComposable($composer: Composer?, $changed: Int): Int {
-  sourceInformationMarkerStart($composer, -60095794, "C(ReturnValueComposable)42@1602L33,44@1670L25,44@1639L88,49@1837L11,45@1730L215:ReturnValueComposable.kt#5mdrpd")
+  sourceInformationMarkerStart($composer, -60095794, "C(ReturnValueComposable)42@1602L33,45@1675L25,44@1639L126,52@1875L11,48@1768L215:ReturnValueComposable.kt#5mdrpd")
   if (isTraceInProgress()) {
     traceEventStart(-60095794, $changed, -1, "boo.kodeeverse.composemagic.restartability.ReturnValueComposable (ReturnValueComposable.kt:41)")
   }
@@ -47,9 +47,9 @@ private fun ReturnValueComposable($composer: Composer?, $changed: Int): Int {
       return count$delegate.setValue(null, ::count$delegate, <set-?>)
     }
   }
-  Text("ReturnValueComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+  Text("ReturnValueComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
   Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-    onClick = sourceInformationMarkerStart($composer, -1917474055, "CC(remember):ReturnValueComposable.kt#9igjgp")
+    onClick = sourceInformationMarkerStart($composer, -1917472839, "CC(remember):ReturnValueComposable.kt#9igjgp")
     val tmp2_group = $composer.cache(false) {
       {
         <get-count>()++

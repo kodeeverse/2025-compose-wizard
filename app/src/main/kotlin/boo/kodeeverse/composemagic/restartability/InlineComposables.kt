@@ -55,7 +55,10 @@ import java.lang.System.currentTimeMillis
 @Composable private inline fun InlineComposable() {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("InlineComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+  Text(
+    "InlineComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+    fontWeight = FontWeight.Bold,
+  )
   Text(
     "count: $count",
     modifier = Modifier
@@ -69,7 +72,10 @@ import java.lang.System.currentTimeMillis
 @Composable private fun NonInlineComposable() {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("NonInlineComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+  Text(
+    "NonInlineComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+    fontWeight = FontWeight.Bold,
+  )
   Text(
     "count: $count",
     modifier = Modifier

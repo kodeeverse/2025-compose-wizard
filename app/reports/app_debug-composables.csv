@@ -1,2 +1,4 @@
 package,name,composable,skippable,restartable,readonly,inline,isLambda,hasDefaults,defaultsGroup,groups,calls,
-boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>,<get-currentRecomposeScopeHash>,1,0,0,1,1,0,0,0,1,1,
+boo.kodeeverse.composemagic.restartability.FunctionalComposable.Content,Content,1,0,0,0,0,0,0,0,0,0,
+boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo.<anonymous>.<no name provided>.Content,Content,1,1,1,0,0,0,0,0,1,3,
+boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo,FunctionalComposableDemo,1,1,1,0,0,0,0,0,1,1,

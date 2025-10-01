@@ -46,7 +46,10 @@ import kotlin.reflect.KProperty
 @Composable private operator fun DelegatingComposable.getValue(thisRef: Any?, property: KProperty<*>) {
   var count by remember { mutableIntStateOf(0) }
 
-  Text("DelegatingComposable @ $currentRecomposeScopeHash", fontWeight = FontWeight.Bold)
+  Text(
+    "DelegatingComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+    fontWeight = FontWeight.Bold,
+  )
   Text(
     "count: $count",
     modifier = Modifier

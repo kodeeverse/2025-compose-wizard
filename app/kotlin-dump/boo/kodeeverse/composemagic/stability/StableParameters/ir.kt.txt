@@ -1,11 +1,16 @@
+@Stable
+private interface StableInterface 
+private class UnstableClass : StableInterface {
+  var a: Any = Any()
+}
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableParameterDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(900846037)
-  sourceInformation($composer, "C(StableParameterDemo)30@1238L33,32@1275L558:StableParameters.kt#b558il")
+  sourceInformation($composer, "C(StableParameterDemo)40@1560L33,42@1597L558:StableParameters.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(900846037, $changed, -1, "boo.kodeeverse.composemagic.stability.StableParameterDemo (StableParameters.kt:29)")
+      traceEventStart(900846037, $changed, -1, "boo.kodeeverse.composemagic.stability.StableParameterDemo (StableParameters.kt:39)")
     }
     var count by {
       val count$delegate = <block>{
@@ -24,7 +29,7 @@ fun StableParameterDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -942516858, "C37@1461L25,37@1447L66,42@1633L11,38@1518L229,46@1752L53,48@1811L18:StableParameters.kt#b558il")
+      sourceInformationMarkerStart($composer, -942516858, "C47@1783L25,47@1769L66,52@1955L11,48@1840L229,56@2074L53,58@2133L18:StableParameters.kt#b558il")
       Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
         onClick = sourceInformationMarkerStart($composer, -1415871510, "CC(remember):StableParameters.kt#9igjgp")
@@ -52,19 +57,18 @@ fun StableParameterDemo($composer: Composer?, $changed: Int) {
     StableParameterDemo($composer, updateChangedFlags($changed or 0b0001))
   }
 }
-val list: MutableList<Int> = mutableListOf(0)
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
-fun UnstableParameterDemo($composer: Composer?, $changed: Int) {
-  $composer = $composer.startRestartGroup(-48204434)
-  sourceInformation($composer, "C(UnstableParameterDemo)56@1995L33,58@2032L673:StableParameters.kt#b558il")
+fun SameInstanceAndMutableUnstableParameterDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-77837224)
+  sourceInformation($composer, "C(SameInstanceAndMutableUnstableParameterDemo)64@2302L33,65@2349L29,67@2382L794:StableParameters.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-48204434, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableParameterDemo (StableParameters.kt:55)")
+      traceEventStart(-77837224, $changed, -1, "boo.kodeeverse.composemagic.stability.SameInstanceAndMutableUnstableParameterDemo (StableParameters.kt:63)")
     }
     var count by {
       val count$delegate = <block>{
-        sourceInformationMarkerStart($composer, 920180655, "CC(remember):StableParameters.kt#9igjgp")
+        sourceInformationMarkerStart($composer, -1787126055, "CC(remember):StableParameters.kt#9igjgp")
         val tmp0_group = $composer.cache(false) {
           mutableIntStateOf(0)
         }
@@ -78,14 +82,23 @@ fun UnstableParameterDemo($composer: Composer?, $changed: Int) {
         return count$delegate.setValue(null, ::count$delegate, <set-?>)
       }
     }
+    val list = <block>{
+      sourceInformationMarkerStart($composer, -1787124555, "CC(remember):StableParameters.kt#9igjgp")
+      val tmp1_group = $composer.cache(false) {
+        mutableListOf(0)
+      }
+      sourceInformationMarkerEnd($composer)
+      tmp1_group
+    }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -24197190, "C64@2225L25,63@2204L134,71@2458L53,67@2343L271,78@2619L53,80@2678L23:StableParameters.kt#b558il")
-      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${list.joinToString()})", Companion.padding(
+      sourceInformationMarkerStart($composer, -871611721, "C73@2598L25,72@2554L255,84@2929L53,80@2814L271,91@3090L53,93@3149L23:StableParameters.kt#b558il")
+      Text("ROOT sameInstanceAndMutable @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+(${list.joinToString()})", Companion.padding(
         horizontal = 30.dp
-      ), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b00110000, 0, 0b00111111111111111100)
+      ).fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b00110000, 0, 0b00111111101111111100)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-        onClick = sourceInformationMarkerStart($composer, -416414867, "CC(remember):StableParameters.kt#9igjgp")
-        val tmp0_group = $composer.cache(false) {
+        onClick = sourceInformationMarkerStart($composer, -859389065, "CC(remember):StableParameters.kt#9igjgp")
+        val tmp0_group = $composer.cache($composer.changedInstance(list)) {
           {
             <get-count>()++
             list += <get-count>()
@@ -107,17 +120,154 @@ fun UnstableParameterDemo($composer: Composer?, $changed: Int) {
     $composer.skipToGroupEnd()
   }
   $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
-    UnstableParameterDemo($composer, updateChangedFlags($changed or 0b0001))
+    SameInstanceAndMutableUnstableParameterDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun NewInstanceAndPersistentUnstableParameterDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-132900537)
+  sourceInformation($composer, "C(NewInstanceAndPersistentUnstableParameterDemo)98@3261L33,99@3310L86,101@3400L856:StableParameters.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-132900537, $changed, -1, "boo.kodeeverse.composemagic.stability.NewInstanceAndPersistentUnstableParameterDemo (StableParameters.kt:97)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 1131605064, "CC(remember):StableParameters.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    var value by {
+      val value$delegate = <block>{
+        sourceInformationMarkerStart($composer, 1131606685, "CC(remember):StableParameters.kt#9igjgp")
+        val tmp1_group = $composer.cache(false) {
+          mutableStateOf(UnstableAndAlwaysSameClass(), neverEqualPolicy())
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp1_group
+      }
+      get() {
+        return value$delegate.getValue(null, ::value$delegate)
+      }
+      set(<set-?>: UnstableAndAlwaysSameClass) {
+        return value$delegate.setValue(null, ::value$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 518159722, "C107@3618L25,106@3572L293,119@3985L76,115@3870L294,126@4169L53,128@4228L24:StableParameters.kt#b558il")
+      Text("${"ROOT newInstanceAndPersistent @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+      "}${"(${currentTimeMillis()})
+(${<get-value>().hashCode()})"}", Companion.padding(
+        horizontal = 30.dp
+      ).fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b00110000, 0, 0b00111111101111111100)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -676009219, "CC(remember):StableParameters.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+            <set-value>(UnstableAndAlwaysSameClass())
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      UnstableParameter(<get-value>(), $composer, UnstableAndAlwaysSameClass.$stable)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    NewInstanceAndPersistentUnstableParameterDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun StableParameterButUnstableArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1212788003)
+  sourceInformation($composer, "C(StableParameterButUnstableArgumentDemo)133@4334L33,134@4390L28,136@4422L589:StableParameters.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1212788003, $changed, -1, "boo.kodeeverse.composemagic.stability.StableParameterButUnstableArgumentDemo (StableParameters.kt:132)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 1553135684, "CC(remember):StableParameters.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    val unstableClass = <block>{
+      sourceInformationMarkerStart($composer, 1553137471, "CC(remember):StableParameters.kt#9igjgp")
+      val tmp1_group = $composer.cache(false) {
+        UnstableClass()
+      }
+      sourceInformationMarkerEnd($composer)
+      tmp1_group
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1231918989, "C141@4608L25,141@4594L66,146@4780L11,142@4665L229,150@4899L53,152@4958L49:StableParameters.kt#b558il")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -98802460, "CC(remember):StableParameters.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StableParameterButUnstableArgument(unstableClass, $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StableParameterButUnstableArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
   }
 }
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun UnstableParameterButStableArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(303036579)
-  sourceInformation($composer, "C(UnstableParameterButStableArgumentDemo)85@2783L33,87@2820L577:StableParameters.kt#b558il")
+  sourceInformation($composer, "C(UnstableParameterButStableArgumentDemo)157@5089L33,159@5126L589:StableParameters.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(303036579, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo (StableParameters.kt:84)")
+      traceEventStart(303036579, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo (StableParameters.kt:156)")
     }
     var count by {
       val count$delegate = <block>{
@@ -136,7 +286,7 @@ fun UnstableParameterButStableArgumentDemo($composer: Composer?, $changed: Int) 
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 70883993, "C92@3006L25,92@2992L66,97@3178L11,93@3063L229,101@3297L53,103@3356L37:StableParameters.kt#b558il")
+      sourceInformationMarkerStart($composer, 70884365, "C164@5312L25,164@5298L66,169@5484L11,165@5369L229,173@5603L53,175@5662L49:StableParameters.kt#b558il")
       Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
         onClick = sourceInformationMarkerStart($composer, 1803407460, "CC(remember):StableParameters.kt#9igjgp")
@@ -151,7 +301,7 @@ fun UnstableParameterButStableArgumentDemo($composer: Composer?, $changed: Int) 
         color = Companion.Green
       ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
       HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
-      UnstableParameterButStableArgument(1, $composer, 0b0110)
+      UnstableParameterButStableArgument(StableClass(), $composer, 0)
       sourceInformationMarkerEnd($composer)
     }, $composer, 0b000110110110, 0)
     if (isTraceInProgress()) {
@@ -168,14 +318,14 @@ fun UnstableParameterButStableArgumentDemo($composer: Composer?, $changed: Int) 
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 private fun StableParameter(value: Int, $composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(1391279223)
-  sourceInformation($composer, "C(StableParameter)N(value)111@3502L25,110@3472L120:StableParameters.kt#b558il")
+  sourceInformation($composer, "C(StableParameter)N(value)183@5820L25,182@5790L120:StableParameters.kt#b558il")
   val $dirty = $changed
   if ($changed and 0b0110 == 0) {
     $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
   }
   if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(1391279223, $dirty, -1, "boo.kodeeverse.composemagic.stability.StableParameter (StableParameters.kt:107)")
+      traceEventStart(1391279223, $dirty, -1, "boo.kodeeverse.composemagic.stability.StableParameter (StableParameters.kt:179)")
     }
     used(value)
     Text("StableParameter @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
@@ -190,19 +340,33 @@ private fun StableParameter(value: Int, $composer: Composer?, $changed: Int) {
   }
 }
 @Composable
-@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
-private fun UnstableParameter(value: List<*>, $composer: Composer?, $changed: Int) {
-  $composer = $composer.startRestartGroup(618331855)
-  sourceInformation($composer, "C(UnstableParameter)N(value)120@3734L25,119@3702L123:StableParameters.kt#b558il")
+private fun UnstableParameter(value: Any, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(730427067)
+  sourceInformation($composer, "C(UnstableParameter)N(value)190@6004L25,189@5972L349:StableParameters.kt#b558il")
   val $dirty = $changed
   if ($changed and 0b0110 == 0) {
     $dirty = $dirty or if ($composer.changedInstance(value)) 0b0100 else 0b0010
   }
   if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(618331855, $dirty, -1, "boo.kodeeverse.composemagic.stability.UnstableParameter (StableParameters.kt:118)")
+      traceEventStart(730427067, $dirty, -1, "boo.kodeeverse.composemagic.stability.UnstableParameter (StableParameters.kt:188)")
     }
-    Text("UnstableParameter @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${value.joinToString()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+    Text("${"UnstableParameter @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+    "}${"(${currentTimeMillis()})
+    "}${"(${val tmp1_elvis_lhs = <block>{
+      value as List<*>??.joinToString()
+    }
+    when {
+      tmp1_elvis_lhs == null -> {
+        value.hashCode()
+      }
+      else -> {
+        tmp1_elvis_lhs
+      }
+    }
+    })"}", Companion.padding(
+      horizontal = 30.dp
+    ).fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000110000, 0, 0b00111111101110111100)
     if (isTraceInProgress()) {
       traceEventEnd()
     }
@@ -214,22 +378,46 @@ private fun UnstableParameter(value: List<*>, $composer: Composer?, $changed: In
   }
 }
 @Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun StableParameterButUnstableArgument(value: StableInterface, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1300277832)
+  sourceInformation($composer, "C(StableParameterButUnstableArgument)N(value)206@6476L25,205@6427L247:StableParameters.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-1300277832, $dirty, -1, "boo.kodeeverse.composemagic.stability.StableParameterButUnstableArgument (StableParameters.kt:202)")
+    }
+    used(value)
+    Text("StableParameterButUnstableArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+(${currentTimeMillis()})", Companion.fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000110000, 0, 0b00111111101110111100)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StableParameterButUnstableArgument(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
 private fun UnstableParameterButStableArgument(value: Any, $composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(464662758)
-  sourceInformation($composer, "C(UnstableParameterButStableArgument)N(value)129@3968L25,128@3919L161:StableParameters.kt#b558il")
+  sourceInformation($composer, "C(UnstableParameterButStableArgument)N(value)219@6817L25,218@6768L247:StableParameters.kt#b558il")
   val $dirty = $changed
   if ($changed and 0b0110 == 0) {
     $dirty = $dirty or if ($composer.changedInstance(value)) 0b0100 else 0b0010
   }
   if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(464662758, $dirty, -1, "boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgument (StableParameters.kt:125)")
+      traceEventStart(464662758, $dirty, -1, "boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgument (StableParameters.kt:215)")
     }
     used(value)
-    val tmp0_text = "UnstableParameterButStableArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})"
-    val tmp1_fontWeight = Companion.Bold
-    val tmp2_fontSize = 12.sp
-    Text(tmp0_text, null, <unsafe-coerce>(0L), null, tmp2_fontSize, null, tmp1_fontWeight, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000110000000000000, 0, 0b00111111111110101110)
+    Text("UnstableParameterButStableArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+(${currentTimeMillis()})", Companion.fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000110000, 0, 0b00111111101110111100)
     if (isTraceInProgress()) {
       traceEventEnd()
     }

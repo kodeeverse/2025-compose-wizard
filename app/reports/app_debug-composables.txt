@@ -1,1 +1,7 @@
-readonly inline fun boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>()
+abstract fun boo.kodeeverse.composemagic.restartability.FunctionalComposable.Content(
+  <this>: FunctionalComposable
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo.<anonymous>.<no name provided>.Content(
+  stable <this>: <no name provided>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo()
