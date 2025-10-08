@@ -54,6 +54,19 @@ private interface VirtualComposable {
   }
 }
 
+@Composable fun OpenButFinalComposableDemo() {
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    remember { OpenButFinalComposable() }.Content()
+  }
+}
+
 private class FinalComposable : VirtualComposable {
   @Composable override fun Content() {
     var count by remember { mutableIntStateOf(0) }
@@ -79,6 +92,25 @@ private open class OpenComposable : VirtualComposable {
 
     Text(
       "OpenComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      fontWeight = FontWeight.Bold,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+  }
+}
+
+private class OpenButFinalComposable : OpenComposable() {
+  @Composable override fun Content() {
+    var count by remember { mutableIntStateOf(0) }
+
+    Text(
+      "OpenButFinalComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
       fontWeight = FontWeight.Bold,
     )
     Text(

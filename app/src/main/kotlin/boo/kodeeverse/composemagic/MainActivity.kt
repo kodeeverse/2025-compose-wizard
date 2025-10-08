@@ -44,6 +44,7 @@ import boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo
 import boo.kodeeverse.composemagic.restartability.InlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
+import boo.kodeeverse.composemagic.restartability.OpenButFinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
 import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
@@ -103,6 +104,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   LocalComposable(category = "restartability", content = { LocalComposableDemo() }),
   ReturnValueComposable(category = "restartability", content = { ReturnValueComposableDemo() }),
   OpenComposable(category = "restartability", content = { OpenComposableDemo() }),
+  OpenButFinalComposable(category = "restartability", content = { OpenButFinalComposableDemo() }),
   FinalComposable(category = "restartability", content = { FinalComposableDemo() });
 
   companion object {

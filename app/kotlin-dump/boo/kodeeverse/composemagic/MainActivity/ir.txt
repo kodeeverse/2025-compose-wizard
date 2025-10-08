@@ -210,6 +210,12 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
           ARG category: CONST String type=kotlin.String value="restartability"
           ARG content: CALL 'internal final fun <get-lambda$-2063764606> (): kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=null
             ARG <this>: GET_OBJECT 'CLASS OBJECT name:ComposableSingletons$MainActivityKt modality:FINAL visibility:internal superTypes:[]' type=boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt
+    ENUM_ENTRY name:OpenButFinalComposable
+      init: EXPRESSION_BODY
+        ENUM_CONSTRUCTOR_CALL 'private constructor <init> (category: kotlin.String, content: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>) [primary] declared in boo.kodeeverse.composemagic.Demo'
+          ARG category: CONST String type=kotlin.String value="restartability"
+          ARG content: CALL 'internal final fun <get-lambda$1874738647> (): kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=null
+            ARG <this>: GET_OBJECT 'CLASS OBJECT name:ComposableSingletons$MainActivityKt modality:FINAL visibility:internal superTypes:[]' type=boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt
     ENUM_ENTRY name:FinalComposable
       init: EXPRESSION_BODY
         ENUM_CONSTRUCTOR_CALL 'private constructor <init> (category: kotlin.String, content: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>) [primary] declared in boo.kodeeverse.composemagic.Demo'
@@ -3623,7 +3629,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
         CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>' type=androidx.compose.runtime.Composer? origin=null
           ARG key: CONST Int type=kotlin.Int value=-1869539610
-          ARG sourceInformation: CONST String type=kotlin.String value="CC(<get-currentRecomposeScopeHash>)186@9679L21:MainActivity.kt#igbs6g"
+          ARG sourceInformation: CONST String type=kotlin.String value="CC(<get-currentRecomposeScopeHash>)188@9855L21:MainActivity.kt#igbs6g"
         VAR IR_TEMPORARY_VARIABLE name:tmp0 type:kotlin.String [val]
           CALL 'public final fun substringAfterLast (<this>: kotlin.String, delimiter: kotlin.Char, missingDelimiterValue: kotlin.String): kotlin.String declared in kotlin.text' type=kotlin.String origin=null
             ARG <this>: CALL 'public open fun toString (): kotlin.String [fake_override] declared in androidx.compose.runtime.RecomposeScope' type=kotlin.String origin=null
@@ -3658,7 +3664,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C70@4020L28:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C71@4097L28:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -3680,7 +3686,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=184549496
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous> (MainActivity.kt:70)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous> (MainActivity.kt:71)"
                         CALL 'public final fun InlineLambdaComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.composableLambda' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -3715,7 +3721,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C71@4123L30:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C72@4200L30:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -3737,7 +3743,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=230219865
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous> (MainActivity.kt:71)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous> (MainActivity.kt:72)"
                         CALL 'public final fun NoInlineLambdaComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.composableLambda' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -3772,7 +3778,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C72@4229L31:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C73@4306L31:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -3794,7 +3800,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1101020661
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous> (MainActivity.kt:72)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous> (MainActivity.kt:73)"
                         CALL 'public final fun NonInlineLambdaComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.composableLambda' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -3829,7 +3835,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$542127054.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C74@4355L37:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C75@4432L37:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -3851,7 +3857,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=542127054
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$542127054.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$542127054.<anonymous> (MainActivity.kt:74)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$542127054.<anonymous> (MainActivity.kt:75)"
                         CALL 'public final fun GivenUnstableAndAlwaysSameClassDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$542127054.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -3886,7 +3892,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-560342987.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C75@4484L35:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C76@4561L35:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -3908,7 +3914,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-560342987
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-560342987.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-560342987.<anonymous> (MainActivity.kt:75)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-560342987.<anonymous> (MainActivity.kt:76)"
                         CALL 'public final fun GivenStableAndAlwaysSameClassDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-560342987.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -3943,7 +3949,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$928632508.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C76@4609L33:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C77@4686L33:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -3965,7 +3971,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=928632508
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$928632508.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$928632508.<anonymous> (MainActivity.kt:76)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$928632508.<anonymous> (MainActivity.kt:77)"
                         CALL 'public final fun GivenStableClassViaArgumentDemo (value: boo.kodeeverse.composemagic.stability.StableClass?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG value: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
@@ -4003,7 +4009,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$975496162.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C77@4728L29:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C78@4805L29:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4025,7 +4031,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=975496162
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$975496162.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$975496162.<anonymous> (MainActivity.kt:77)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$975496162.<anonymous> (MainActivity.kt:78)"
                         CALL 'public final fun GivenStableClassViaPropDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$975496162.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4060,7 +4066,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1082205059.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C78@4850L36:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C79@4927L36:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4082,7 +4088,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1082205059
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1082205059.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1082205059.<anonymous> (MainActivity.kt:78)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1082205059.<anonymous> (MainActivity.kt:79)"
                         CALL 'public final fun GivenImmutableClassViaArgumentDemo (value: boo.kodeeverse.composemagic.stability.ImmutableClass?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG value: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
@@ -4120,7 +4126,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-817122263.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C79@4975L32:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C80@5052L32:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4142,7 +4148,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-817122263
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-817122263.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-817122263.<anonymous> (MainActivity.kt:79)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-817122263.<anonymous> (MainActivity.kt:80)"
                         CALL 'public final fun GivenImmutableClassViaPropDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-817122263.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4177,7 +4183,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C81@5092L24:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C82@5169L24:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4199,7 +4205,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1686582239
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous> (MainActivity.kt:81)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous> (MainActivity.kt:82)"
                         CALL 'public final fun StableCallArgumentDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4234,7 +4240,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C82@5202L26:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C83@5279L26:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4256,7 +4262,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-280771782
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous> (MainActivity.kt:82)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous> (MainActivity.kt:83)"
                         CALL 'public final fun UnstableCallArgumentDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4291,7 +4297,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C84@5313L19:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C85@5390L19:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4313,7 +4319,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=268587770
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous> (MainActivity.kt:84)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous> (MainActivity.kt:85)"
                         CALL 'public final fun EmptyListCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4348,7 +4354,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C85@5413L16:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C86@5490L16:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4370,7 +4376,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1234237982
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous> (MainActivity.kt:85)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous> (MainActivity.kt:86)"
                         CALL 'public final fun ListOfCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4405,7 +4411,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C86@5512L18:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C87@5589L18:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4427,7 +4433,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=302071704
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous> (MainActivity.kt:86)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous> (MainActivity.kt:87)"
                         CALL 'public final fun EmptyMapCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4462,7 +4468,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C87@5610L15:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C88@5687L15:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4484,7 +4490,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=622331202
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous> (MainActivity.kt:87)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous> (MainActivity.kt:88)"
                         CALL 'public final fun MapOfCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4519,7 +4525,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C88@5708L18:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C89@5785L18:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4541,7 +4547,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=231682974
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous> (MainActivity.kt:88)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous> (MainActivity.kt:89)"
                         CALL 'public final fun EmptySetCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4576,7 +4582,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C89@5806L15:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C90@5883L15:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4598,7 +4604,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1698238408
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous> (MainActivity.kt:89)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous> (MainActivity.kt:90)"
                         CALL 'public final fun SetOfCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4633,7 +4639,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C90@5902L16:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C91@5979L16:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4655,7 +4661,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1649201318
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous> (MainActivity.kt:90)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous> (MainActivity.kt:91)"
                         CALL 'public final fun PairOfCallDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4690,7 +4696,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1139522655.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C92@5997L21:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C93@6074L21:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4712,7 +4718,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1139522655
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1139522655.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1139522655.<anonymous> (MainActivity.kt:92)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1139522655.<anonymous> (MainActivity.kt:93)"
                         CALL 'public final fun StableParameterDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1139522655.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4747,7 +4753,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1198111236.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C93@6120L45:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C94@6197L45:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4769,7 +4775,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1198111236
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1198111236.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1198111236.<anonymous> (MainActivity.kt:93)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1198111236.<anonymous> (MainActivity.kt:94)"
                         CALL 'public final fun SameInstanceAndMutableUnstableParameterDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1198111236.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4804,7 +4810,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$477393005.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C94@6269L47:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C95@6346L47:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4826,7 +4832,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=477393005
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$477393005.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$477393005.<anonymous> (MainActivity.kt:94)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$477393005.<anonymous> (MainActivity.kt:95)"
                         CALL 'public final fun NewInstanceAndPersistentUnstableParameterDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$477393005.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4861,7 +4867,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1808038159.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C95@6413L40:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C96@6490L40:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4883,7 +4889,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1808038159
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1808038159.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1808038159.<anonymous> (MainActivity.kt:95)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1808038159.<anonymous> (MainActivity.kt:96)"
                         CALL 'public final fun StableParameterButUnstableArgumentDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1808038159.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4918,7 +4924,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1809220209.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C96@6550L40:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C97@6627L40:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4940,7 +4946,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1809220209
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1809220209.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1809220209.<anonymous> (MainActivity.kt:96)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1809220209.<anonymous> (MainActivity.kt:97)"
                         CALL 'public final fun UnstableParameterButStableArgumentDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.stability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1809220209.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -4975,7 +4981,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1857000058.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C98@6660L26:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C99@6737L26:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -4997,7 +5003,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1857000058
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1857000058.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1857000058.<anonymous> (MainActivity.kt:98)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1857000058.<anonymous> (MainActivity.kt:99)"
                         CALL 'public final fun DelegatingComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1857000058.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5032,7 +5038,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1078281669.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C99@6755L26:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C100@6832L26:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5054,7 +5060,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1078281669
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1078281669.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1078281669.<anonymous> (MainActivity.kt:99)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1078281669.<anonymous> (MainActivity.kt:100)"
                         CALL 'public final fun FunctionalComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1078281669.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5089,7 +5095,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C100@6846L22:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C101@6923L22:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5111,7 +5117,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1546175953
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous> (MainActivity.kt:100)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous> (MainActivity.kt:101)"
                         CALL 'public final fun InlineComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5146,7 +5152,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C101@6936L25:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C102@7013L25:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5168,7 +5174,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=2089939364
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous> (MainActivity.kt:101)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous> (MainActivity.kt:102)"
                         CALL 'public final fun NonInlineComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5203,7 +5209,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C102@7025L21:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C103@7102L21:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5225,7 +5231,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=341138569
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous> (MainActivity.kt:102)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous> (MainActivity.kt:103)"
                         CALL 'public final fun LocalComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5260,7 +5266,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C103@7116L27:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C104@7193L27:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5282,7 +5288,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1615663745
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous> (MainActivity.kt:103)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous> (MainActivity.kt:104)"
                         CALL 'public final fun ReturnValueComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5317,7 +5323,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-2063764606.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C104@7206L20:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C105@7283L20:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5339,7 +5345,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-2063764606
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-2063764606.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-2063764606.<anonymous> (MainActivity.kt:104)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-2063764606.<anonymous> (MainActivity.kt:105)"
                         CALL 'public final fun OpenComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-2063764606.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5358,6 +5364,63 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
           RETURN type=kotlin.Nothing from='internal final fun <get-lambda$-2063764606> (): kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt'
             GET_FIELD 'FIELD name:lambda$-2063764606 type:kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> visibility:private [static] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=null
               receiver: GET_VAR '<this>: boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.<get-lambda$-2063764606>' type=boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt origin=null
+    PROPERTY name:lambda$1874738647 visibility:internal modality:FINAL [val]
+      FIELD name:lambda$1874738647 type:kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> visibility:private [static]
+        EXPRESSION_BODY
+          CALL 'public final fun composableLambdaInstance (key: kotlin.Int, tracked: kotlin.Boolean, block: kotlin.Any): androidx.compose.runtime.internal.ComposableLambda declared in androidx.compose.runtime.internal' type=androidx.compose.runtime.internal.ComposableLambda origin=null
+            ARG key: CONST Int type=kotlin.Int value=1874738647
+            ARG tracked: CONST Boolean type=kotlin.Boolean value=false
+            ARG block: FUN_EXPR type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL returnType:kotlin.Unit
+                VALUE_PARAMETER kind:Regular name:$composer index:0 type:androidx.compose.runtime.Composer? [assignable]
+                VALUE_PARAMETER kind:Regular name:$changed index:1 type:kotlin.Int
+                annotations:
+                  Composable
+                  ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+                BLOCK_BODY
+                  CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
+                    ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
+                    ARG sourceInformation: CONST String type=kotlin.String value="C106@7374L28:MainActivity.kt#igbs6g"
+                  WHEN type=kotlin.Unit origin=IF
+                    BRANCH
+                      if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                        ARG <this>: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
+                        ARG parametersChanged: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                          ARG <this>: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                            ARG arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                              ARG <this>: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=kotlin.Int origin=null
+                              ARG other: CONST Int type=kotlin.Int value=3
+                            ARG arg1: CONST Int type=kotlin.Int value=2
+                        ARG flags: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                          ARG <this>: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=kotlin.Int origin=null
+                          ARG other: CONST Int type=kotlin.Int value=1
+                      then: BLOCK type=kotlin.Unit origin=null
+                        WHEN type=kotlin.Unit origin=IF
+                          BRANCH
+                            if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
+                            then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
+                              ARG key: CONST Int type=kotlin.Int value=1874738647
+                              ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=kotlin.Int origin=null
+                              ARG dirty2: CONST Int type=kotlin.Int value=-1
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous> (MainActivity.kt:106)"
+                        CALL 'public final fun OpenButFinalComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
+                          ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
+                          ARG $changed: CONST Int type=kotlin.Int value=0
+                        WHEN type=kotlin.Unit origin=IF
+                          BRANCH
+                            if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
+                            then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
+                    BRANCH
+                      if: CONST Boolean type=kotlin.Boolean value=true
+                      then: CALL 'public abstract fun skipToGroupEnd (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                        ARG <this>: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1874738647.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-lambda$1874738647> visibility:internal modality:FINAL returnType:kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>
+        VALUE_PARAMETER INSTANCE_RECEIVER kind:DispatchReceiver name:<this> index:0 type:boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt
+        correspondingProperty: PROPERTY name:lambda$1874738647 visibility:internal modality:FINAL [val]
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='internal final fun <get-lambda$1874738647> (): kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt'
+            GET_FIELD 'FIELD name:lambda$1874738647 type:kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> visibility:private [static] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=null
+              receiver: GET_VAR '<this>: boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.<get-lambda$1874738647>' type=boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt origin=null
     PROPERTY name:lambda$1547146452 visibility:internal modality:FINAL [val]
       FIELD name:lambda$1547146452 type:kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> visibility:private [static]
         EXPRESSION_BODY
@@ -5374,7 +5437,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1547146452.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C105@7290L21:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C107@7466L21:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5396,7 +5459,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=1547146452
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1547146452.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1547146452.<anonymous> (MainActivity.kt:105)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1547146452.<anonymous> (MainActivity.kt:107)"
                         CALL 'public final fun FinalComposableDemo ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability' type=kotlin.Unit origin=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1547146452.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                           ARG $changed: CONST Int type=kotlin.Int value=0
@@ -5432,7 +5495,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-391809502.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C157@8927L30:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C159@9103L30:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5454,7 +5517,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-1586740999
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-391809502.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-391809502.<anonymous> (MainActivity.kt:157)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-391809502.<anonymous> (MainActivity.kt:159)"
                         CALL 'public final fun Spacer (modifier: androidx.compose.ui.Modifier, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in androidx.compose.foundation.layout' type=kotlin.Unit origin=null
                           ARG modifier: CALL 'public final fun height (<this>: androidx.compose.ui.Modifier, height: androidx.compose.ui.unit.Dp): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
                             ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[androidx.compose.ui.Modifier]' type=androidx.compose.ui.Modifier.Companion
@@ -5493,7 +5556,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                 BLOCK_BODY
                   CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                     ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                    ARG sourceInformation: CONST String type=kotlin.String value="C118@7615L40,119@7680L23,121@7737L29,121@7711L55,125@7818L1758,125@7774L1802:MainActivity.kt#igbs6g"
+                    ARG sourceInformation: CONST String type=kotlin.String value="C120@7791L40,121@7856L23,123@7913L29,123@7887L55,127@7994L1758,127@7950L1802:MainActivity.kt#igbs6g"
                   WHEN type=kotlin.Unit origin=IF
                     BRANCH
                       if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5515,7 +5578,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                               ARG key: CONST Int type=kotlin.Int value=-708884880
                               ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>' type=kotlin.Int origin=null
                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous> (MainActivity.kt:118)"
+                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous> (MainActivity.kt:120)"
                         LOCAL_DELEGATED_PROPERTY name:demo type:boo.kodeeverse.composemagic.Demo? flags:var
                           VAR PROPERTY_DELEGATE name:demo$delegate type:androidx.compose.runtime.MutableState<boo.kodeeverse.composemagic.Demo?> [val]
                             BLOCK type=androidx.compose.runtime.MutableState<boo.kodeeverse.composemagic.Demo?> origin=null
@@ -5680,7 +5743,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                               ARG key: CONST Int type=kotlin.Int value=-1894280319
                                               ARG dirty1: GET_VAR 'val $dirty: kotlin.Int [val] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>' type=kotlin.Int origin=null
                                               ARG dirty2: CONST Int type=kotlin.Int value=-1
-                                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous> (MainActivity.kt:126)"
+                                              ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous> (MainActivity.kt:128)"
                                         WHEN type=kotlin.Unit origin=WHEN
                                           BRANCH
                                             if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQ
@@ -5693,7 +5756,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                   ARG key: CONST Int type=kotlin.Int value=-929587315
                                                 CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                                   ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                                                  ARG sourceInformation: CONST String type=kotlin.String value="135@8203L802,128@7891L1114"
+                                                  ARG sourceInformation: CONST String type=kotlin.String value="137@8379L802,130@8067L1114"
                                               BLOCK type=kotlin.Unit origin=null
                                                 CALL 'public final fun LazyColumn (modifier: androidx.compose.ui.Modifier?, state: androidx.compose.foundation.lazy.LazyListState?, contentPadding: androidx.compose.foundation.layout.PaddingValues?, reverseLayout: kotlin.Boolean, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, flingBehavior: androidx.compose.foundation.gestures.FlingBehavior?, userScrollEnabled: kotlin.Boolean, overscrollEffect: androidx.compose.foundation.OverscrollEffect?, content: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.lazy.LazyListScope, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.foundation.lazy' type=kotlin.Unit origin=null
                                                   ARG modifier: CALL 'public final fun padding (<this>: androidx.compose.ui.Modifier, paddingValues: androidx.compose.foundation.layout.PaddingValues): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
@@ -5777,7 +5840,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                                                       BLOCK_BODY
                                                                                         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                                                                           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                                                                                          ARG sourceInformation: CONST String type=kotlin.String value="CN(it)138@8309L386:MainActivity.kt#igbs6g"
+                                                                                          ARG sourceInformation: CONST String type=kotlin.String value="CN(it)140@8485L386:MainActivity.kt#igbs6g"
                                                                                         WHEN type=kotlin.Unit origin=IF
                                                                                           BRANCH
                                                                                             if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5799,7 +5862,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                                                                     ARG key: CONST Int type=kotlin.Int value=-2125069960
                                                                                                     ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=kotlin.Int origin=null
                                                                                                     ARG dirty2: CONST Int type=kotlin.Int value=-1
-                                                                                                    ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:138)"
+                                                                                                    ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:140)"
                                                                                               CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                                                                                                 ARG text: GET_VAR 'val category: kotlin.String [val] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=kotlin.String origin=null
                                                                                                 ARG modifier: BLOCK type=androidx.compose.ui.Modifier origin=ARGUMENTS_REORDERING_FOR_CALL
@@ -5893,7 +5956,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                                                             ARG key: CONST Int type=kotlin.Int value=427961150
                                                                                           CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                                                                             ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                                                                                            ARG sourceInformation: CONST String type=kotlin.String value="CN(entry)*151@8790L16,151@8808L58,151@8773L93:MainActivity.kt#igbs6g"
+                                                                                            ARG sourceInformation: CONST String type=kotlin.String value="CN(entry)*153@8966L16,153@8984L58,153@8949L93:MainActivity.kt#igbs6g"
                                                                                         COMPOSITE type=kotlin.Unit origin=null
                                                                                           CALL 'public final fun Button (onClick: kotlin.Function0<kotlin.Unit>, modifier: androidx.compose.ui.Modifier?, enabled: kotlin.Boolean, shape: androidx.compose.ui.graphics.Shape?, colors: androidx.compose.material3.ButtonColors?, elevation: androidx.compose.material3.ButtonElevation?, border: androidx.compose.foundation.BorderStroke?, contentPadding: androidx.compose.foundation.layout.PaddingValues?, interactionSource: androidx.compose.foundation.interaction.MutableInteractionSource?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.RowScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                                                                                             ARG onClick: BLOCK type=kotlin.Function0<kotlin.Unit> origin=null
@@ -5973,7 +6036,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                                                                   BLOCK_BODY
                                                                                                     CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                                                                                       ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                                                                                                      ARG sourceInformation: CONST String type=kotlin.String value="C152@8830L16:MainActivity.kt#igbs6g"
+                                                                                                      ARG sourceInformation: CONST String type=kotlin.String value="C154@9006L16:MainActivity.kt#igbs6g"
                                                                                                     WHEN type=kotlin.Unit origin=IF
                                                                                                       BRANCH
                                                                                                         if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -5995,7 +6058,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                                                                                 ARG key: CONST Int type=kotlin.Int value=2132182515
                                                                                                                 ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=kotlin.Int origin=null
                                                                                                                 ARG dirty2: CONST Int type=kotlin.Int value=-1
-                                                                                                                ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:152)"
+                                                                                                                ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:154)"
                                                                                                           CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                                                                                                             ARG text: CALL 'public final fun <get-name> (): kotlin.String [fake_override] declared in boo.kodeeverse.composemagic.Demo' type=kotlin.String origin=GET_PROPERTY
                                                                                                               ARG <this>: GET_VAR 'entry: boo.kodeeverse.composemagic.Demo declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' type=boo.kodeeverse.composemagic.Demo origin=null
@@ -6091,7 +6154,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                   ARG key: CONST Int type=kotlin.Int value=-928448096
                                                 CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                                   ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                                                  ARG sourceInformation: CONST String type=kotlin.String value="168@9218L266,164@9059L487"
+                                                  ARG sourceInformation: CONST String type=kotlin.String value="170@9394L266,166@9235L487"
                                               BLOCK type=kotlin.Unit origin=null
                                                 CALL 'public final fun Box (modifier: androidx.compose.ui.Modifier?, contentAlignment: androidx.compose.ui.Alignment?, propagateMinConstraints: kotlin.Boolean, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.BoxScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout' type=kotlin.Unit origin=null
                                                   ARG modifier: CALL 'public final fun padding (<this>: androidx.compose.ui.Modifier, paddingValues: androidx.compose.foundation.layout.PaddingValues): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
@@ -6161,7 +6224,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                                           CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                                             ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                                                             ARG key: CONST Int type=kotlin.Int value=-2071114805
-                                                            ARG sourceInformation: CONST String type=kotlin.String value="C175@9523L9:MainActivity.kt#igbs6g"
+                                                            ARG sourceInformation: CONST String type=kotlin.String value="C177@9699L9:MainActivity.kt#igbs6g"
                                                           COMPOSITE type=kotlin.Unit origin=null
                                                             CALL 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Unit origin=null
                                                               ARG <this>: CALL 'public final fun <get-content> (): kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> declared in boo.kodeeverse.composemagic.Demo' type=kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=GET_PROPERTY
@@ -6182,7 +6245,7 @@ FILE fqName:boo.kodeeverse.composemagic fileName:/Users/jisungbin/AndroidStudioP
                                             then: BLOCK type=kotlin.Unit origin=null
                                               CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
                                                 ARG <this>: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                                                ARG key: CONST Int type=kotlin.Int value=-937437631
+                                                ARG key: CONST Int type=kotlin.Int value=-937612223
                                               CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
                                                 ARG <this>: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                                               BLOCK type=kotlin.Unit origin=null

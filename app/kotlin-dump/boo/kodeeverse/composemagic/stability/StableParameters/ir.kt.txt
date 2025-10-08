@@ -185,7 +185,7 @@ fun NewInstanceAndPersistentUnstableParameterDemo($composer: Composer?, $changed
         color = Companion.Green
       ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
       HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
-      UnstableParameter(<get-value>(), $composer, UnstableAndAlwaysSameClass.$stable)
+      UnstableParameter(<get-value>(), $composer, 0)
       sourceInformationMarkerEnd($composer)
     }, $composer, 0b000110110110, 0)
     if (isTraceInProgress()) {

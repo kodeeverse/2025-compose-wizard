@@ -64,15 +64,46 @@ fun OpenComposableDemo($composer: Composer?, $changed: Int) {
     OpenComposableDemo($composer, updateChangedFlags($changed or 0b0001))
   }
 }
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun OpenButFinalComposableDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1482769493)
+  sourceInformation($composer, "C(OpenButFinalComposableDemo)57@2015L353:VirtualComposables.kt#5mdrpd")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-1482769493, $changed, -1, "boo.kodeeverse.composemagic.restartability.OpenButFinalComposableDemo (VirtualComposables.kt:56)")
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 2018989213, "C62@2201L25,62@2187L66,63@2258L53,65@2317L37,65@2355L9:VirtualComposables.kt#5mdrpd")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      sourceInformationMarkerStart($composer, 2004795354, "CC(remember):VirtualComposables.kt#9igjgp")
+      val tmp0_group = $composer.cache(false) {
+        OpenButFinalComposable()
+      }
+      sourceInformationMarkerEnd($composer)
+      tmp0_group.Content($composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    OpenButFinalComposableDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
 private class FinalComposable : VirtualComposable {
   @Composable
   @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
   override fun Content($composer: Composer?, $changed: Int) {
     $composer = $composer.startRestartGroup(116226904)
-    sourceInformation($composer, "C(Content)58@2074L33,61@2145L25,60@2113L126,68@2359L11,64@2244L229:VirtualComposables.kt#5mdrpd")
+    sourceInformation($composer, "C(Content)71@2480L33,74@2551L25,73@2519L126,81@2765L11,77@2650L229:VirtualComposables.kt#5mdrpd")
     if ($composer.shouldExecute($changed and 0b0001 != 0, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(116226904, $changed, -1, "boo.kodeeverse.composemagic.restartability.FinalComposable.Content (VirtualComposables.kt:57)")
+        traceEventStart(116226904, $changed, -1, "boo.kodeeverse.composemagic.restartability.FinalComposable.Content (VirtualComposables.kt:70)")
       }
       var count by {
         val count$delegate = <block>{
@@ -120,9 +151,9 @@ private open class OpenComposable : VirtualComposable {
   @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
   override fun Content($composer: Composer?, $changed: Int) {
     $composer.startReplaceGroup(2145971540)
-    sourceInformation($composer, "C(Content)77@2593L33,80@2663L25,79@2632L125,87@2877L11,83@2762L229:VirtualComposables.kt#5mdrpd")
+    sourceInformation($composer, "C(Content)90@2999L33,93@3069L25,92@3038L125,100@3283L11,96@3168L229:VirtualComposables.kt#5mdrpd")
     if (isTraceInProgress()) {
-      traceEventStart(2145971540, $changed, -1, "boo.kodeeverse.composemagic.restartability.OpenComposable.Content (VirtualComposables.kt:76)")
+      traceEventStart(2145971540, $changed, -1, "boo.kodeeverse.composemagic.restartability.OpenComposable.Content (VirtualComposables.kt:89)")
     }
     var count by {
       val count$delegate = <block>{
@@ -157,5 +188,56 @@ private open class OpenComposable : VirtualComposable {
       traceEventEnd()
     }
     $composer.endReplaceGroup()
+  }
+}
+private class OpenButFinalComposable : OpenComposable {
+  @Composable
+  @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  override fun Content($composer: Composer?, $changed: Int) {
+    $composer = $composer.startRestartGroup(988203625)
+    sourceInformation($composer, "C(Content)109@3519L33,112@3597L25,111@3558L133,119@3811L11,115@3696L229:VirtualComposables.kt#5mdrpd")
+    if ($composer.shouldExecute($changed and 0b0001 != 0, $changed and 0b0001)) {
+      if (isTraceInProgress()) {
+        traceEventStart(988203625, $changed, -1, "boo.kodeeverse.composemagic.restartability.OpenButFinalComposable.Content (VirtualComposables.kt:108)")
+      }
+      var count by {
+        val count$delegate = <block>{
+          sourceInformationMarkerStart($composer, 475912298, "CC(remember):VirtualComposables.kt#9igjgp")
+          val tmp0_group = $composer.cache(false) {
+            mutableIntStateOf(0)
+          }
+          sourceInformationMarkerEnd($composer)
+          tmp0_group
+        }
+        get() {
+          return count$delegate.getValue(null, ::count$delegate)
+        }
+        set(<set-?>: Int) {
+          return count$delegate.setValue(null, ::count$delegate, <set-?>)
+        }
+      }
+      Text("OpenButFinalComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 475921620, "CC(remember):VirtualComposables.kt#9igjgp")
+        val tmp1_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp1_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      if (isTraceInProgress()) {
+        traceEventEnd()
+      }
+    } else {
+      $composer.skipToGroupEnd()
+    }
+    val tmp2_rcvr = <this>
+    $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+      tmp2_rcvr.Content($composer, updateChangedFlags($changed or 0b0001))
+    }
   }
 }
