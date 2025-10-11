@@ -38,9 +38,8 @@ import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo
-import boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo
 import boo.kodeeverse.composemagic.restartability.FinalComposableDemo
-import boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo
+import boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo
 import boo.kodeeverse.composemagic.restartability.InlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
@@ -74,10 +73,10 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   NonInlineLambdaComposable(category = "restartability - composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
 //  DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
-  FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),
   InlineComposable(category = "restartability", content = { InlineComposableDemo() }),
   NonInlineComposable(category = "restartability", content = { NonInlineComposableDemo() }),
   LocalComposable(category = "restartability", content = { LocalComposableDemo() }),
+  LocalFunctionalComposable(category = "restartability", content = { LocalFunctionalComposableDemo() }),
   ReturnValueComposable(category = "restartability", content = { ReturnValueComposableDemo() }),
   OpenComposable(category = "restartability", content = { OpenComposableDemo() }),
   OpenButFinalComposable(category = "restartability", content = { OpenButFinalComposableDemo() }),

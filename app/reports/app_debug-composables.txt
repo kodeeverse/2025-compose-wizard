@@ -25,19 +25,19 @@ restartable skippable fun boo.kodeeverse.composemagic.restartability.getValue(
   unused unstable thisRef: Any?
   unused unstable property: KProperty<*>
 )
+abstract fun boo.kodeeverse.composemagic.restartability.FunctionalComposable.Content(
+  <this>: FunctionalComposable
+)
 scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalComposableDemo.<anonymous>.Local()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo.<anonymous>.<no name provided>.Content(
+  stable <this>: <no name provided>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.InlineComposableDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo()
 inline scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.InlineComposable()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.NonInlineComposable()
-abstract fun boo.kodeeverse.composemagic.restartability.FunctionalComposable.Content(
-  <this>: FunctionalComposable
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo.<anonymous>.<no name provided>.Content(
-  stable <this>: <no name provided>
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo()
 abstract fun boo.kodeeverse.composemagic.restartability.VirtualComposable.Content(
   <this>: VirtualComposable
 )
