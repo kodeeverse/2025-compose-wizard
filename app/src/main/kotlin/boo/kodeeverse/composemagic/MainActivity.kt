@@ -69,33 +69,9 @@ import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
-  InlineLambdaComposable(category = "composableLambda", content = { InlineLambdaComposableDemo() }),
-  NoInlineLambdaComposable(category = "composableLambda", content = { NoInlineLambdaComposableDemo() }),
-  NonInlineLambdaComposable(category = "composableLambda", content = { NonInlineLambdaComposableDemo() }),
-
-  GivenUnstableAndAlwaysSameClass(category = "stability - ConstructorCalls", content = { GivenUnstableAndAlwaysSameClassDemo() }),
-  GivenStableAndAlwaysSameClass(category = "stability - ConstructorCalls", content = { GivenStableAndAlwaysSameClassDemo() }),
-  GivenStableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenStableClassViaArgumentDemo() }),
-  GivenStableClassViaProp(category = "stability - ConstructorCalls", content = { GivenStableClassViaPropDemo() }),
-  GivenImmutableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaArgumentDemo() }),
-  GivenImmutableClassViaProp(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaPropDemo() }),
-
-  StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
-  UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
-
-  EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
-  ListOfCall(category = "stability - KnownStableCallArguments", content = { ListOfCallDemo() }),
-  EmptyMapCall(category = "stability - KnownStableCallArguments", content = { EmptyMapCallDemo() }),
-  MapOfCall(category = "stability - KnownStableCallArguments", content = { MapOfCallDemo() }),
-  EmptySetCall(category = "stability - KnownStableCallArguments", content = { EmptySetCallDemo() }),
-  SetOfCall(category = "stability - KnownStableCallArguments", content = { SetOfCallDemo() }),
-  PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() }),
-
-  StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
-  SameInstanceAndMutableUnstableParameter(category = "stability - StableParameters", content = { SameInstanceAndMutableUnstableParameterDemo() }),
-  NewInstanceAndPersistentUnstableParameter(category = "stability - StableParameters", content = { NewInstanceAndPersistentUnstableParameterDemo() }),
-  StableParameterButUnstableArgument(category = "stability - StableParameters", content = { StableParameterButUnstableArgumentDemo() }),
-  UnstableParameterButStableArgument(category = "stability - StableParameters", content = { UnstableParameterButStableArgumentDemo() }),
+  InlineLambdaComposable(category = "restartability - composableLambda", content = { InlineLambdaComposableDemo() }),
+  NoInlineLambdaComposable(category = "restartability - composableLambda", content = { NoInlineLambdaComposableDemo() }),
+  NonInlineLambdaComposable(category = "restartability - composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
   DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),
@@ -105,7 +81,31 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   ReturnValueComposable(category = "restartability", content = { ReturnValueComposableDemo() }),
   OpenComposable(category = "restartability", content = { OpenComposableDemo() }),
   OpenButFinalComposable(category = "restartability", content = { OpenButFinalComposableDemo() }),
-  FinalComposable(category = "restartability", content = { FinalComposableDemo() });
+  FinalComposable(category = "restartability", content = { FinalComposableDemo() }),
+
+  StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
+  UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
+
+  StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
+  SameInstanceAndMutableUnstableParameter(category = "stability - StableParameters", content = { SameInstanceAndMutableUnstableParameterDemo() }),
+  NewInstanceAndPersistentUnstableParameter(category = "stability - StableParameters", content = { NewInstanceAndPersistentUnstableParameterDemo() }),
+  StableParameterButUnstableArgument(category = "stability - StableParameters", content = { StableParameterButUnstableArgumentDemo() }),
+  UnstableParameterButStableArgument(category = "stability - StableParameters", content = { UnstableParameterButStableArgumentDemo() }),
+
+  GivenUnstableAndAlwaysSameClass(category = "stability - ConstructorCalls", content = { GivenUnstableAndAlwaysSameClassDemo() }),
+  GivenStableAndAlwaysSameClass(category = "stability - ConstructorCalls", content = { GivenStableAndAlwaysSameClassDemo() }),
+  GivenStableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenStableClassViaArgumentDemo() }),
+  GivenStableClassViaProp(category = "stability - ConstructorCalls", content = { GivenStableClassViaPropDemo() }),
+  GivenImmutableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaArgumentDemo() }),
+  GivenImmutableClassViaProp(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaPropDemo() }),
+
+  EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
+  ListOfCall(category = "stability - KnownStableCallArguments", content = { ListOfCallDemo() }),
+  EmptyMapCall(category = "stability - KnownStableCallArguments", content = { EmptyMapCallDemo() }),
+  MapOfCall(category = "stability - KnownStableCallArguments", content = { MapOfCallDemo() }),
+  EmptySetCall(category = "stability - KnownStableCallArguments", content = { EmptySetCallDemo() }),
+  SetOfCall(category = "stability - KnownStableCallArguments", content = { SetOfCallDemo() }),
+  PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() });
 
   companion object {
     val Groups: Map<String, List<Demo>> = entries.groupBy(Demo::category)
