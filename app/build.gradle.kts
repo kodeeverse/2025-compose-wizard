@@ -52,5 +52,5 @@ dependencies {
   implementation("androidx.compose.material3:material3:1.5.0-alpha06")
 
   // https://github.com/jisungbin/kotlin-dumper
-  kotlinCompilerPluginClasspath("land.sungbin:kotlin-dumper:0.1.7")
+  // kotlinCompilerPluginClasspath("land.sungbin:kotlin-dumper:0.1.7")
 }
