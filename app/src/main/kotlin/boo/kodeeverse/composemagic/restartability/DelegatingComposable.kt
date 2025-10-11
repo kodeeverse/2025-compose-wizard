@@ -11,7 +11,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -41,8 +40,8 @@ import kotlin.reflect.KProperty
 }
 
 // 이론상(https://github.com/jisungbin/kotlin-2.1.20/blob/735b16bbc2d47b49e2ebc4a324212adc6f43d77e/plugins/compose/compiler-hosted/src/main/java/androidx/compose/compiler/plugins/kotlin/lower/AbstractComposeLowering.kt#L1357)
-// RecomposeScope가 안 생겨야 하는데.. 모르겠다! 밑에 DelegatingComposable.getValue() 확장 함수로 만들어도 동일해.
-@Immutable private object DelegatingComposable {
+// RecomposeScope가 안 생겨야 하는데.. 모르겠다! 밑에 DelegatingComposable2.getValue() 확장 함수로 만들어도 동일해.
+private object DelegatingComposable {
   @Composable operator fun getValue(thisRef: Any?, property: KProperty<*>) {
     var count by remember { mutableIntStateOf(0) }
 
@@ -61,19 +60,21 @@ import kotlin.reflect.KProperty
   }
 }
 
-//@Composable private operator fun DelegatingComposable.getValue(thisRef: Any?, property: KProperty<*>) {
-//  var count by remember { mutableIntStateOf(0) }
-//
-//  Text(
-//    "DelegatingComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-//    fontWeight = FontWeight.Bold,
-//  )
-//  Text(
-//    "count: $count",
-//    modifier = Modifier
-//      .clip(RoundedCornerShape(10.dp))
-//      .clickable { count++ }
-//      .background(color = Color.Green)
-//      .padding(horizontal = 20.dp, vertical = 10.dp),
-//  )
-//}
+private object DelegatingComposable2
+
+@Composable private operator fun DelegatingComposable2.getValue(thisRef: Any?, property: KProperty<*>) {
+  var count by remember { mutableIntStateOf(0) }
+
+  Text(
+    "DelegatingComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+    fontWeight = FontWeight.Bold,
+  )
+  Text(
+    "count: $count",
+    modifier = Modifier
+      .clip(RoundedCornerShape(10.dp))
+      .clickable { count++ }
+      .background(color = Color.Green)
+      .padding(horizontal = 20.dp, vertical = 10.dp),
+  )
+}

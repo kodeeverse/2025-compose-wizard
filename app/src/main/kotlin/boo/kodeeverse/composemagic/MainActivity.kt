@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo
+import boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo
 import boo.kodeeverse.composemagic.restartability.FinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.FunctionalComposableDemo
 import boo.kodeeverse.composemagic.restartability.InlineComposableDemo
@@ -72,7 +73,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   NoInlineLambdaComposable(category = "restartability - composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "restartability - composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-  // DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
+//  DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   FunctionalComposable(category = "restartability", content = { FunctionalComposableDemo() }),
   InlineComposable(category = "restartability", content = { InlineComposableDemo() }),
   NonInlineComposable(category = "restartability", content = { NonInlineComposableDemo() }),

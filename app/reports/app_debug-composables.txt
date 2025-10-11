@@ -20,6 +20,11 @@ restartable skippable fun boo.kodeeverse.composemagic.restartability.DelegatingC
   unused unstable property: KProperty<*>
   unused stable <this>: DelegatingComposable
 )
+restartable skippable fun boo.kodeeverse.composemagic.restartability.getValue(
+  unused stable <this>: DelegatingComposable2
+  unused unstable thisRef: Any?
+  unused unstable property: KProperty<*>
+)
 scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalComposableDemo.<anonymous>.Local()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalComposableDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.InlineComposableDemo()
