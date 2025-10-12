@@ -28,13 +28,17 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
-private val topLevelStableObject = MyRegularClass()
+private val topLevelStableObject = MyStableClass()
 
 private enum class MyEnum {
   A,
 }
 
+@Stable private class MyStableClass
+
 private open class MyRegularClass {
+  var a: Any = listOf(1) // unstable maker
+
   companion object : MyRegularClass()
 }
 
@@ -190,7 +194,7 @@ private open class MyRegularClass {
 @Stable private fun companionObjectArgumentCall(value: MyRegularClass): Long =
   currentTimeMillis() + value.hashCode()
 
-@Stable private fun topLevelStableObjectArgumentCall(value: MyRegularClass): Long =
+@Stable private fun topLevelStableObjectArgumentCall(value: MyStableClass): Long =
   currentTimeMillis() + value.hashCode()
 
 @Stable private fun staticVariableArgumentCall(value: Any): Long =
