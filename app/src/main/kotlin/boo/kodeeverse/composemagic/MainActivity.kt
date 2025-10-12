@@ -49,9 +49,11 @@ import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenFinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
+import boo.kodeeverse.composemagic.stability.CompanionObjectArgumentCallDemo
 import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
 import boo.kodeeverse.composemagic.stability.EmptyMapCallDemo
 import boo.kodeeverse.composemagic.stability.EmptySetCallDemo
+import boo.kodeeverse.composemagic.stability.EnumEntryArgumentCallDemo
 import boo.kodeeverse.composemagic.stability.GivenImmutableClassViaArgumentDemo
 import boo.kodeeverse.composemagic.stability.GivenImmutableClassViaPropDemo
 import boo.kodeeverse.composemagic.stability.GivenStableAndAlwaysSameClassDemo
@@ -67,6 +69,9 @@ import boo.kodeeverse.composemagic.stability.SetOfCallDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableParameterButUnstableArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableParameterDemo
+import boo.kodeeverse.composemagic.stability.StaticArgumentCallDemo
+import boo.kodeeverse.composemagic.stability.StaticVariableArgumentCallDemo
+import boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentCallDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo
 
@@ -90,6 +95,12 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
 
   StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
   UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
+
+  StaticArgumentCall(category = "stability - StaticExpressionArguments", content = { StaticArgumentCallDemo() }),
+  EnumEntryArgumentCall(category = "stability - StaticExpressionArguments", content = { EnumEntryArgumentCallDemo() }),
+  CompanionObjectArgumentCall(category = "stability - StaticExpressionArguments", content = { CompanionObjectArgumentCallDemo() }),
+  TopLevelStableObjectArgumentCall(category = "stability - StaticExpressionArguments", content = { TopLevelStableObjectArgumentCallDemo() }),
+  StaticVariableArgumentCall(category = "stability - StaticExpressionArguments", content = { StaticVariableArgumentCallDemo() }),
 
   StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
   SameInstanceAndMutableUnstableParameter(category = "stability - StableParameters", content = { SameInstanceAndMutableUnstableParameterDemo() }),

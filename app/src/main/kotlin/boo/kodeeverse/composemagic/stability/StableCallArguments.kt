@@ -1,3 +1,5 @@
+@file:Suppress("SameParameterValue")
+
 package boo.kodeeverse.composemagic.stability
 
 import androidx.compose.foundation.background
