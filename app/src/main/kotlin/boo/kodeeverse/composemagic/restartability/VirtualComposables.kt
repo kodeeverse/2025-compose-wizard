@@ -48,7 +48,7 @@ private open class OpenVirtualComposable {
     Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    remember { IFinalComposable() }.Content()
+    remember { IFinalComposable() as IVirtualComposable }.Content()
   }
 }
 
@@ -61,7 +61,7 @@ private open class OpenVirtualComposable {
     Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    remember { IOpenComposable() }.Content()
+    remember { IOpenComposable() as IVirtualComposable }.Content()
   }
 }
 
