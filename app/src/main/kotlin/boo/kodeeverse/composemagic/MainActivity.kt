@@ -38,13 +38,16 @@ import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo
 import boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo
-import boo.kodeeverse.composemagic.restartability.FinalComposableDemo
-import boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo
+import boo.kodeeverse.composemagic.restartability.AbstractFinalComposableDemo
+import boo.kodeeverse.composemagic.restartability.AbstractOpenComposableDemo
+import boo.kodeeverse.composemagic.restartability.IFinalComposableDemo
+import boo.kodeeverse.composemagic.restartability.IOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.InlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.LocalComposableDemo
+import boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo
 import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
-import boo.kodeeverse.composemagic.restartability.OpenButFinalComposableDemo
-import boo.kodeeverse.composemagic.restartability.OpenComposableDemo
+import boo.kodeeverse.composemagic.restartability.OpenFinalComposableDemo
+import boo.kodeeverse.composemagic.restartability.OpenOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
 import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
 import boo.kodeeverse.composemagic.stability.EmptyMapCallDemo
@@ -78,9 +81,12 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   LocalComposable(category = "restartability", content = { LocalComposableDemo() }),
   LocalFunctionalComposable(category = "restartability", content = { LocalFunctionalComposableDemo() }),
   ReturnValueComposable(category = "restartability", content = { ReturnValueComposableDemo() }),
-  OpenComposable(category = "restartability", content = { OpenComposableDemo() }),
-  OpenButFinalComposable(category = "restartability", content = { OpenButFinalComposableDemo() }),
-  FinalComposable(category = "restartability", content = { FinalComposableDemo() }),
+  IFinalComposable(category = "restartability", content = { IFinalComposableDemo() }),
+  IOpenComposable(category = "restartability", content = { IOpenComposableDemo() }),
+  AbstractFinalComposable(category = "restartability", content = { AbstractFinalComposableDemo() }),
+  AbstractOpenComposable(category = "restartability", content = { AbstractOpenComposableDemo() }),
+  OpenFinalComposable(category = "restartability", content = { OpenFinalComposableDemo() }),
+  OpenOpenComposable(category = "restartability", content = { OpenOpenComposableDemo() }),
 
   StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
   UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
