@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
@@ -28,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
-abstract class UnstableMarker() {
+abstract class UnstableMarker {
   var createdAt: Long = currentTimeMillis()
 }
 
@@ -39,14 +38,20 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
 
 @Stable class StableClass : UnstableMarker()
 
+@JvmInline value class StableBoxingClass(val value: Int)
+
+@JvmInline value class UnstableBoxingClass(val value: Any)
+
 @Stable class StableAndAlwaysSameClass : UnstableMarker() {
   override fun equals(other: Any?): Boolean = true
   override fun hashCode(): Int = 42
 }
 
-@Immutable class ImmutableClass : UnstableMarker()
+@Immutable class ImmutableClass(val staticValue: Int) : UnstableMarker()
 
-@Composable fun GivenUnstableAndAlwaysSameClassDemo() {
+@Immutable class ImmutableButNonStaticArgumentClass(val value: Any)
+
+@Composable fun UnstableAndAlwaysSameClassArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -54,7 +59,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT unstableAndAlwaysSameClassArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -65,11 +74,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenUnstableAndAlwaysSameClass(UnstableAndAlwaysSameClass())
+    ConstructorCall(UnstableAndAlwaysSameClass())
   }
 }
 
-@Composable fun GivenStableAndAlwaysSameClassDemo() {
+@Composable fun StableClassParameterIntoArgumentDemo(value: StableClass = StableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -77,7 +86,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT stableClassParameterIntoArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -88,34 +101,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenStableAndAlwaysSameClass(StableAndAlwaysSameClass())
+    ConstructorCall(value)
   }
 }
 
-@Composable fun GivenStableClassViaArgumentDemo(value: StableClass = StableClass()) {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text("ROOT argument @ $currentRecomposeScopeHash (${currentTimeMillis()})")
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    GivenStableClass(value)
-  }
-}
-
-@Composable fun GivenStableClassViaPropDemo() {
+@Composable fun StableClassPropertyIntoArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
   val value = StableClass()
 
@@ -124,7 +114,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT prop @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT stableClassPropertyIntoArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -135,11 +129,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenStableClass(value)
+    ConstructorCall(value)
   }
 }
 
-@Composable fun GivenImmutableClassViaArgumentDemo(value: ImmutableClass = ImmutableClass()) {
+@Composable fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass = ImmutableClass(1)) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -147,7 +141,11 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT argumemt @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT immutableClassParameterIntoArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -158,20 +156,24 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenImmutableClass(value)
+    ConstructorCall(value)
   }
 }
 
-@Composable fun GivenImmutableClassViaPropDemo() {
+@Composable fun ImmutableClassPropertyIntoArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value = ImmutableClass()
+  val value = ImmutableClass(1)
 
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT prop @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT immutableClassPropertyIntoArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -182,43 +184,130 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    GivenImmutableClass(value)
+    ConstructorCall(value)
   }
 }
 
-@Composable private fun GivenUnstableAndAlwaysSameClass(value: UnstableAndAlwaysSameClass) {
+@Composable fun StableBoxingClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableBoxing @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ConstructorCall(StableBoxingClass(1))
+  }
+}
+
+@Composable fun ImmutableClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT immutableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ConstructorCall(ImmutableClass(1))
+  }
+}
+
+@Composable fun UnstableBoxingClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT unstableBoxing @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ConstructorCall(UnstableBoxingClass(Any()))
+  }
+}
+
+@Composable fun ImmutableButNonStaticArgumentClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT immutableClassButNonStaticArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ConstructorCall(ImmutableButNonStaticArgumentClass(Any()))
+  }
+}
+
+@Composable private fun ConstructorCall(value: UnstableMarker) {
   Text(
-    "GivenUnstableAndAlwaysSameClass @ $currentRecomposeScopeHash\n(${value.createdAt})",
-    modifier = Modifier
-      .fillMaxWidth()
-      .wrapContentWidth(),
+    "ConstructorCall @ $currentRecomposeScopeHash\n(${value.createdAt})",
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
   )
 }
 
-@Composable private fun GivenStableAndAlwaysSameClass(value: StableAndAlwaysSameClass) {
+@Composable private fun ConstructorCall(value: Any) {
+  used(value)
+
   Text(
-    "GivenStableAndAlwaysSameClass @ $currentRecomposeScopeHash\n(${value.createdAt})",
-    modifier = Modifier
-      .fillMaxWidth()
-      .wrapContentWidth(),
+    "ConstructorCall @ $currentRecomposeScopeHash (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
-  )
-}
-
-@Composable private fun GivenStableClass(value: StableClass) {
-  Text(
-    "GivenStableClass @ $currentRecomposeScopeHash (${value.createdAt})",
-    fontWeight = FontWeight.Bold,
-  )
-}
-
-@Composable private fun GivenImmutableClass(value: ImmutableClass) {
-  Text(
-    "GivenImmutableClass @ $currentRecomposeScopeHash (${value.createdAt})",
-    fontWeight = FontWeight.Bold,
   )
 }
 

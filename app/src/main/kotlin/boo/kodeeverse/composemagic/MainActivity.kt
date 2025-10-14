@@ -49,38 +49,41 @@ import boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenFinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
-import boo.kodeeverse.composemagic.stability.CompanionObjectArgumentCallDemo
+import boo.kodeeverse.composemagic.stability.CompanionObjectArgumentDemo
 import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
 import boo.kodeeverse.composemagic.stability.EmptyMapCallDemo
 import boo.kodeeverse.composemagic.stability.EmptySetCallDemo
-import boo.kodeeverse.composemagic.stability.EnumEntryArgumentCallDemo
-import boo.kodeeverse.composemagic.stability.GivenImmutableClassViaArgumentDemo
-import boo.kodeeverse.composemagic.stability.GivenImmutableClassViaPropDemo
-import boo.kodeeverse.composemagic.stability.GivenStableAndAlwaysSameClassDemo
-import boo.kodeeverse.composemagic.stability.GivenStableClassViaArgumentDemo
-import boo.kodeeverse.composemagic.stability.GivenStableClassViaPropDemo
-import boo.kodeeverse.composemagic.stability.GivenUnstableAndAlwaysSameClassDemo
+import boo.kodeeverse.composemagic.stability.EnumEntryArgumentDemo
+import boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo
+import boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo
+import boo.kodeeverse.composemagic.stability.ImmutableClassParameterIntoArgumentDemo
+import boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.ListOfCallDemo
 import boo.kodeeverse.composemagic.stability.MapOfCallDemo
-import boo.kodeeverse.composemagic.stability.NewInstanceAndPersistentUnstableParameterDemo
+import boo.kodeeverse.composemagic.stability.MutableButSameInstanceArgumentInUnstableParameterDemo
+import boo.kodeeverse.composemagic.stability.NewInstanceAndAlwaysSameInUnstableParameterDemo
 import boo.kodeeverse.composemagic.stability.PairOfCallDemo
-import boo.kodeeverse.composemagic.stability.SameInstanceAndMutableUnstableParameterDemo
 import boo.kodeeverse.composemagic.stability.SetOfCallDemo
+import boo.kodeeverse.composemagic.stability.StableArgumentInStableParameterDemo
+import boo.kodeeverse.composemagic.stability.StableArgumentInUnstableParameterDemo
+import boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
-import boo.kodeeverse.composemagic.stability.StableParameterButUnstableArgumentDemo
-import boo.kodeeverse.composemagic.stability.StableParameterDemo
-import boo.kodeeverse.composemagic.stability.StaticArgumentCallDemo
-import boo.kodeeverse.composemagic.stability.StaticVariableArgumentCallDemo
-import boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentCallDemo
+import boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo
+import boo.kodeeverse.composemagic.stability.StaticArgumentDemo
+import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
+import boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableAndAlwaysSameClassArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableArgumentInStableParameterDemo
+import boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
-import boo.kodeeverse.composemagic.stability.UnstableParameterButStableArgumentDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "restartability - composableLambda", content = { InlineLambdaComposableDemo() }),
   NoInlineLambdaComposable(category = "restartability - composableLambda", content = { NoInlineLambdaComposableDemo() }),
   NonInlineLambdaComposable(category = "restartability - composableLambda", content = { NonInlineLambdaComposableDemo() }),
 
-//  DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
+  // DelegatingComposable(category = "restartability", content = { DelegatingComposableDemo() }),
   InlineComposable(category = "restartability", content = { InlineComposableDemo() }),
   NonInlineComposable(category = "restartability", content = { NonInlineComposableDemo() }),
   LocalComposable(category = "restartability", content = { LocalComposableDemo() }),
@@ -96,24 +99,27 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
   UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
 
-  StaticArgumentCall(category = "stability - StaticExpressionArguments", content = { StaticArgumentCallDemo() }),
-  EnumEntryArgumentCall(category = "stability - StaticExpressionArguments", content = { EnumEntryArgumentCallDemo() }),
-  CompanionObjectArgumentCall(category = "stability - StaticExpressionArguments", content = { CompanionObjectArgumentCallDemo() }),
-  TopLevelStableObjectArgumentCall(category = "stability - StaticExpressionArguments", content = { TopLevelStableObjectArgumentCallDemo() }),
-  StaticVariableArgumentCall(category = "stability - StaticExpressionArguments", content = { StaticVariableArgumentCallDemo() }),
+  StaticArgument(category = "stability - StaticExpressionArguments", content = { StaticArgumentDemo() }),
+  EnumEntryArgument(category = "stability - StaticExpressionArguments", content = { EnumEntryArgumentDemo() }),
+  CompanionObjectArgument(category = "stability - StaticExpressionArguments", content = { CompanionObjectArgumentDemo() }),
+  TopLevelStableObjectArgument(category = "stability - StaticExpressionArguments", content = { TopLevelStableObjectArgumentDemo() }),
+  StaticVariableArgument(category = "stability - StaticExpressionArguments", content = { StaticVariableArgumentDemo() }),
 
-  StableParameter(category = "stability - StableParameters", content = { StableParameterDemo() }),
-  SameInstanceAndMutableUnstableParameter(category = "stability - StableParameters", content = { SameInstanceAndMutableUnstableParameterDemo() }),
-  NewInstanceAndPersistentUnstableParameter(category = "stability - StableParameters", content = { NewInstanceAndPersistentUnstableParameterDemo() }),
-  StableParameterButUnstableArgument(category = "stability - StableParameters", content = { StableParameterButUnstableArgumentDemo() }),
-  UnstableParameterButStableArgument(category = "stability - StableParameters", content = { UnstableParameterButStableArgumentDemo() }),
+  MutableButSameInstanceArgumentInUnstableParameter(category = "stability - StableParameters", content = { MutableButSameInstanceArgumentInUnstableParameterDemo() }),
+  NewInstanceAndAlwaysSameInUnstableParameter(category = "stability - StableParameters", content = { NewInstanceAndAlwaysSameInUnstableParameterDemo() }),
+  StableArgumentInUnstableParameter(category = "stability - StableParameters", content = { StableArgumentInUnstableParameterDemo() }),
+  StableArgumentInStableParameter(category = "stability - StableParameters", content = { StableArgumentInStableParameterDemo() }),
+  UnstableArgumentInStableParameter(category = "stability - StableParameters", content = { UnstableArgumentInStableParameterDemo() }),
 
-  GivenUnstableAndAlwaysSameClass(category = "stability - ConstructorCalls", content = { GivenUnstableAndAlwaysSameClassDemo() }),
-  GivenStableAndAlwaysSameClass(category = "stability - ConstructorCalls", content = { GivenStableAndAlwaysSameClassDemo() }),
-  GivenStableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenStableClassViaArgumentDemo() }),
-  GivenStableClassViaProp(category = "stability - ConstructorCalls", content = { GivenStableClassViaPropDemo() }),
-  GivenImmutableClassViaArgument(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaArgumentDemo() }),
-  GivenImmutableClassViaProp(category = "stability - ConstructorCalls", content = { GivenImmutableClassViaPropDemo() }),
+  UnstableAndAlwaysSameClassArgument(category = "stability - ConstructorCalls", content = { UnstableAndAlwaysSameClassArgumentDemo() }),
+  StableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { StableClassParameterIntoArgumentDemo() }),
+  StableClassPropertyIntoArgument(category = "stability - ConstructorCalls", content = { StableClassPropertyIntoArgumentDemo() }),
+  ImmutableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassParameterIntoArgumentDemo() }),
+  ImmutableClassPropertyIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassPropertyIntoArgumentDemo() }),
+  StableBoxingClassArgument(category = "stability - ConstructorCalls", content = { StableBoxingClassArgumentDemo() }),
+  ImmutableClassArgument(category = "stability - ConstructorCalls", content = { ImmutableClassArgumentDemo() }),
+  UnstableBoxingClassArgument(category = "stability - ConstructorCalls", content = { UnstableBoxingClassArgumentDemo() }),
+  ImmutableButNonStaticArgumentClassArgument(category = "stability - ConstructorCalls", content = { ImmutableButNonStaticArgumentClassArgumentDemo() }),
 
   EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
   ListOfCall(category = "stability - KnownStableCallArguments", content = { ListOfCallDemo() }),

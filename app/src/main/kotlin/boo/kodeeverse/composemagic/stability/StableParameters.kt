@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
@@ -33,35 +32,14 @@ import java.lang.System.currentTimeMillis
 
 @Stable private interface StableInterface
 
+@Stable private class StableClass2 : StableInterface
+
 private class UnstableClass : StableInterface {
   var a: Any = Any()
 }
 
-@Composable fun StableParameterDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    StableParameter(1)
-  }
-}
-
 // Bug but Feature: strong-skipping으로 인해 list가 변경되어도 리컴포지션되지 않음
-@Composable fun SameInstanceAndMutableUnstableParameterDemo() {
+@Composable fun MutableButSameInstanceArgumentInUnstableParameterDemo() {
   var count by remember { mutableIntStateOf(0) }
   val list = remember { mutableListOf(0) }
 
@@ -71,11 +49,8 @@ private class UnstableClass : StableInterface {
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
     Text(
-      "ROOT sameInstanceAndMutable @ $currentRecomposeScopeHash\n(${list.joinToString()})",
-      modifier = Modifier
-        .padding(horizontal = 30.dp)
-        .fillMaxWidth()
-        .wrapContentWidth(),
+      "ROOT mutableButSameInstanceArgumentInUnstableParameter\n" +
+        "@ $currentRecomposeScopeHash (${list.joinToString()})",
       textAlign = TextAlign.Center,
     )
     Text(
@@ -95,7 +70,7 @@ private class UnstableClass : StableInterface {
   }
 }
 
-@Composable fun NewInstanceAndPersistentUnstableParameterDemo() {
+@Composable fun NewInstanceAndAlwaysSameInUnstableParameterDemo() {
   var count by remember { mutableIntStateOf(0) }
   var value by remember { mutableStateOf(UnstableAndAlwaysSameClass(), policy = neverEqualPolicy()) }
 
@@ -105,12 +80,8 @@ private class UnstableClass : StableInterface {
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
     Text(
-      "ROOT newInstanceAndPersistent @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})\n(${value.hashCode()})",
-      modifier = Modifier
-        .padding(horizontal = 30.dp)
-        .fillMaxWidth()
-        .wrapContentWidth(),
+      "ROOT newInstanceAndAlwaysSameInUnstableParameter\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()}) (${value.hashCode()})",
       textAlign = TextAlign.Center,
     )
     Text(
@@ -130,16 +101,19 @@ private class UnstableClass : StableInterface {
   }
 }
 
-@Composable fun StableParameterButUnstableArgumentDemo() {
+@Composable fun StableArgumentInUnstableParameterDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val unstableClass = remember { UnstableClass() }
 
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT stableArgumentInUnstableParameter\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -150,11 +124,11 @@ private class UnstableClass : StableInterface {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableParameterButUnstableArgument(unstableClass)
+    UnstableParameter(StableClass2())
   }
 }
 
-@Composable fun UnstableParameterButStableArgumentDemo() {
+@Composable fun StableArgumentInStableParameterDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -162,7 +136,11 @@ private class UnstableClass : StableInterface {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text(
+      "ROOT stableArgumentInStableParameter\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
     Text(
       "count: $count",
       modifier = Modifier
@@ -173,17 +151,35 @@ private class UnstableClass : StableInterface {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableParameterButStableArgument(StableClass())
+    StableParameter(StableClass2())
   }
 }
 
-@Composable private fun StableParameter(value: Int) {
-  used(value)
+@Composable fun UnstableArgumentInStableParameterDemo() {
+  var count by remember { mutableIntStateOf(0) }
 
-  Text(
-    "StableParameter @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-  )
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableArgumentInStableParameter\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StableParameter(UnstableClass())
+  }
 }
 
 @Composable private fun UnstableParameter(value: Any) {
@@ -191,37 +187,16 @@ private class UnstableClass : StableInterface {
     "UnstableParameter @ $currentRecomposeScopeHash\n" +
       "(${currentTimeMillis()})\n" +
       "(${(value as? List<*>)?.joinToString() ?: value.hashCode()})",
-    modifier = Modifier
-      .padding(horizontal = 30.dp)
-      .fillMaxWidth()
-      .wrapContentWidth(),
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
   )
 }
 
-@Composable private fun StableParameterButUnstableArgument(value: StableInterface) {
+@Composable private fun StableParameter(value: StableInterface) {
   used(value)
 
   Text(
-    "StableParameterButUnstableArgument @ $currentRecomposeScopeHash\n(${currentTimeMillis()})",
-    modifier = Modifier
-      .fillMaxWidth()
-      .wrapContentWidth(),
+    "StableParameter @ $currentRecomposeScopeHash (${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
-  )
-}
-
-@Composable private fun UnstableParameterButStableArgument(value: Any) {
-  used(value)
-
-  Text(
-    "UnstableParameterButStableArgument @ $currentRecomposeScopeHash\n(${currentTimeMillis()})",
-    modifier = Modifier
-      .fillMaxWidth()
-      .wrapContentWidth(),
-    fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
   )
 }

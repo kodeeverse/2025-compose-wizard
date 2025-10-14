@@ -42,7 +42,7 @@ private open class MyRegularClass {
   companion object : MyRegularClass()
 }
 
-@Composable fun StaticArgumentCallDemo() {
+@Composable fun StaticArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -69,7 +69,7 @@ private open class MyRegularClass {
   }
 }
 
-@Composable fun EnumEntryArgumentCallDemo() {
+@Composable fun EnumEntryArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -96,7 +96,7 @@ private open class MyRegularClass {
   }
 }
 
-@Composable fun CompanionObjectArgumentCallDemo() {
+@Composable fun CompanionObjectArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -123,7 +123,7 @@ private open class MyRegularClass {
   }
 }
 
-@Composable fun TopLevelStableObjectArgumentCallDemo() {
+@Composable fun TopLevelStableObjectArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -132,7 +132,7 @@ private open class MyRegularClass {
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
     Text(
-      "ROOT @ topLevelStableObjectArgument $currentRecomposeScopeHash\n" +
+      "ROOT topLevelStableObjectArgument @ $currentRecomposeScopeHash\n" +
         "(${currentTimeMillis()})",
       textAlign = TextAlign.Center,
     )
@@ -150,7 +150,7 @@ private open class MyRegularClass {
   }
 }
 
-@Composable fun StaticVariableArgumentCallDemo() {
+@Composable fun StaticVariableArgumentDemo() {
   val myStaticValue = 1234
   var count by remember { mutableIntStateOf(0) }
 
@@ -180,8 +180,9 @@ private open class MyRegularClass {
 
 @Composable private fun StaticExpressionArgument(value: Long) {
   Text(
-    "StaticExpressionArgument @ $currentRecomposeScopeHash ($value)",
+    "StaticExpressionArgument @ $currentRecomposeScopeHash\n($value)",
     fontWeight = FontWeight.Bold,
+    textAlign = TextAlign.Center,
   )
 }
 

@@ -481,4 +481,5 @@ private fun GivenImmutableClass(value: ImmutableClass, $composer: Composer?, $ch
     GivenImmutableClass(value, $composer, updateChangedFlags($changed or 0b0001))
   }
 }
+@Suppress(names = "NOTHING_TO_INLINE")
 internal fun used(a: Any) { }

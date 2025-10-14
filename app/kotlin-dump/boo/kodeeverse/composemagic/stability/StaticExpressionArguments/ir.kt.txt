@@ -1,0 +1,337 @@
+val topLevelStableObject: MyStableClass = MyStableClass()
+private class MyEnum : Enum<MyEnum> {
+  <<IrEnumEntryImpl>>
+  fun values(): Array<MyEnum> { }
+  fun valueOf(value: String): MyEnum { }
+  val entries: EnumEntries<MyEnum>
+    get() {
+      <<IrSyntheticBodyImpl>>
+    }
+}
+@Stable
+private class MyStableClass 
+private open class MyRegularClass {
+  var a: Any = listOf(1)
+  object Companion : MyRegularClass 
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun StaticArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(591767613)
+  sourceInformation($composer, "C(StaticArgumentDemo)45@1535L33,47@1572L663:StaticExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(591767613, $changed, -1, "boo.kodeeverse.composemagic.stability.StaticArgumentDemo (StaticExpressionArguments.kt:44)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 1752994398, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -409223979, "C53@1779L25,52@1744L143,61@2007L11,57@1892L229,65@2126L53,67@2185L46:StaticExpressionArguments.kt#b558il")
+      Text("${"ROOT constArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+      "}${"(${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -428834830, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StaticExpressionArgument(constArgumentCall(1), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StaticArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun EnumEntryArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-43892636)
+  sourceInformation($composer, "C(EnumEntryArgumentDemo)72@2296L33,74@2333L678:StaticExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-43892636, $changed, -1, "boo.kodeeverse.composemagic.stability.EnumEntryArgumentDemo (StaticExpressionArguments.kt:71)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 768851237, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1582933363, "C80@2544L25,79@2505L147,88@2772L11,84@2657L229,92@2891L53,94@2950L57:StaticExpressionArguments.kt#b558il")
+      Text("${"ROOT enumEntryArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+      "}${"(${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 1713638405, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StaticExpressionArgument(enumEntryArgumentCall(MyEnum.A), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    EnumEntryArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun CompanionObjectArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1463723742)
+  sourceInformation($composer, "C(CompanionObjectArgumentDemo)99@3078L33,101@3115L706:StaticExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1463723742, $changed, -1, "boo.kodeeverse.composemagic.stability.CompanionObjectArgumentDemo (StaticExpressionArguments.kt:98)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -2110755361, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1847269533, "C107@3332L25,106@3287L153,115@3560L11,111@3445L229,119@3679L53,121@3738L79:StaticExpressionArguments.kt#b558il")
+      Text("${"ROOT companionObjectArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+      "}${"(${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -1741517761, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StaticExpressionArgument(companionObjectArgumentCall(Companion), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    CompanionObjectArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun TopLevelStableObjectArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1772207928)
+  sourceInformation($composer, "C(TopLevelStableObjectArgumentDemo)126@3893L33,128@3930L712:StaticExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1772207928, $changed, -1, "boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentDemo (StaticExpressionArguments.kt:125)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -2010195879, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1168498537, "C134@4152L25,133@4102L158,142@4380L11,138@4265L229,146@4499L53,148@4558L80:StaticExpressionArguments.kt#b558il")
+      Text("${"ROOT topLevelStableObjectArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+      "}${"(${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 1007533197, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StaticExpressionArgument(topLevelStableObjectArgumentCall(topLevelStableObject), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    TopLevelStableObjectArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun StaticVariableArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1292118489)
+  sourceInformation($composer, "C(StaticVariableArgumentDemo)154@4735L33,156@4772L693:StaticExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1292118489, $changed, -1, "boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo (StaticExpressionArguments.kt:152)")
+    }
+    val myStaticValue = 1234
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 480321882, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -1920715941, "C162@4988L25,161@4944L152,170@5216L11,166@5101L229,174@5335L53,176@5394L67:StaticExpressionArguments.kt#b558il")
+      Text("${"ROOT staticVariableArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+      "}${"(${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -1308876370, "CC(remember):StaticExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StaticExpressionArgument(staticVariableArgumentCall(myStaticValue), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StaticVariableArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+private fun StaticExpressionArgument(value: Long, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-409569386)
+  sourceInformation($composer, "C(StaticExpressionArgument)N(value)182@5574L25,181@5535L148:StaticExpressionArguments.kt#b558il")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changed(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-409569386, $dirty, -1, "boo.kodeeverse.composemagic.stability.StaticExpressionArgument (StaticExpressionArguments.kt:180)")
+    }
+    Text("StaticExpressionArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+($value)", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111101110111110)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StaticExpressionArgument(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Stable
+private fun constArgumentCall(value: Int): Long {
+  return currentTimeMillis() + value
+}
+@Stable
+private fun enumEntryArgumentCall(value: MyEnum): Long {
+  return currentTimeMillis() + value.ordinal
+}
+@Stable
+private fun companionObjectArgumentCall(value: MyRegularClass): Long {
+  return currentTimeMillis() + value.hashCode()
+}
+@Stable
+private fun topLevelStableObjectArgumentCall(value: MyStableClass): Long {
+  return currentTimeMillis() + value.hashCode()
+}
+@Stable
+private fun staticVariableArgumentCall(value: Any): Long {
+  return currentTimeMillis() + value.hashCode()
+}

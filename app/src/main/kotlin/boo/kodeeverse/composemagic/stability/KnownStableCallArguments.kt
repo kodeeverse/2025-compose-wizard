@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
@@ -43,7 +44,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(emptyList<Nothing>())
+    KnownStableCallArgument(emptyList<Nothing>())
   }
 }
 
@@ -66,7 +67,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(listOf(1, 2))
+    KnownStableCallArgument(listOf(1, 2))
   }
 }
 
@@ -89,7 +90,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(emptyMap<Nothing, Nothing>())
+    KnownStableCallArgument(emptyMap<Nothing, Nothing>())
   }
 }
 
@@ -112,7 +113,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(mapOf(1 to 1f, 2 to 2f))
+    KnownStableCallArgument(mapOf(1 to 1f, 2 to 2f))
   }
 }
 
@@ -135,7 +136,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(emptySet<Nothing>())
+    KnownStableCallArgument(emptySet<Nothing>())
   }
 }
 
@@ -158,7 +159,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(setOf(1, 2))
+    KnownStableCallArgument(setOf(1, 2))
   }
 }
 
@@ -181,13 +182,14 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(1 to 1)
+    KnownStableCallArgument(1 to 1)
   }
 }
 
-@Composable private fun StableCallArgument(value: Any) {
+@Composable private fun KnownStableCallArgument(value: Any) {
   Text(
-    "StableCallArgument @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+    "KnownStableCallArgument @ $currentRecomposeScopeHash\n(${currentTimeMillis()})",
     fontWeight = FontWeight.Bold,
+    textAlign = TextAlign.Center,
   )
 }

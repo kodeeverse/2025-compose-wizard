@@ -35,7 +35,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text("ROOT stableCall @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -46,7 +46,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StableCallArgument(stableCall())
+    ArgumentDemo(stableCall())
   }
 }
 
@@ -58,7 +58,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    Text("ROOT unstableCall @ $currentRecomposeScopeHash (${currentTimeMillis()})")
     Text(
       "count: $count",
       modifier = Modifier
@@ -69,20 +69,13 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableCallArgument(unstableCall())
+    ArgumentDemo(unstableCall())
   }
 }
 
-@Composable private fun StableCallArgument(value: Long) {
+@Composable private fun ArgumentDemo(value: Any) {
   Text(
-    "StableCallArgument @ $currentRecomposeScopeHash ($value)",
-    fontWeight = FontWeight.Bold,
-  )
-}
-
-@Composable private fun UnstableCallArgument(value: Long) {
-  Text(
-    "UnstableCallArgument @ $currentRecomposeScopeHash ($value)",
+    "ArgumentDemo @ $currentRecomposeScopeHash ($value)",
     fontWeight = FontWeight.Bold,
   )
 }
