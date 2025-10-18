@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
@@ -47,6 +48,33 @@ import java.lang.System.currentTimeMillis
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     ArgumentDemo(stableCall())
+  }
+}
+
+@Composable fun StableCallWithUnstableTypeArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableCallWithUnstableType @ $currentRecomposeScopeHash\n" +
+        "(${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ArgumentDemo(stableCallWithUnstableTypeParameter<Any>())
   }
 }
 
@@ -81,5 +109,7 @@ import java.lang.System.currentTimeMillis
 }
 
 @Stable private fun stableCall(): Long = currentTimeMillis()
+
+@Stable private fun <T> stableCallWithUnstableTypeParameter(): Long = currentTimeMillis()
 
 private fun unstableCall(): Long = currentTimeMillis()

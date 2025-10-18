@@ -68,6 +68,7 @@ import boo.kodeeverse.composemagic.stability.StableArgumentInStableParameterDemo
 import boo.kodeeverse.composemagic.stability.StableArgumentInUnstableParameterDemo
 import boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableCallWithUnstableTypeArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticArgumentDemo
@@ -97,6 +98,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   OpenOpenComposable(category = "restartability", content = { OpenOpenComposableDemo() }),
 
   StableCallArgument(category = "stability - StableCallArguments", content = { StableCallArgumentDemo() }),
+  StableCallWithUnstableTypeArgument(category = "stability - StableCallArguments", content = { StableCallWithUnstableTypeArgumentDemo() }),
   UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
 
   StaticArgument(category = "stability - StaticExpressionArguments", content = { StaticArgumentDemo() }),
