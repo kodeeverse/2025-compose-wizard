@@ -74,7 +74,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(UnstableAndAlwaysSameClass())
+    StaticConstructorArgument(currentMsCall(UnstableAndAlwaysSameClass()))
   }
 }
 
@@ -101,7 +101,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(value)
+    StaticConstructorArgument(currentMsCall(value))
   }
 }
 
@@ -129,7 +129,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(value)
+    StaticConstructorArgument(currentMsCall(value))
   }
 }
 
@@ -156,7 +156,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(value)
+    StaticConstructorArgument(currentMsCall(value))
   }
 }
 
@@ -184,7 +184,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(value)
+    StaticConstructorArgument(currentMsCall(value))
   }
 }
 
@@ -210,33 +210,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(StableBoxingClass(1))
-  }
-}
-
-@Composable fun ImmutableClassArgumentDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text(
-      "ROOT immutableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    ConstructorCall(ImmutableClass(1))
+    StaticConstructorArgument(currentMsCall(StableBoxingClass(1)))
   }
 }
 
@@ -262,7 +236,33 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(UnstableBoxingClass(Any()))
+    StaticConstructorArgument(currentMsCall(UnstableBoxingClass(Any())))
+  }
+}
+
+@Composable fun ImmutableClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT immutableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticConstructorArgument(currentMsCall(ImmutableClass(1)))
   }
 }
 
@@ -289,26 +289,19 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCall(ImmutableButNonStaticArgumentClass(Any()))
+    StaticConstructorArgument(currentMsCall(ImmutableButNonStaticArgumentClass(Any())))
   }
 }
 
-@Composable private fun ConstructorCall(value: UnstableMarker) {
+@Composable private fun StaticConstructorArgument(value: Long) {
   Text(
-    "ConstructorCall @ $currentRecomposeScopeHash\n(${value.createdAt})",
+    "StaticConstructorArgument @ $currentRecomposeScopeHash\n($value)",
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
   )
 }
 
-@Composable private fun ConstructorCall(value: Any) {
-  used(value)
-
-  Text(
-    "ConstructorCall @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
-  )
-}
+@Stable private fun currentMsCall(value: Any): Long =
+  currentTimeMillis() + value.hashCode()
 
 internal fun used(a: Any) {}

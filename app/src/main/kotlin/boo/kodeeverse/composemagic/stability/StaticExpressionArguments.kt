@@ -46,7 +46,7 @@ private open class MyRegularClass {
   companion object : MyRegularClass()
 }
 
-@Composable fun StaticArgumentDemo() {
+@Composable fun ConstArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(

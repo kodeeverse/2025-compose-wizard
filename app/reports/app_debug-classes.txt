@@ -1,6 +1,3 @@
-unstable class boo.kodeeverse.composemagic.MainActivity {
-  <runtime stability> = Unstable
-}
 unstable class boo.kodeeverse.composemagic.stability.UnstableMarker {
   stable var createdAt: Long
   <runtime stability> = Unstable

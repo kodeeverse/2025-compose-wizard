@@ -50,6 +50,7 @@ import boo.kodeeverse.composemagic.restartability.OpenFinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.OpenOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo
 import boo.kodeeverse.composemagic.stability.CompanionObjectArgumentDemo
+import boo.kodeeverse.composemagic.stability.ConstArgumentDemo
 import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
 import boo.kodeeverse.composemagic.stability.EmptyMapCallDemo
 import boo.kodeeverse.composemagic.stability.EmptySetCallDemo
@@ -71,7 +72,6 @@ import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableCallWithUnstableTypeArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo
-import boo.kodeeverse.composemagic.stability.StaticArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
 import boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentDemo
 import boo.kodeeverse.composemagic.stability.TopLevelStablePropertyArgumentDemo
@@ -102,7 +102,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   StableCallWithUnstableTypeArgument(category = "stability - StableCallArguments", content = { StableCallWithUnstableTypeArgumentDemo() }),
   UnstableCallArgument(category = "stability - StableCallArguments", content = { UnstableCallArgumentDemo() }),
 
-  StaticArgument(category = "stability - StaticExpressionArguments", content = { StaticArgumentDemo() }),
+  ConstArgument(category = "stability - StaticExpressionArguments", content = { ConstArgumentDemo() }),
   EnumEntryArgument(category = "stability - StaticExpressionArguments", content = { EnumEntryArgumentDemo() }),
   CompanionObjectArgument(category = "stability - StaticExpressionArguments", content = { CompanionObjectArgumentDemo() }),
   TopLevelStableObjectArgument(category = "stability - StaticExpressionArguments", content = { TopLevelStableObjectArgumentDemo() }),
