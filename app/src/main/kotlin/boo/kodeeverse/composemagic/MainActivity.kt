@@ -74,6 +74,7 @@ import boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
 import boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentDemo
+import boo.kodeeverse.composemagic.stability.TopLevelStablePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableAndAlwaysSameClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableArgumentInStableParameterDemo
 import boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo
@@ -105,6 +106,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   EnumEntryArgument(category = "stability - StaticExpressionArguments", content = { EnumEntryArgumentDemo() }),
   CompanionObjectArgument(category = "stability - StaticExpressionArguments", content = { CompanionObjectArgumentDemo() }),
   TopLevelStableObjectArgument(category = "stability - StaticExpressionArguments", content = { TopLevelStableObjectArgumentDemo() }),
+  TopLevelStablePropertyArgument(category = "stability - StaticExpressionArguments", content = { TopLevelStablePropertyArgumentDemo() }),
   StaticVariableArgument(category = "stability - StaticExpressionArguments", content = { StaticVariableArgumentDemo() }),
 
   MutableButSameInstanceArgumentInUnstableParameter(category = "stability - StableParameters", content = { MutableButSameInstanceArgumentInUnstableParameterDemo() }),

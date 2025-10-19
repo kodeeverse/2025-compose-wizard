@@ -30,6 +30,10 @@ import java.lang.System.currentTimeMillis
 
 private val topLevelStableObject = MyStableClass()
 
+@get:Stable
+@property:Stable
+private val topLevelStableProperty = MyRegularClass()
+
 private enum class MyEnum {
   A,
 }
@@ -65,7 +69,7 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(constArgumentCall(1))
+    StaticExpressionArgument(currentMsCall(1))
   }
 }
 
@@ -92,7 +96,7 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(enumEntryArgumentCall(MyEnum.A))
+    StaticExpressionArgument(currentMsCall(MyEnum.A))
   }
 }
 
@@ -119,7 +123,7 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(companionObjectArgumentCall(MyRegularClass.Companion))
+    StaticExpressionArgument(currentMsCall(MyRegularClass.Companion))
   }
 }
 
@@ -146,7 +150,34 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(topLevelStableObjectArgumentCall(topLevelStableObject))
+    StaticExpressionArgument(currentMsCall(topLevelStableObject))
+  }
+}
+
+@Composable fun TopLevelStablePropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT topLevelStablePropertyArgument @ $currentRecomposeScopeHash\n" +
+        "(${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticExpressionArgument(currentMsCall(topLevelStableProperty))
   }
 }
 
@@ -174,7 +205,7 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(staticVariableArgumentCall(myStaticValue))
+    StaticExpressionArgument(currentMsCall(myStaticValue))
   }
 }
 
@@ -186,17 +217,5 @@ private open class MyRegularClass {
   )
 }
 
-@Stable private fun constArgumentCall(value: Int): Long =
-  currentTimeMillis() + value
-
-@Stable private fun enumEntryArgumentCall(value: MyEnum): Long =
-  currentTimeMillis() + value.ordinal
-
-@Stable private fun companionObjectArgumentCall(value: MyRegularClass): Long =
-  currentTimeMillis() + value.hashCode()
-
-@Stable private fun topLevelStableObjectArgumentCall(value: MyStableClass): Long =
-  currentTimeMillis() + value.hashCode()
-
-@Stable private fun staticVariableArgumentCall(value: Any): Long =
+@Stable private fun currentMsCall(value: Any): Long =
   currentTimeMillis() + value.hashCode()
