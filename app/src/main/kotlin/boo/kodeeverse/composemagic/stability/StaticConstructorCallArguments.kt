@@ -41,7 +41,7 @@ class UnstableClass_ {
 
 @Immutable class ImmutableClass_
 
-@Immutable private class ImmutableButNonStaticArgumentClass(val value: Any)
+@Immutable private class ImmutableClassWithAnyParameter(val value: Any)
 
 @Composable fun UntableClassArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
@@ -118,6 +118,60 @@ class UnstableClass_ {
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     StaticConstructorArgument(ImmutableClass_())
+  }
+}
+
+@Composable fun ImmutableWithNonStaticArgumentClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT immutableClassWithNonStaticArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticConstructorArgument(ImmutableClassWithAnyParameter(Any()))
+  }
+}
+
+@Composable fun ImmutableWithStaticArgumentClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT immutableClassWithStaticArgument\n" +
+        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticConstructorArgument(ImmutableClassWithAnyParameter(123))
   }
 }
 
@@ -205,13 +259,14 @@ class UnstableClass_ {
 
 @Composable fun ImmutableClassPropertyIntoArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value = ImmutableClass_()
 
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
+    val value = ImmutableClass_()
+
     Text(
       "ROOT immutableClassPropertyIntoArgument\n" +
         "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
@@ -283,36 +338,10 @@ class UnstableClass_ {
   }
 }
 
-@Composable fun ImmutableButNonStaticArgumentClassArgumentDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text(
-      "ROOT immutableClassButNonStaticArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    StaticConstructorArgument(ImmutableButNonStaticArgumentClass(Any()))
-  }
-}
-
 @Composable private fun StaticConstructorArgument(value: Any) {
   Text(
-    "StaticConstructorArgument @ $currentRecomposeScopeHash\n(${value.hashCode()})",
+    "StaticConstructorArgument @ $currentRecomposeScopeHash\n" +
+      "(${currentTimeMillis()}) (${value.hashCode()})",
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
   )

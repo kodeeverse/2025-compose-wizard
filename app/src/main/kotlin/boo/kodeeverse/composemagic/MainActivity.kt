@@ -55,10 +55,11 @@ import boo.kodeeverse.composemagic.stability.EmptyListCallDemo
 import boo.kodeeverse.composemagic.stability.EmptyMapCallDemo
 import boo.kodeeverse.composemagic.stability.EmptySetCallDemo
 import boo.kodeeverse.composemagic.stability.EnumEntryArgumentDemo
-import boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.ImmutableClassParameterIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentDemo
+import boo.kodeeverse.composemagic.stability.ImmutableWithNonStaticArgumentClassArgumentDemo
+import boo.kodeeverse.composemagic.stability.ImmutableWithStaticArgumentClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.ListOfCallDemo
 import boo.kodeeverse.composemagic.stability.MapOfCallDemo
 import boo.kodeeverse.composemagic.stability.MutableButSameInstanceArgumentInUnstableParameterDemo
@@ -123,13 +124,14 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   UntableClassArgument(category = "stability - ConstructorCalls", content = { UntableClassArgumentDemo() }),
   StableClassArgument(category = "stability - ConstructorCalls", content = { StableClassArgumentDemo() }),
   ImmutableClassArgument(category = "stability - ConstructorCalls", content = { ImmutableClassArgumentDemo() }),
+  ImmutableWithStaticArgumentClassArgument(category = "stability - ConstructorCalls", content = { ImmutableWithStaticArgumentClassArgumentDemo() }),
+  ImmutableWithNonStaticArgumentClassArgument(category = "stability - ConstructorCalls", content = { ImmutableWithNonStaticArgumentClassArgumentDemo() }),
   StableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { StableClassParameterIntoArgumentDemo() }),
   StableClassPropertyIntoArgument(category = "stability - ConstructorCalls", content = { StableClassPropertyIntoArgumentDemo() }),
   ImmutableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassParameterIntoArgumentDemo() }),
   ImmutableClassPropertyIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassPropertyIntoArgumentDemo() }),
   StableBoxingClassArgument(category = "stability - ConstructorCalls", content = { StableBoxingClassArgumentDemo() }),
   UnstableBoxingClassArgument(category = "stability - ConstructorCalls", content = { UnstableBoxingClassArgumentDemo() }),
-  ImmutableButNonStaticArgumentClassArgument(category = "stability - ConstructorCalls", content = { ImmutableButNonStaticArgumentClassArgumentDemo() }),
 
   EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
   ListOfCall(category = "stability - KnownStableCallArguments", content = { ListOfCallDemo() }),

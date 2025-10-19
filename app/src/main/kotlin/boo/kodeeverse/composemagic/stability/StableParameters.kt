@@ -36,7 +36,6 @@ private class UnstableClass : StableInterface {
   var a: Any = Any()
 }
 
-// Bug but Feature: strong-skipping으로 인해 list가 변경되어도 리컴포지션되지 않음
 @Composable fun MutableButSameInstanceArgumentInUnstableParameterDemo() {
   var count by remember { mutableIntStateOf(0) }
   val list = remember { mutableListOf(0) }
@@ -48,7 +47,7 @@ private class UnstableClass : StableInterface {
   ) {
     Text(
       "ROOT mutableButSameInstanceArgumentInUnstableParameter\n" +
-        "@ $currentRecomposeScopeHash (${list.joinToString()})",
+        "(${list.joinToString()})",
       textAlign = TextAlign.Center,
     )
     Text(
@@ -64,7 +63,7 @@ private class UnstableClass : StableInterface {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    UnstableParameter(list)
+    ListParameter(list)
   }
 }
 
@@ -147,6 +146,14 @@ private class UnstableClass : StableInterface {
 
     StableParameter(UnstableClass())
   }
+}
+
+@Composable private fun ListParameter(value: List<*>) {
+  Text(
+    "ListParameter (${value.joinToString()})",
+    fontWeight = FontWeight.Bold,
+    textAlign = TextAlign.Center,
+  )
 }
 
 @Composable private fun UnstableParameter(value: Any) {
