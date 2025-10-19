@@ -1,0 +1,236 @@
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun InlineLambdaComposableDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-879546662)
+  sourceInformation($composer, "C(InlineLambdaComposableDemo)31@1323L33,33@1360L716:InlineLambdaComposables.kt#ectame")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-879546662, $changed, -1, "boo.kodeeverse.composemagic.composableLambda.InlineLambdaComposableDemo (InlineLambdaComposables.kt:30)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 864216763, "CC(remember):InlineLambdaComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -256357545, "C38@1546L25,38@1532L66,43@1718L11,39@1603L229,47@1837L53,49@1896L176:InlineLambdaComposables.kt#ectame")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -1809379493, "CC(remember):InlineLambdaComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      InlineLambdaComposable({ $composer: Composer?, $changed: Int ->
+        sourceInformationMarkerStart($composer, 2001352014, "C51@1968L25,50@1927L139:InlineLambdaComposables.kt#ectame")
+        Text("InlineLambdaComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111111110111110)
+        sourceInformationMarkerEnd($composer)
+      }, $composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    InlineLambdaComposableDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun NoInlineLambdaComposableDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1522780825)
+  sourceInformation($composer, "C(NoInlineLambdaComposableDemo)59@2144L33,61@2181L844:InlineLambdaComposables.kt#ectame")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1522780825, $changed, -1, "boo.kodeeverse.composemagic.composableLambda.NoInlineLambdaComposableDemo (InlineLambdaComposables.kt:58)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -1191473414, "CC(remember):InlineLambdaComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -1648236488, "C66@2367L25,66@2353L66,71@2539L11,67@2424L229,75@2658L53,77@2717L304:InlineLambdaComposables.kt#ectame")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -2131373606, "CC(remember):InlineLambdaComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      NoInlineLambdaComposable(ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134, $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    NoInlineLambdaComposableDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun NonInlineLambdaComposableDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(311352361)
+  sourceInformation($composer, "C(NonInlineLambdaComposableDemo)91@3094L33,93@3131L846:InlineLambdaComposables.kt#ectame")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(311352361, $changed, -1, "boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposableDemo (InlineLambdaComposables.kt:90)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -1438090070, "CC(remember):InlineLambdaComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1358584722, "C98@3317L25,98@3303L66,103@3489L11,99@3374L229,107@3608L53,109@3667L306:InlineLambdaComposables.kt#ectame")
+      Text("ROOT @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -510358722, "CC(remember):InlineLambdaComposables.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      NonInlineLambdaComposable(ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028, $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    NonInlineLambdaComposableDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableInferredTarget(scheme = "[0[0]]")
+private fun InlineLambdaComposable(content: Function2<Composer, Int, Unit>, $composer: Composer?, $changed: Int) {
+  sourceInformationMarkerStart($composer, -2125141330, "CC(InlineLambdaComposable)N(content)123@4072L9:InlineLambdaComposables.kt#ectame")
+  content($composer, 0b1110 and $changed)
+  sourceInformationMarkerEnd($composer)
+}
+@Composable
+@ComposableInferredTarget(scheme = "[0[0]]")
+private fun NoInlineLambdaComposable(noinline content: Function2<Composer, Int, Unit>, $composer: Composer?, $changed: Int) {
+  sourceInformationMarkerStart($composer, 1229945103, "CC(NoInlineLambdaComposable)N(content)127@4187L9:InlineLambdaComposables.kt#ectame")
+  content($composer, 0b1110 and $changed)
+  sourceInformationMarkerEnd($composer)
+}
+@Composable
+@ComposableInferredTarget(scheme = "[0[0]]")
+private fun NonInlineLambdaComposable(content: Function2<Composer, Int, Unit>, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(871175551)
+  sourceInformation($composer, "C(NonInlineLambdaComposable)N(content)131@4287L9:InlineLambdaComposables.kt#ectame")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changedInstance(content)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(871175551, $dirty, -1, "boo.kodeeverse.composemagic.composableLambda.NonInlineLambdaComposable (InlineLambdaComposables.kt:130)")
+    }
+    content($composer, 0b1110 and $dirty)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    NonInlineLambdaComposable(content, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+internal object ComposableSingletons$InlineLambdaComposablesKt {
+  val lambda$-1916130134: Function2<Composer, Int, Unit> = composableLambdaInstance(-1916130134, false) { $composer: Composer?, $changed: Int ->
+    sourceInformation($composer, "C79@2793L25,78@2750L265:InlineLambdaComposables.kt#ectame")
+    if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
+      if (isTraceInProgress()) {
+        traceEventStart(-1916130134, $changed, -1, "boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$-1916130134.<anonymous> (InlineLambdaComposables.kt:78)")
+      }
+      Text("NoInlineLambdaComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+(${currentTimeMillis()})", Companion.fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000110000, 0, 0b00111111101110111100)
+      if (isTraceInProgress()) {
+        traceEventEnd()
+      }
+    } else {
+      $composer.skipToGroupEnd()
+    }
+  }
+  val lambda$1582973028: Function2<Composer, Int, Unit> = composableLambdaInstance(1582973028, false) { $composer: Composer?, $changed: Int ->
+    sourceInformation($composer, "C111@3745L25,110@3701L266:InlineLambdaComposables.kt#ectame")
+    if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
+      if (isTraceInProgress()) {
+        traceEventStart(1582973028, $changed, -1, "boo.kodeeverse.composemagic.composableLambda.ComposableSingletons$InlineLambdaComposablesKt.lambda$1582973028.<anonymous> (InlineLambdaComposables.kt:110)")
+      }
+      Text("NonInlineLambdaComposable @ ${<get-currentRecomposeScopeHash>($composer, 0)}
+(${currentTimeMillis()})", Companion.fillMaxWidth().wrapContentWidth(), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000110000, 0, 0b00111111101110111100)
+      if (isTraceInProgress()) {
+        traceEventEnd()
+      }
+    } else {
+      $composer.skipToGroupEnd()
+    }
+  }
+}
