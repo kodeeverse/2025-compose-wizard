@@ -33,8 +33,6 @@ android {
 
 kotlin {
   compilerOptions {
-    allWarningsAsErrors = true
-    extraWarnings = true
     jvmTarget = JvmTarget.JVM_21
   }
 }

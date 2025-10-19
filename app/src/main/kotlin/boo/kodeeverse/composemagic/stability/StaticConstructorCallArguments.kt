@@ -1,3 +1,5 @@
+@file:Suppress("ClassName")
+
 package boo.kodeeverse.composemagic.stability
 
 import androidx.compose.foundation.background
@@ -27,26 +29,99 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
-abstract class UnstableMarker {
-  var createdAt: Long = currentTimeMillis()
+class UnstableClass_ {
+  var createdAt: Any = listOf<Nothing>() // unstable marker
 }
 
-@Stable class StableClass
+@Stable class StableClass_
 
-@JvmInline value class StableBoxingClass(val value: Int)
+@JvmInline private value class StableBoxingClass(val value: Int)
 
-@JvmInline value class UnstableBoxingClass(val value: Any)
+@JvmInline private value class UnstableBoxingClass(val value: Any)
 
-@Stable class StableAndAlwaysSameClass : UnstableMarker() {
-  override fun equals(other: Any?): Boolean = true
-  override fun hashCode(): Int = 42
+@Immutable class ImmutableClass_
+
+@Immutable private class ImmutableButNonStaticArgumentClass(val value: Any)
+
+@Composable fun UntableClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT unstableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticConstructorArgument(UnstableClass_())
+  }
 }
 
-@Immutable class ImmutableClass
+@Composable fun StableClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
 
-@Immutable class ImmutableButNonStaticArgumentClass(val value: Any)
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-@Composable fun StableClassParameterIntoArgumentDemo(value: StableClass = StableClass()) {
+    StaticConstructorArgument(StableClass_())
+  }
+}
+
+@Composable fun ImmutableClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT immutableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticConstructorArgument(ImmutableClass_())
+  }
+}
+
+@Composable fun StableClassParameterIntoArgumentDemo(value: StableClass_ = StableClass_()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -75,7 +150,7 @@ abstract class UnstableMarker {
 
 @Composable fun StableClassPropertyIntoArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value = StableClass()
+  val value = StableClass_()
 
   Column(
     modifier = Modifier.wrapContentSize(),
@@ -101,7 +176,7 @@ abstract class UnstableMarker {
   }
 }
 
-@Composable fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass = ImmutableClass()) {
+@Composable fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass_ = ImmutableClass_()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -130,7 +205,7 @@ abstract class UnstableMarker {
 
 @Composable fun ImmutableClassPropertyIntoArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value = ImmutableClass()
+  val value = ImmutableClass_()
 
   Column(
     modifier = Modifier.wrapContentSize(),
@@ -205,58 +280,6 @@ abstract class UnstableMarker {
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     StaticConstructorArgument(UnstableBoxingClass(Any()))
-  }
-}
-
-@Composable fun StableClassArgumentDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text(
-      "ROOT stableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    StaticConstructorArgument(StableClass())
-  }
-}
-
-@Composable fun ImmutableClassArgumentDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text(
-      "ROOT immutableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    StaticConstructorArgument(ImmutableClass())
   }
 }
 

@@ -81,18 +81,19 @@ restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodee
 restartable skippable fun boo.kodeeverse.composemagic.stability.KnownStableCallArgument(
   unstable value: Any
 )
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UntableClassArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo(
-  stable value: StableClass? = @dynamic <expression>
+  stable value: StableClass_? = @dynamic <expression>
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassParameterIntoArgumentDemo(
-  stable value: ImmutableClass? = @static <expression>
+  stable value: ImmutableClass_? = @static <expression>
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo()
 restartable skippable fun boo.kodeeverse.composemagic.stability.StaticConstructorArgument(
   unstable value: Any
