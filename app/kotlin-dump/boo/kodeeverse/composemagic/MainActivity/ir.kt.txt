@@ -551,13 +551,13 @@ internal object ComposableSingletons$MainActivityKt {
       $composer.skipToGroupEnd()
     }
   }
-  val lambda$1979739518: Function2<Composer, Int, Unit> = composableLambdaInstance(1979739518, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C123@9178L28:MainActivity.kt#igbs6g")
+  val lambda$742964443: Function2<Composer, Int, Unit> = composableLambdaInstance(742964443, false) { $composer: Composer?, $changed: Int ->
+    sourceInformation($composer, "C123@9183L33:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1979739518, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1979739518.<anonymous> (MainActivity.kt:123)")
+        traceEventStart(742964443, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$742964443.<anonymous> (MainActivity.kt:123)")
       }
-      ImmutableClassArgumentDemo($composer, 0)
+      UnstableBoxingClassArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
         traceEventEnd()
       }
@@ -565,13 +565,13 @@ internal object ComposableSingletons$MainActivityKt {
       $composer.skipToGroupEnd()
     }
   }
-  val lambda$742964443: Function2<Composer, Int, Unit> = composableLambdaInstance(742964443, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C124@9296L33:MainActivity.kt#igbs6g")
+  val lambda$1979739518: Function2<Composer, Int, Unit> = composableLambdaInstance(1979739518, false) { $composer: Composer?, $changed: Int ->
+    sourceInformation($composer, "C124@9301L28:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(742964443, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$742964443.<anonymous> (MainActivity.kt:124)")
+        traceEventStart(1979739518, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1979739518.<anonymous> (MainActivity.kt:124)")
       }
-      UnstableBoxingClassArgumentDemo($composer, 0)
+      ImmutableClassArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
         traceEventEnd()
       }

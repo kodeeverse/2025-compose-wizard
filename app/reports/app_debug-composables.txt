@@ -1,16 +1,1 @@
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableAndAlwaysSameClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo(
-  stable value: StableClass? = @dynamic <expression>
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassParameterIntoArgumentDemo(
-  stable value: ImmutableClass? = @static <expression>
-)
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo()
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StaticConstructorArgument(
-  stable value: Long
-)
+readonly inline fun boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>()

@@ -121,8 +121,8 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   ImmutableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassParameterIntoArgumentDemo() }),
   ImmutableClassPropertyIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassPropertyIntoArgumentDemo() }),
   StableBoxingClassArgument(category = "stability - ConstructorCalls", content = { StableBoxingClassArgumentDemo() }),
-  ImmutableClassArgument(category = "stability - ConstructorCalls", content = { ImmutableClassArgumentDemo() }),
   UnstableBoxingClassArgument(category = "stability - ConstructorCalls", content = { UnstableBoxingClassArgumentDemo() }),
+  ImmutableClassArgument(category = "stability - ConstructorCalls", content = { ImmutableClassArgumentDemo() }),
   ImmutableButNonStaticArgumentClassArgument(category = "stability - ConstructorCalls", content = { ImmutableButNonStaticArgumentClassArgumentDemo() }),
 
   EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
