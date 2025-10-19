@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -44,7 +45,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(emptyList<Nothing>())
+    KnownStableCallArgument(currentMsCall(emptyList<Nothing>()))
   }
 }
 
@@ -67,7 +68,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(listOf(1, 2))
+    KnownStableCallArgument(currentMsCall(listOf(1, 2)))
   }
 }
 
@@ -90,7 +91,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(emptyMap<Nothing, Nothing>())
+    KnownStableCallArgument(currentMsCall(emptyMap<Nothing, Nothing>()))
   }
 }
 
@@ -113,7 +114,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(mapOf(1 to 1f, 2 to 2f))
+    KnownStableCallArgument(currentMsCall(mapOf(1 to 1f, 2 to 2f)))
   }
 }
 
@@ -136,7 +137,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(emptySet<Nothing>())
+    KnownStableCallArgument(currentMsCall(emptySet<Nothing>()))
   }
 }
 
@@ -159,7 +160,7 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(setOf(1, 2))
+    KnownStableCallArgument(currentMsCall(setOf(1, 2)))
   }
 }
 
@@ -182,14 +183,17 @@ import java.lang.System.currentTimeMillis
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    KnownStableCallArgument(1 to 1)
+    KnownStableCallArgument(currentMsCall(1 to 1))
   }
 }
 
 @Composable private fun KnownStableCallArgument(value: Any) {
   Text(
-    "KnownStableCallArgument @ $currentRecomposeScopeHash\n(${currentTimeMillis()})",
+    "KnownStableCallArgument @ $currentRecomposeScopeHash\n(${value})",
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
   )
 }
+
+@Stable private fun currentMsCall(value: Any): Long =
+  currentTimeMillis() + value.hashCode()

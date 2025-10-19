@@ -1,1 +1,10 @@
-readonly inline fun boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EmptyListCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ListOfCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EmptyMapCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.MapOfCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EmptySetCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.SetOfCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.PairOfCallDemo()
+restartable skippable fun boo.kodeeverse.composemagic.stability.KnownStableCallArgument(
+  unstable value: Any
+)
