@@ -31,7 +31,7 @@ abstract class UnstableMarker {
   var createdAt: Long = currentTimeMillis()
 }
 
-@Stable class StableClass : UnstableMarker()
+@Stable class StableClass
 
 @JvmInline value class StableBoxingClass(val value: Int)
 
@@ -42,7 +42,7 @@ abstract class UnstableMarker {
   override fun hashCode(): Int = 42
 }
 
-@Immutable class ImmutableClass(val staticValue: Int) : UnstableMarker()
+@Immutable class ImmutableClass
 
 @Immutable class ImmutableButNonStaticArgumentClass(val value: Any)
 
@@ -101,7 +101,7 @@ abstract class UnstableMarker {
   }
 }
 
-@Composable fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass = ImmutableClass(1)) {
+@Composable fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass = ImmutableClass()) {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -130,7 +130,7 @@ abstract class UnstableMarker {
 
 @Composable fun ImmutableClassPropertyIntoArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
-  val value = ImmutableClass(1)
+  val value = ImmutableClass()
 
   Column(
     modifier = Modifier.wrapContentSize(),
@@ -208,6 +208,32 @@ abstract class UnstableMarker {
   }
 }
 
+@Composable fun StableClassArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticConstructorArgument(StableClass())
+  }
+}
+
 @Composable fun ImmutableClassArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -230,7 +256,7 @@ abstract class UnstableMarker {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(ImmutableClass(1))
+    StaticConstructorArgument(ImmutableClass())
   }
 }
 

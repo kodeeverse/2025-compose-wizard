@@ -4,7 +4,7 @@ abstract class UnstableMarker {
   static val $stable: Int = 8
 }
 @Stable
-class StableClass : UnstableMarker {
+class StableClass {
   static val $stable: Int = 0
 }
 @JvmInline
@@ -64,7 +64,7 @@ class StableAndAlwaysSameClass : UnstableMarker {
   static val $stable: Int = 0
 }
 @Immutable
-class ImmutableClass(val staticValue: Int) : UnstableMarker {
+class ImmutableClass {
   static val $stable: Int = 0
 }
 @Immutable
@@ -75,7 +75,7 @@ class ImmutableButNonStaticArgumentClass(val value: Any) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableClassParameterIntoArgumentDemo(value: StableClass?, $composer: Composer?, $changed: Int, $default: Int) {
   $composer = $composer.startRestartGroup(332352536)
-  sourceInformation($composer, "C(StableClassParameterIntoArgumentDemo)N(value)49@1881L33,51@1918L668:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(StableClassParameterIntoArgumentDemo)N(value)49@1821L33,51@1858L668:StaticConstructorCallArguments.kt#b558il")
   val $dirty = $changed
   if ($changed and 0b0110 == 0) {
     $dirty = $dirty or if ($default and 0b0001 == 0 && $composer.changed(value)) 0b0100 else 0b0010
@@ -114,7 +114,7 @@ fun StableClassParameterIntoArgumentDemo(value: StableClass?, $composer: Compose
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1692486197, "C58@2158L25,56@2090L162,65@2372L11,61@2257L229,69@2491L53,71@2550L32:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 1692486197, "C58@2098L25,56@2030L162,65@2312L11,61@2197L229,69@2431L53,71@2490L32:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT stableClassParameterIntoArgument
       ${"@ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -147,7 +147,7 @@ fun StableClassParameterIntoArgumentDemo(value: StableClass?, $composer: Compose
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableClassPropertyIntoArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(816415533)
-  sourceInformation($composer, "C(StableClassPropertyIntoArgumentDemo)76@2661L33,79@2726L667:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(StableClassPropertyIntoArgumentDemo)76@2601L33,79@2666L667:StaticConstructorCallArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
       traceEventStart(816415533, $changed, -1, "boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo (StaticConstructorCallArguments.kt:75)")
@@ -170,7 +170,7 @@ fun StableClassPropertyIntoArgumentDemo($composer: Composer?, $changed: Int) {
     }
     val value = StableClass()
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 2099036129, "C86@2965L25,84@2898L161,93@3179L11,89@3064L229,97@3298L53,99@3357L32:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 2099036129, "C86@2905L25,84@2838L161,93@3119L11,89@3004L229,97@3238L53,99@3297L32:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT stableClassPropertyIntoArgument
       ${"@ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -203,7 +203,7 @@ fun StableClassPropertyIntoArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass?, $composer: Composer?, $changed: Int, $default: Int) {
   $composer = $composer.startRestartGroup(1834957122)
-  sourceInformation($composer, "C(ImmutableClassParameterIntoArgumentDemo)N(value)104@3513L33,106@3550L671:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(ImmutableClassParameterIntoArgumentDemo)N(value)104@3452L33,106@3489L671:StaticConstructorCallArguments.kt#b558il")
   val $dirty = $changed
   if ($default and 0b0001 != 0) {
     $dirty = $dirty or 0b0110
@@ -212,14 +212,14 @@ fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass?, $composer: C
   }
   if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
     if ($default and 0b0001 != 0) {
-      value = ImmutableClass(1)
+      value = ImmutableClass()
     }
     if (isTraceInProgress()) {
       traceEventStart(1834957122, $dirty, -1, "boo.kodeeverse.composemagic.stability.ImmutableClassParameterIntoArgumentDemo (StaticConstructorCallArguments.kt:103)")
     }
     var count by {
       val count$delegate = <block>{
-        sourceInformationMarkerStart($composer, -1837761053, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
+        sourceInformationMarkerStart($composer, -1837761085, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
         val tmp0_group = $composer.cache(false) {
           mutableIntStateOf(0)
         }
@@ -234,7 +234,7 @@ fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass?, $composer: C
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 257238184, "C113@3793L25,111@3722L165,120@4007L11,116@3892L229,124@4126L53,126@4185L32:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 257238184, "C113@3732L25,111@3661L165,120@3946L11,116@3831L229,124@4065L53,126@4124L32:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT immutableClassParameterIntoArgument
       ${"@ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -267,7 +267,7 @@ fun ImmutableClassParameterIntoArgumentDemo(value: ImmutableClass?, $composer: C
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun ImmutableClassPropertyIntoArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(296753880)
-  sourceInformation($composer, "C(ImmutableClassPropertyIntoArgumentDemo)131@4299L33,134@4368L670:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(ImmutableClassPropertyIntoArgumentDemo)131@4238L33,134@4306L670:StaticConstructorCallArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
       traceEventStart(296753880, $changed, -1, "boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentDemo (StaticConstructorCallArguments.kt:130)")
@@ -288,9 +288,9 @@ fun ImmutableClassPropertyIntoArgumentDemo($composer: Composer?, $changed: Int) 
         return count$delegate.setValue(null, ::count$delegate, <set-?>)
       }
     }
-    val value = ImmutableClass(1)
+    val value = ImmutableClass()
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1087607303, "C141@4610L25,139@4540L164,148@4824L11,144@4709L229,152@4943L53,154@5002L32:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 1087607303, "C141@4548L25,139@4478L164,148@4762L11,144@4647L229,152@4881L53,154@4940L32:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT immutableClassPropertyIntoArgument
       ${"@ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -323,7 +323,7 @@ fun ImmutableClassPropertyIntoArgumentDemo($composer: Composer?, $changed: Int) 
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableBoxingClassArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(839783257)
-  sourceInformation($composer, "C(StableBoxingClassArgumentDemo)159@5107L33,161@5144L649:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(StableBoxingClassArgumentDemo)159@5045L33,161@5082L649:StaticConstructorCallArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
       traceEventStart(839783257, $changed, -1, "boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo (StaticConstructorCallArguments.kt:158)")
@@ -345,7 +345,7 @@ fun StableBoxingClassArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -1506705785, "C167@5350L25,166@5316L128,174@5564L11,170@5449L229,178@5683L53,180@5742L47:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -1506705785, "C167@5288L25,166@5254L128,174@5502L11,170@5387L229,178@5621L53,180@5680L47:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT stableBoxing @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
         onClick = sourceInformationMarkerStart($composer, 505593390, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
@@ -377,7 +377,7 @@ fun StableBoxingClassArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun UnstableBoxingClassArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-782124046)
-  sourceInformation($composer, "C(UnstableBoxingClassArgumentDemo)185@5864L33,187@5901L657:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(UnstableBoxingClassArgumentDemo)185@5802L33,187@5839L657:StaticConstructorCallArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
       traceEventStart(-782124046, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo (StaticConstructorCallArguments.kt:184)")
@@ -399,7 +399,7 @@ fun UnstableBoxingClassArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -261669178, "C193@6109L25,192@6073L130,200@6323L11,196@6208L229,204@6442L53,206@6501L53:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -261669178, "C193@6047L25,192@6011L130,200@6261L11,196@6146L229,204@6380L53,206@6439L53:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT unstableBoxing @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
         onClick = sourceInformationMarkerStart($composer, -1809548729, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
@@ -429,12 +429,66 @@ fun UnstableBoxingClassArgumentDemo($composer: Composer?, $changed: Int) {
 }
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
-fun ImmutableClassArgumentDemo($composer: Composer?, $changed: Int) {
-  $composer = $composer.startRestartGroup(1718825709)
-  sourceInformation($composer, "C(ImmutableClassArgumentDemo)211@6624L33,213@6661L648:StaticConstructorCallArguments.kt#b558il")
+fun StableClassArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1834044734)
+  sourceInformation($composer, "C(StableClassArgumentDemo)211@6559L33,213@6596L641:StaticConstructorCallArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(1718825709, $changed, -1, "boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo (StaticConstructorCallArguments.kt:210)")
+      traceEventStart(-1834044734, $changed, -1, "boo.kodeeverse.composemagic.stability.StableClassArgumentDemo (StaticConstructorCallArguments.kt:210)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -1580396477, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 895347206, "C219@6801L25,218@6768L127,226@7015L11,222@6900L229,230@7134L53,232@7193L40:StaticConstructorCallArguments.kt#b558il")
+      Text("ROOT stableClass @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 1275815607, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      StaticConstructorArgument(StableClass(), $composer, 0)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StableClassArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun ImmutableClassArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(1718825709)
+  sourceInformation($composer, "C(ImmutableClassArgumentDemo)237@7303L33,239@7340L647:StaticConstructorCallArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(1718825709, $changed, -1, "boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo (StaticConstructorCallArguments.kt:236)")
     }
     var count by {
       val count$delegate = <block>{
@@ -453,7 +507,7 @@ fun ImmutableClassArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -340631000, "C219@6869L25,218@6833L130,226@7083L11,222@6968L229,230@7202L53,232@7261L44:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -340631031, "C245@7548L25,244@7512L130,252@7762L11,248@7647L229,256@7881L53,258@7940L43:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT immutableClass @ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
         onClick = sourceInformationMarkerStart($composer, -149527890, "CC(remember):StaticConstructorCallArguments.kt#9igjgp")
@@ -468,7 +522,7 @@ fun ImmutableClassArgumentDemo($composer: Composer?, $changed: Int) {
         color = Companion.Green
       ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111100)
       HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
-      StaticConstructorArgument(ImmutableClass(1), $composer, 0b0110)
+      StaticConstructorArgument(ImmutableClass(), $composer, 0b0110)
       sourceInformationMarkerEnd($composer)
     }, $composer, 0b000110110110, 0)
     if (isTraceInProgress()) {
@@ -485,10 +539,10 @@ fun ImmutableClassArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun ImmutableButNonStaticArgumentClassArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(1297857796)
-  sourceInformation($composer, "C(ImmutableButNonStaticArgumentClassArgumentDemo)237@7395L33,239@7432L706:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(ImmutableButNonStaticArgumentClassArgumentDemo)263@8073L33,265@8110L706:StaticConstructorCallArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(1297857796, $changed, -1, "boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo (StaticConstructorCallArguments.kt:236)")
+      traceEventStart(1297857796, $changed, -1, "boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo (StaticConstructorCallArguments.kt:262)")
     }
     var count by {
       val count$delegate = <block>{
@@ -507,7 +561,7 @@ fun ImmutableButNonStaticArgumentClassArgumentDemo($composer: Composer?, $change
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 924338871, "C246@7674L25,244@7604L164,253@7888L11,249@7773L229,257@8007L53,259@8066L68:StaticConstructorCallArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 924338871, "C272@8352L25,270@8282L164,279@8566L11,275@8451L229,283@8685L53,285@8744L68:StaticConstructorCallArguments.kt#b558il")
       Text("ROOT immutableClassButNonStaticArgument
       ${"@ ${<get-currentRecomposeScopeHash>($composer, 0)} (${currentTimeMillis()})"}", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111101111111110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -539,14 +593,14 @@ fun ImmutableButNonStaticArgumentClassArgumentDemo($composer: Composer?, $change
 @Composable
 private fun StaticConstructorArgument(value: Any, $composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(831392616)
-  sourceInformation($composer, "C(StaticConstructorArgument)N(value)265@8248L25,264@8208L162:StaticConstructorCallArguments.kt#b558il")
+  sourceInformation($composer, "C(StaticConstructorArgument)N(value)291@8926L25,290@8886L162:StaticConstructorCallArguments.kt#b558il")
   val $dirty = $changed
   if ($changed and 0b0110 == 0) {
     $dirty = $dirty or if ($composer.changedInstance(value)) 0b0100 else 0b0010
   }
   if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(831392616, $dirty, -1, "boo.kodeeverse.composemagic.stability.StaticConstructorArgument (StaticConstructorCallArguments.kt:263)")
+      traceEventStart(831392616, $dirty, -1, "boo.kodeeverse.composemagic.stability.StaticConstructorArgument (StaticConstructorCallArguments.kt:289)")
     }
     Text("StaticConstructorArgument @ ${<get-currentRecomposeScopeHash>($composer, 0)}
 (${value.hashCode()})", null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, Companion.Bold, null, <unsafe-coerce>(0L), null, Companion.Center, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b000110000000000000000000, 0, 0b00111111101110111110)

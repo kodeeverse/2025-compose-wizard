@@ -10,7 +10,6 @@ stable class boo.kodeeverse.composemagic.stability.StableClass {
 stable class boo.kodeeverse.composemagic.stability.StableAndAlwaysSameClass {
 }
 stable class boo.kodeeverse.composemagic.stability.ImmutableClass {
-  stable val staticValue: Int
 }
 stable class boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClass {
   unstable val value: Any

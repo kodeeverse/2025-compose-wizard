@@ -50,6 +50,7 @@ boo.kodeeverse.composemagic.stability.ImmutableClassParameterIntoArgumentDemo,Im
 boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentDemo,ImmutableClassPropertyIntoArgumentDemo,1,1,1,0,0,0,0,0,1,1,
 boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo,StableBoxingClassArgumentDemo,1,1,1,0,0,0,0,0,1,1,
 boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo,UnstableBoxingClassArgumentDemo,1,1,1,0,0,0,0,0,1,1,
+boo.kodeeverse.composemagic.stability.StableClassArgumentDemo,StableClassArgumentDemo,1,1,1,0,0,0,0,0,1,1,
 boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo,ImmutableClassArgumentDemo,1,1,1,0,0,0,0,0,1,1,
 boo.kodeeverse.composemagic.stability.ImmutableButNonStaticArgumentClassArgumentDemo,ImmutableButNonStaticArgumentClassArgumentDemo,1,1,1,0,0,0,0,0,1,1,
 boo.kodeeverse.composemagic.stability.StaticConstructorArgument,StaticConstructorArgument,1,1,1,0,0,0,0,0,1,2,
