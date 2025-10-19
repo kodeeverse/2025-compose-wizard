@@ -28,14 +28,24 @@ import androidx.compose.ui.unit.dp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 
-private val topLevelStableObject = MyStableClass()
+private val stableValueProperty = MyStableClass()
 
-@get:Stable
-@property:Stable
-private val topLevelStableProperty = MyRegularClass()
+@Stable private var stableVariableProperty: MyStableClass
+  set(_) {}
+  get() = MyStableClass()
+
+private var variableProperty: MyStableClass
+  set(_) {}
+  get() = MyStableClass()
 
 private enum class MyEnum {
   A,
+}
+
+@Stable private object StableObject
+
+private object UnstableObject {
+  var a: Any = listOf(1) // unstable maker
 }
 
 @Stable private class MyStableClass
@@ -127,7 +137,7 @@ private open class MyRegularClass {
   }
 }
 
-@Composable fun TopLevelStableObjectArgumentDemo() {
+@Composable fun StableObjectArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -136,7 +146,7 @@ private open class MyRegularClass {
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
     Text(
-      "ROOT topLevelStableObjectArgument @ $currentRecomposeScopeHash\n" +
+      "ROOT stableObjectArgument @ $currentRecomposeScopeHash\n" +
         "(${currentTimeMillis()})",
       textAlign = TextAlign.Center,
     )
@@ -150,11 +160,11 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(topLevelStableObject))
+    StaticExpressionArgument(currentMsCall(StableObject))
   }
 }
 
-@Composable fun TopLevelStablePropertyArgumentDemo() {
+@Composable fun UnstableObjectArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -163,7 +173,7 @@ private open class MyRegularClass {
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
     Text(
-      "ROOT topLevelStablePropertyArgument @ $currentRecomposeScopeHash\n" +
+      "ROOT unstableObjectArgument @ $currentRecomposeScopeHash\n" +
         "(${currentTimeMillis()})",
       textAlign = TextAlign.Center,
     )
@@ -177,7 +187,88 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(topLevelStableProperty))
+    StaticExpressionArgument(currentMsCall(UnstableObject))
+  }
+}
+
+@Composable fun StableValuePropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableValuePropertyArgument @ $currentRecomposeScopeHash\n" +
+        "(${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticExpressionArgument(currentMsCall(stableValueProperty))
+  }
+}
+
+@Composable fun StableVariablePropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT stableVariablePropertyArgument @ $currentRecomposeScopeHash\n" +
+        "(${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticExpressionArgument(currentMsCall(stableVariableProperty))
+  }
+}
+
+@Composable fun VariablePropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    Text(
+      "ROOT variablePropertyArgument @ $currentRecomposeScopeHash\n" +
+        "(${currentTimeMillis()})",
+      textAlign = TextAlign.Center,
+    )
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    StaticExpressionArgument(currentMsCall(variableProperty))
   }
 }
 

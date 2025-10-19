@@ -72,13 +72,16 @@ import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableCallWithUnstableTypeArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableObjectArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableValuePropertyArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
-import boo.kodeeverse.composemagic.stability.TopLevelStableObjectArgumentDemo
-import boo.kodeeverse.composemagic.stability.TopLevelStablePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableAndAlwaysSameClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableArgumentInStableParameterDemo
 import boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableObjectArgumentDemo
+import boo.kodeeverse.composemagic.stability.VariablePropertyArgumentDemo
 
 private enum class Demo(val category: String, val content: @Composable () -> Unit) {
   InlineLambdaComposable(category = "restartability - composableLambda", content = { InlineLambdaComposableDemo() }),
@@ -105,8 +108,11 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   ConstArgument(category = "stability - StaticExpressionArguments", content = { ConstArgumentDemo() }),
   EnumEntryArgument(category = "stability - StaticExpressionArguments", content = { EnumEntryArgumentDemo() }),
   CompanionObjectArgument(category = "stability - StaticExpressionArguments", content = { CompanionObjectArgumentDemo() }),
-  TopLevelStableObjectArgument(category = "stability - StaticExpressionArguments", content = { TopLevelStableObjectArgumentDemo() }),
-  TopLevelStablePropertyArgument(category = "stability - StaticExpressionArguments", content = { TopLevelStablePropertyArgumentDemo() }),
+  StableObjectArgument(category = "stability - StaticExpressionArguments", content = { StableObjectArgumentDemo() }),
+  UnstableObjectArgument(category = "stability - StaticExpressionArguments", content = { UnstableObjectArgumentDemo() }),
+  StableValuePropertyArgument(category = "stability - StaticExpressionArguments", content = { StableValuePropertyArgumentDemo() }),
+  StableVariablePropertyArgument(category = "stability - StaticExpressionArguments", content = { StableVariablePropertyArgumentDemo() }),
+  VariablePropertyArgument(category = "stability - StaticExpressionArguments", content = { VariablePropertyArgumentDemo() }),
   StaticVariableArgument(category = "stability - StaticExpressionArguments", content = { StaticVariableArgumentDemo() }),
 
   MutableButSameInstanceArgumentInUnstableParameter(category = "stability - StableParameters", content = { MutableButSameInstanceArgumentInUnstableParameterDemo() }),
