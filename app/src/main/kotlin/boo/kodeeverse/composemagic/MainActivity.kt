@@ -62,7 +62,6 @@ import boo.kodeeverse.composemagic.stability.ImmutableClassPropertyIntoArgumentD
 import boo.kodeeverse.composemagic.stability.ListOfCallDemo
 import boo.kodeeverse.composemagic.stability.MapOfCallDemo
 import boo.kodeeverse.composemagic.stability.MutableButSameInstanceArgumentInUnstableParameterDemo
-import boo.kodeeverse.composemagic.stability.NewInstanceAndAlwaysSameInUnstableParameterDemo
 import boo.kodeeverse.composemagic.stability.PairOfCallDemo
 import boo.kodeeverse.composemagic.stability.SetOfCallDemo
 import boo.kodeeverse.composemagic.stability.StableArgumentInStableParameterDemo
@@ -76,7 +75,6 @@ import boo.kodeeverse.composemagic.stability.StableObjectArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableValuePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
-import boo.kodeeverse.composemagic.stability.UnstableAndAlwaysSameClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableArgumentInStableParameterDemo
 import boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
@@ -116,12 +114,10 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   StaticVariableArgument(category = "stability - StaticExpressionArguments", content = { StaticVariableArgumentDemo() }),
 
   MutableButSameInstanceArgumentInUnstableParameter(category = "stability - StableParameters", content = { MutableButSameInstanceArgumentInUnstableParameterDemo() }),
-  NewInstanceAndAlwaysSameInUnstableParameter(category = "stability - StableParameters", content = { NewInstanceAndAlwaysSameInUnstableParameterDemo() }),
   StableArgumentInUnstableParameter(category = "stability - StableParameters", content = { StableArgumentInUnstableParameterDemo() }),
   StableArgumentInStableParameter(category = "stability - StableParameters", content = { StableArgumentInStableParameterDemo() }),
   UnstableArgumentInStableParameter(category = "stability - StableParameters", content = { UnstableArgumentInStableParameterDemo() }),
 
-  UnstableAndAlwaysSameClassArgument(category = "stability - ConstructorCalls", content = { UnstableAndAlwaysSameClassArgumentDemo() }),
   StableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { StableClassParameterIntoArgumentDemo() }),
   StableClassPropertyIntoArgument(category = "stability - ConstructorCalls", content = { StableClassPropertyIntoArgumentDemo() }),
   ImmutableClassParameterIntoArgument(category = "stability - ConstructorCalls", content = { ImmutableClassParameterIntoArgumentDemo() }),

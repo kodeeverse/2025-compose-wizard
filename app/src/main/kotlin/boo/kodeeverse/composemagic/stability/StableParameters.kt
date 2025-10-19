@@ -16,8 +16,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.neverEqualPolicy
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -67,37 +65,6 @@ private class UnstableClass : StableInterface {
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     UnstableParameter(list)
-  }
-}
-
-@Composable fun NewInstanceAndAlwaysSameInUnstableParameterDemo() {
-  var count by remember { mutableIntStateOf(0) }
-  var value by remember { mutableStateOf(UnstableAndAlwaysSameClass(), policy = neverEqualPolicy()) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text(
-      "ROOT newInstanceAndAlwaysSameInUnstableParameter\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()}) (${value.hashCode()})",
-      textAlign = TextAlign.Center,
-    )
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable {
-          count++
-          value = UnstableAndAlwaysSameClass()
-        }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    UnstableParameter(value)
   }
 }
 

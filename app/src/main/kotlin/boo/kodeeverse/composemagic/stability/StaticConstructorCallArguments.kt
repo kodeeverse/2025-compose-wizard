@@ -31,11 +31,6 @@ abstract class UnstableMarker {
   var createdAt: Long = currentTimeMillis()
 }
 
-class UnstableAndAlwaysSameClass : UnstableMarker() {
-  override fun equals(other: Any?): Boolean = true
-  override fun hashCode(): Int = 42
-}
-
 @Stable class StableClass : UnstableMarker()
 
 @JvmInline value class StableBoxingClass(val value: Int)
@@ -50,33 +45,6 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
 @Immutable class ImmutableClass(val staticValue: Int) : UnstableMarker()
 
 @Immutable class ImmutableButNonStaticArgumentClass(val value: Any)
-
-@Composable fun UnstableAndAlwaysSameClassArgumentDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
-  Column(
-    modifier = Modifier.wrapContentSize(),
-    verticalArrangement = Arrangement.spacedBy(10.dp),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Text(
-      "ROOT unstableAndAlwaysSameClassArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
-    Text(
-      "count: $count",
-      modifier = Modifier
-        .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
-        .background(color = Color.Green)
-        .padding(horizontal = 20.dp, vertical = 10.dp),
-    )
-    HorizontalDivider(modifier = Modifier.fillMaxWidth())
-
-    StaticConstructorArgument(currentMsCall(UnstableAndAlwaysSameClass()))
-  }
-}
 
 @Composable fun StableClassParameterIntoArgumentDemo(value: StableClass = StableClass()) {
   var count by remember { mutableIntStateOf(0) }
@@ -101,7 +69,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(value))
+    StaticConstructorArgument(value)
   }
 }
 
@@ -129,7 +97,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(value))
+    StaticConstructorArgument(value)
   }
 }
 
@@ -156,7 +124,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(value))
+    StaticConstructorArgument(value)
   }
 }
 
@@ -184,7 +152,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(value))
+    StaticConstructorArgument(value)
   }
 }
 
@@ -210,7 +178,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(StableBoxingClass(1)))
+    StaticConstructorArgument(StableBoxingClass(1))
   }
 }
 
@@ -236,7 +204,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(UnstableBoxingClass(Any())))
+    StaticConstructorArgument(UnstableBoxingClass(Any()))
   }
 }
 
@@ -262,7 +230,7 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(ImmutableClass(1)))
+    StaticConstructorArgument(ImmutableClass(1))
   }
 }
 
@@ -289,19 +257,16 @@ class UnstableAndAlwaysSameClass : UnstableMarker() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(currentMsCall(ImmutableButNonStaticArgumentClass(Any())))
+    StaticConstructorArgument(ImmutableButNonStaticArgumentClass(Any()))
   }
 }
 
-@Composable private fun StaticConstructorArgument(value: Long) {
+@Composable private fun StaticConstructorArgument(value: Any) {
   Text(
-    "StaticConstructorArgument @ $currentRecomposeScopeHash\n($value)",
+    "StaticConstructorArgument @ $currentRecomposeScopeHash\n(${value.hashCode()})",
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
   )
 }
-
-@Stable private fun currentMsCall(value: Any): Long =
-  currentTimeMillis() + value.hashCode()
 
 internal fun used(a: Any) {}

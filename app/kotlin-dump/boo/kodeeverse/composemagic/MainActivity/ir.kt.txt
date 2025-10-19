@@ -44,8 +44,6 @@ private class Demo(val category: String, val content: Function2<Composer, Int, U
   <<IrEnumEntryImpl>>
   <<IrEnumEntryImpl>>
   <<IrEnumEntryImpl>>
-  <<IrEnumEntryImpl>>
-  <<IrEnumEntryImpl>>
   object Companion {
     val Groups: Map<String, List<Demo>> = entries.groupBy(::category)
   }
@@ -70,7 +68,7 @@ class MainActivity : ComponentActivity {
 val currentRecomposeScopeHash: String
   @Composable @ReadOnlyComposable @JvmName(name = "getCurrentRecomposeScopeHash") 
   get() {
-    sourceInformationMarkerStart($composer, -1869539610, "CC(<get-currentRecomposeScopeHash>)220@13119L21:MainActivity.kt#igbs6g")
+    sourceInformationMarkerStart($composer, -1869539610, "CC(<get-currentRecomposeScopeHash>)216@12650L21:MainActivity.kt#igbs6g")
     val tmp0 = <get-currentRecomposeScope>($composer, 0) as Any.toString().substringAfterLast(
       delimiter = '@'
     )
@@ -79,10 +77,10 @@ val currentRecomposeScopeHash: String
   }
 internal object ComposableSingletons$MainActivityKt {
   val lambda$184549496: Function2<Composer, Int, Unit> = composableLambdaInstance(184549496, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C86@5295L28:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C84@5118L28:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(184549496, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous> (MainActivity.kt:86)")
+        traceEventStart(184549496, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$184549496.<anonymous> (MainActivity.kt:84)")
       }
       InlineLambdaComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -93,10 +91,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$230219865: Function2<Composer, Int, Unit> = composableLambdaInstance(230219865, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C87@5415L30:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C85@5238L30:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(230219865, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous> (MainActivity.kt:87)")
+        traceEventStart(230219865, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$230219865.<anonymous> (MainActivity.kt:85)")
       }
       NoInlineLambdaComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -107,10 +105,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1101020661: Function2<Composer, Int, Unit> = composableLambdaInstance(-1101020661, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C88@5538L31:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C86@5361L31:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1101020661, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous> (MainActivity.kt:88)")
+        traceEventStart(-1101020661, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1101020661.<anonymous> (MainActivity.kt:86)")
       }
       NonInlineLambdaComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -121,10 +119,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1546175953: Function2<Composer, Int, Unit> = composableLambdaInstance(1546175953, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C91@5733L22:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C89@5556L22:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1546175953, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous> (MainActivity.kt:91)")
+        traceEventStart(1546175953, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1546175953.<anonymous> (MainActivity.kt:89)")
       }
       InlineComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -135,10 +133,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$2089939364: Function2<Composer, Int, Unit> = composableLambdaInstance(2089939364, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C92@5823L25:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C90@5646L25:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(2089939364, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous> (MainActivity.kt:92)")
+        traceEventStart(2089939364, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$2089939364.<anonymous> (MainActivity.kt:90)")
       }
       NonInlineComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -149,10 +147,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$341138569: Function2<Composer, Int, Unit> = composableLambdaInstance(341138569, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C93@5912L21:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C91@5735L21:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(341138569, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous> (MainActivity.kt:93)")
+        traceEventStart(341138569, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$341138569.<anonymous> (MainActivity.kt:91)")
       }
       LocalComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -163,10 +161,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1106329964: Function2<Composer, Int, Unit> = composableLambdaInstance(1106329964, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C94@6007L31:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C92@5830L31:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1106329964, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1106329964.<anonymous> (MainActivity.kt:94)")
+        traceEventStart(1106329964, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1106329964.<anonymous> (MainActivity.kt:92)")
       }
       LocalFunctionalComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -177,10 +175,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1615663745: Function2<Composer, Int, Unit> = composableLambdaInstance(-1615663745, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C95@6108L27:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C93@5931L27:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1615663745, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous> (MainActivity.kt:95)")
+        traceEventStart(-1615663745, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1615663745.<anonymous> (MainActivity.kt:93)")
       }
       ReturnValueComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -191,10 +189,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$90164421: Function2<Composer, Int, Unit> = composableLambdaInstance(90164421, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C96@6200L22:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C94@6023L22:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(90164421, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$90164421.<anonymous> (MainActivity.kt:96)")
+        traceEventStart(90164421, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$90164421.<anonymous> (MainActivity.kt:94)")
       }
       IFinalComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -205,10 +203,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1491466609: Function2<Composer, Int, Unit> = composableLambdaInstance(1491466609, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C97@6286L21:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C95@6109L21:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1491466609, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1491466609.<anonymous> (MainActivity.kt:97)")
+        traceEventStart(1491466609, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1491466609.<anonymous> (MainActivity.kt:95)")
       }
       IOpenComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -219,10 +217,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1754517842: Function2<Composer, Int, Unit> = composableLambdaInstance(1754517842, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C98@6379L29:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C96@6202L29:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1754517842, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1754517842.<anonymous> (MainActivity.kt:98)")
+        traceEventStart(1754517842, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1754517842.<anonymous> (MainActivity.kt:96)")
       }
       AbstractFinalComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -233,10 +231,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$436776772: Function2<Composer, Int, Unit> = composableLambdaInstance(436776772, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C99@6479L28:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C97@6302L28:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(436776772, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$436776772.<anonymous> (MainActivity.kt:99)")
+        traceEventStart(436776772, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$436776772.<anonymous> (MainActivity.kt:97)")
       }
       AbstractOpenComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -247,10 +245,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$736096170: Function2<Composer, Int, Unit> = composableLambdaInstance(736096170, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C100@6575L25:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C98@6398L25:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(736096170, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$736096170.<anonymous> (MainActivity.kt:100)")
+        traceEventStart(736096170, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$736096170.<anonymous> (MainActivity.kt:98)")
       }
       OpenFinalComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -261,10 +259,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$403924460: Function2<Composer, Int, Unit> = composableLambdaInstance(403924460, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C101@6667L24:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C99@6490L24:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(403924460, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$403924460.<anonymous> (MainActivity.kt:101)")
+        traceEventStart(403924460, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$403924460.<anonymous> (MainActivity.kt:99)")
       }
       OpenOpenComposableDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -275,10 +273,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1686582239: Function2<Composer, Int, Unit> = composableLambdaInstance(-1686582239, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C103@6776L24:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C101@6599L24:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1686582239, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous> (MainActivity.kt:103)")
+        traceEventStart(-1686582239, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1686582239.<anonymous> (MainActivity.kt:101)")
       }
       StableCallArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -289,10 +287,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-434243435: Function2<Composer, Int, Unit> = composableLambdaInstance(-434243435, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C104@6900L40:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C102@6723L40:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-434243435, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-434243435.<anonymous> (MainActivity.kt:104)")
+        traceEventStart(-434243435, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-434243435.<anonymous> (MainActivity.kt:102)")
       }
       StableCallWithUnstableTypeArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -303,10 +301,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-280771782: Function2<Composer, Int, Unit> = composableLambdaInstance(-280771782, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C105@7026L26:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C103@6849L26:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-280771782, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous> (MainActivity.kt:105)")
+        traceEventStart(-280771782, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-280771782.<anonymous> (MainActivity.kt:103)")
       }
       UnstableCallArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -317,10 +315,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$857183665: Function2<Composer, Int, Unit> = composableLambdaInstance(857183665, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C107@7138L19:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C105@6961L19:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(857183665, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$857183665.<anonymous> (MainActivity.kt:107)")
+        traceEventStart(857183665, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$857183665.<anonymous> (MainActivity.kt:105)")
       }
       ConstArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -331,10 +329,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$150123199: Function2<Composer, Int, Unit> = composableLambdaInstance(150123199, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C108@7246L23:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C106@7069L23:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(150123199, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$150123199.<anonymous> (MainActivity.kt:108)")
+        traceEventStart(150123199, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$150123199.<anonymous> (MainActivity.kt:106)")
       }
       EnumEntryArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -345,10 +343,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-112640007: Function2<Composer, Int, Unit> = composableLambdaInstance(-112640007, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C109@7364L29:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C107@7187L29:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-112640007, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-112640007.<anonymous> (MainActivity.kt:109)")
+        traceEventStart(-112640007, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-112640007.<anonymous> (MainActivity.kt:107)")
       }
       CompanionObjectArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -359,10 +357,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$758117890: Function2<Composer, Int, Unit> = composableLambdaInstance(758117890, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C110@7485L26:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C108@7308L26:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(758117890, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$758117890.<anonymous> (MainActivity.kt:110)")
+        traceEventStart(758117890, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$758117890.<anonymous> (MainActivity.kt:108)")
       }
       StableObjectArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -373,10 +371,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1172731173: Function2<Composer, Int, Unit> = composableLambdaInstance(-1172731173, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C111@7605L28:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C109@7428L28:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1172731173, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1172731173.<anonymous> (MainActivity.kt:111)")
+        traceEventStart(-1172731173, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1172731173.<anonymous> (MainActivity.kt:109)")
       }
       UnstableObjectArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -387,10 +385,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-279106567: Function2<Composer, Int, Unit> = composableLambdaInstance(-279106567, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C112@7732L33:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C110@7555L33:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-279106567, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-279106567.<anonymous> (MainActivity.kt:112)")
+        traceEventStart(-279106567, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-279106567.<anonymous> (MainActivity.kt:110)")
       }
       StableValuePropertyArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -401,10 +399,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1923634380: Function2<Composer, Int, Unit> = composableLambdaInstance(-1923634380, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C113@7867L36:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C111@7690L36:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1923634380, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1923634380.<anonymous> (MainActivity.kt:113)")
+        traceEventStart(-1923634380, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1923634380.<anonymous> (MainActivity.kt:111)")
       }
       StableVariablePropertyArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -415,10 +413,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$408553113: Function2<Composer, Int, Unit> = composableLambdaInstance(408553113, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C114@7999L30:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C112@7822L30:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(408553113, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$408553113.<anonymous> (MainActivity.kt:114)")
+        traceEventStart(408553113, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$408553113.<anonymous> (MainActivity.kt:112)")
       }
       VariablePropertyArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -429,10 +427,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1545736050: Function2<Composer, Int, Unit> = composableLambdaInstance(1545736050, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C115@8123L28:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C113@7946L28:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1545736050, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1545736050.<anonymous> (MainActivity.kt:115)")
+        traceEventStart(1545736050, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1545736050.<anonymous> (MainActivity.kt:113)")
       }
       StaticVariableArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -443,10 +441,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1905245906: Function2<Composer, Int, Unit> = composableLambdaInstance(-1905245906, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C117@8264L55:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C115@8087L55:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1905245906, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1905245906.<anonymous> (MainActivity.kt:117)")
+        traceEventStart(-1905245906, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1905245906.<anonymous> (MainActivity.kt:115)")
       }
       MutableButSameInstanceArgumentInUnstableParameterDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -456,25 +454,11 @@ internal object ComposableSingletons$MainActivityKt {
       $composer.skipToGroupEnd()
     }
   }
-  val lambda$-1749839350: Function2<Composer, Int, Unit> = composableLambdaInstance(-1749839350, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C118@8425L49:MainActivity.kt#igbs6g")
-    if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
-      if (isTraceInProgress()) {
-        traceEventStart(-1749839350, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1749839350.<anonymous> (MainActivity.kt:118)")
-      }
-      NewInstanceAndAlwaysSameInUnstableParameterDemo($composer, 0)
-      if (isTraceInProgress()) {
-        traceEventEnd()
-      }
-    } else {
-      $composer.skipToGroupEnd()
-    }
-  }
   val lambda$-1670699767: Function2<Composer, Int, Unit> = composableLambdaInstance(-1670699767, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C119@8570L39:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C116@8238L39:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1670699767, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1670699767.<anonymous> (MainActivity.kt:119)")
+        traceEventStart(-1670699767, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1670699767.<anonymous> (MainActivity.kt:116)")
       }
       StableArgumentInUnstableParameterDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -485,10 +469,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$96864834: Function2<Composer, Int, Unit> = composableLambdaInstance(96864834, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C120@8703L37:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C117@8371L37:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(96864834, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$96864834.<anonymous> (MainActivity.kt:120)")
+        traceEventStart(96864834, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$96864834.<anonymous> (MainActivity.kt:117)")
       }
       StableArgumentInStableParameterDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -499,10 +483,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1234361399: Function2<Composer, Int, Unit> = composableLambdaInstance(-1234361399, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C121@8836L39:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C118@8504L39:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1234361399, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1234361399.<anonymous> (MainActivity.kt:121)")
+        traceEventStart(-1234361399, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1234361399.<anonymous> (MainActivity.kt:118)")
       }
       UnstableArgumentInStableParameterDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -512,25 +496,11 @@ internal object ComposableSingletons$MainActivityKt {
       $composer.skipToGroupEnd()
     }
   }
-  val lambda$-1098289752: Function2<Composer, Int, Unit> = composableLambdaInstance(-1098289752, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C123@8973L40:MainActivity.kt#igbs6g")
-    if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
-      if (isTraceInProgress()) {
-        traceEventStart(-1098289752, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1098289752.<anonymous> (MainActivity.kt:123)")
-      }
-      UnstableAndAlwaysSameClassArgumentDemo($composer, 0)
-      if (isTraceInProgress()) {
-        traceEventEnd()
-      }
-    } else {
-      $composer.skipToGroupEnd()
-    }
-  }
   val lambda$-1643288620: Function2<Composer, Int, Unit> = composableLambdaInstance(-1643288620, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C124@9108L38:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C120@8639L38:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1643288620, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1643288620.<anonymous> (MainActivity.kt:124)")
+        traceEventStart(-1643288620, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1643288620.<anonymous> (MainActivity.kt:120)")
       }
       StableClassParameterIntoArgumentDemo(null, $composer, 0, 0b0001)
       if (isTraceInProgress()) {
@@ -541,10 +511,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1685587456: Function2<Composer, Int, Unit> = composableLambdaInstance(1685587456, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C125@9240L37:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C121@8771L37:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1685587456, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1685587456.<anonymous> (MainActivity.kt:125)")
+        traceEventStart(1685587456, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1685587456.<anonymous> (MainActivity.kt:121)")
       }
       StableClassPropertyIntoArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -555,10 +525,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1246115393: Function2<Composer, Int, Unit> = composableLambdaInstance(1246115393, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C126@9375L41:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C122@8906L41:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1246115393, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1246115393.<anonymous> (MainActivity.kt:126)")
+        traceEventStart(1246115393, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1246115393.<anonymous> (MainActivity.kt:122)")
       }
       ImmutableClassParameterIntoArgumentDemo(null, $composer, 0, 0b0001)
       if (isTraceInProgress()) {
@@ -569,10 +539,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-437963277: Function2<Composer, Int, Unit> = composableLambdaInstance(-437963277, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C127@9513L40:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C123@9044L40:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-437963277, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-437963277.<anonymous> (MainActivity.kt:127)")
+        traceEventStart(-437963277, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-437963277.<anonymous> (MainActivity.kt:123)")
       }
       ImmutableClassPropertyIntoArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -583,10 +553,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$269103636: Function2<Composer, Int, Unit> = composableLambdaInstance(269103636, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C128@9641L31:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C124@9172L31:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(269103636, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$269103636.<anonymous> (MainActivity.kt:128)")
+        traceEventStart(269103636, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$269103636.<anonymous> (MainActivity.kt:124)")
       }
       StableBoxingClassArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -597,10 +567,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$742964443: Function2<Composer, Int, Unit> = composableLambdaInstance(742964443, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C129@9762L33:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C125@9293L33:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(742964443, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$742964443.<anonymous> (MainActivity.kt:129)")
+        traceEventStart(742964443, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$742964443.<anonymous> (MainActivity.kt:125)")
       }
       UnstableBoxingClassArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -611,10 +581,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1979739518: Function2<Composer, Int, Unit> = composableLambdaInstance(1979739518, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C130@9880L28:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C126@9411L28:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1979739518, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1979739518.<anonymous> (MainActivity.kt:130)")
+        traceEventStart(1979739518, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1979739518.<anonymous> (MainActivity.kt:126)")
       }
       ImmutableClassArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -625,10 +595,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-684236729: Function2<Composer, Int, Unit> = composableLambdaInstance(-684236729, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C131@10013L48:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C127@9544L48:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-684236729, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-684236729.<anonymous> (MainActivity.kt:131)")
+        traceEventStart(-684236729, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-684236729.<anonymous> (MainActivity.kt:127)")
       }
       ImmutableButNonStaticArgumentClassArgumentDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -639,10 +609,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$268587770: Function2<Composer, Int, Unit> = composableLambdaInstance(268587770, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C133@10146L19:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C129@9677L19:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(268587770, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous> (MainActivity.kt:133)")
+        traceEventStart(268587770, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$268587770.<anonymous> (MainActivity.kt:129)")
       }
       EmptyListCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -653,10 +623,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1234237982: Function2<Composer, Int, Unit> = composableLambdaInstance(1234237982, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C134@10246L16:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C130@9777L16:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1234237982, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous> (MainActivity.kt:134)")
+        traceEventStart(1234237982, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1234237982.<anonymous> (MainActivity.kt:130)")
       }
       ListOfCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -667,10 +637,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$302071704: Function2<Composer, Int, Unit> = composableLambdaInstance(302071704, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C135@10345L18:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C131@9876L18:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(302071704, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous> (MainActivity.kt:135)")
+        traceEventStart(302071704, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$302071704.<anonymous> (MainActivity.kt:131)")
       }
       EmptyMapCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -681,10 +651,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$622331202: Function2<Composer, Int, Unit> = composableLambdaInstance(622331202, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C136@10443L15:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C132@9974L15:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(622331202, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous> (MainActivity.kt:136)")
+        traceEventStart(622331202, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$622331202.<anonymous> (MainActivity.kt:132)")
       }
       MapOfCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -695,10 +665,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$231682974: Function2<Composer, Int, Unit> = composableLambdaInstance(231682974, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C137@10541L18:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C133@10072L18:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(231682974, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous> (MainActivity.kt:137)")
+        traceEventStart(231682974, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$231682974.<anonymous> (MainActivity.kt:133)")
       }
       EmptySetCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -709,10 +679,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$1698238408: Function2<Composer, Int, Unit> = composableLambdaInstance(1698238408, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C138@10639L15:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C134@10170L15:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(1698238408, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous> (MainActivity.kt:138)")
+        traceEventStart(1698238408, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$1698238408.<anonymous> (MainActivity.kt:134)")
       }
       SetOfCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -723,10 +693,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-1649201318: Function2<Composer, Int, Unit> = composableLambdaInstance(-1649201318, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C139@10735L16:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C135@10266L16:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1649201318, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous> (MainActivity.kt:139)")
+        traceEventStart(-1649201318, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-1649201318.<anonymous> (MainActivity.kt:135)")
       }
       PairOfCallDemo($composer, 0)
       if (isTraceInProgress()) {
@@ -737,10 +707,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-391809502: @[ExtensionFunctionType] Function3<LazyItemScope, Composer, Int, Unit> = composableLambdaInstance(-391809502, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C191@12367L30:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C187@11898L30:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b00010001 != 0b00010000, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-1586740999, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-391809502.<anonymous> (MainActivity.kt:191)")
+        traceEventStart(-1586740999, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-391809502.<anonymous> (MainActivity.kt:187)")
       }
       Spacer(Companion.height(30.dp), $composer, 0b0110)
       if (isTraceInProgress()) {
@@ -751,10 +721,10 @@ internal object ComposableSingletons$MainActivityKt {
     }
   }
   val lambda$-708884880: Function2<Composer, Int, Unit> = composableLambdaInstance(-708884880, false) { $composer: Composer?, $changed: Int ->
-    sourceInformation($composer, "C152@11055L40,153@11120L23,155@11177L29,155@11151L55,159@11258L1758,159@11214L1802:MainActivity.kt#igbs6g")
+    sourceInformation($composer, "C148@10586L40,149@10651L23,151@10708L29,151@10682L55,155@10789L1758,155@10745L1802:MainActivity.kt#igbs6g")
     if ($composer.shouldExecute($changed and 0b0011 != 0b0010, $changed and 0b0001)) {
       if (isTraceInProgress()) {
-        traceEventStart(-708884880, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous> (MainActivity.kt:152)")
+        traceEventStart(-708884880, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous> (MainActivity.kt:148)")
       }
       var demo by {
         val demo$delegate = <block>{
@@ -793,12 +763,12 @@ internal object ComposableSingletons$MainActivityKt {
         }
         if ($composer.shouldExecute($dirty and 0b00010011 != 0b00010010, $dirty and 0b0001)) {
           if (isTraceInProgress()) {
-            traceEventStart(-1894280319, $dirty, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous> (MainActivity.kt:160)")
+            traceEventStart(-1894280319, $dirty, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous> (MainActivity.kt:156)")
           }
           when {
             <get-demo>() == null -> {
               $composer.startReplaceGroup(-929587315)
-              sourceInformation($composer, "169@11643L802,162@11331L1114")
+              sourceInformation($composer, "165@11174L802,158@10862L1114")
               LazyColumn(Companion.fillMaxSize().padding(innerPadding), scrollState, null, false, Arrangement.spacedBy(5.dp), Companion.CenterHorizontally, null, false, null, <block>{
                 sourceInformationMarkerStart($composer, 662760067, "CC(remember):MainActivity.kt#9igjgp")
                 val tmp0_group = $composer.cache(false) {
@@ -810,10 +780,10 @@ internal object ComposableSingletons$MainActivityKt {
                       val demos = <destruct>.component2()
                       $this$LazyColumn.stickyHeader(
                         content = composableLambdaInstance(738836769, true) { it: Int, $composer: Composer?, $changed: Int ->
-                          sourceInformation($composer, "CN(it)172@11749L386:MainActivity.kt#igbs6g")
+                          sourceInformation($composer, "CN(it)168@11280L386:MainActivity.kt#igbs6g")
                           if ($composer.shouldExecute($changed and 0b10000001 != 0b10000000, $changed and 0b0001)) {
                             if (isTraceInProgress()) {
-                              traceEventStart(-2125069960, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:172)")
+                              traceEventStart(-2125069960, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:168)")
                             }
                             Text(category, <block>{
                               val tmp0_$receiver = Companion.fillMaxWidth().background(
@@ -835,7 +805,7 @@ internal object ComposableSingletons$MainActivityKt {
                         items = demos
                       ) { entry: Demo, $composer: Composer?, $changed: Int ->
                         $composer.startReplaceGroup(427961150)
-                        sourceInformation($composer, "CN(entry)*185@12230L16,185@12248L58,185@12213L93:MainActivity.kt#igbs6g")
+                        sourceInformation($composer, "CN(entry)*181@11761L16,181@11779L58,181@11744L93:MainActivity.kt#igbs6g")
                         Button(<block>{
                           sourceInformationMarkerStart($composer, -1371667656, "CC(remember):MainActivity.kt#9igjgp")
                           val tmp0_group = $composer.cache($changed and 0b01110000 xor 0b00110000 > 32 && $composer.changed(entry.ordinal) || $changed and 0b00110000 == 0b00100000) {
@@ -846,10 +816,10 @@ internal object ComposableSingletons$MainActivityKt {
                           sourceInformationMarkerEnd($composer)
                           tmp0_group
                         }, null, false, null, null, null, null, null, null, rememberComposableLambda(666006044, true, { $composer: Composer?, $changed: Int ->
-                          sourceInformation($composer, "C186@12270L16:MainActivity.kt#igbs6g")
+                          sourceInformation($composer, "C182@11801L16:MainActivity.kt#igbs6g")
                           if ($composer.shouldExecute($changed and 0b00010001 != 0b00010000, $changed and 0b0001)) {
                             if (isTraceInProgress()) {
-                              traceEventStart(2132182515, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:186)")
+                              traceEventStart(2132182515, $changed, -1, "boo.kodeeverse.composemagic.ComposableSingletons$MainActivityKt.lambda$-708884880.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (MainActivity.kt:182)")
                             }
                             Text(entry.name, null, <unsafe-coerce>(0L), null, <unsafe-coerce>(0L), null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0, 0, 0b00111111111111111110)
                             if (isTraceInProgress()) {
@@ -874,7 +844,7 @@ internal object ComposableSingletons$MainActivityKt {
             }
             <get-demo>() != null -> {
               $composer.startReplaceGroup(-928448096)
-              sourceInformation($composer, "202@12658L266,198@12499L487")
+              sourceInformation($composer, "198@12189L266,194@12030L487")
               Box(Companion.fillMaxSize().padding(innerPadding), <block>{
                 sourceInformationMarkerStart($composer, 662792011, "CC(remember):MainActivity.kt#9igjgp")
                 val tmp1_group = $composer.cache(false) {
@@ -888,14 +858,14 @@ internal object ComposableSingletons$MainActivityKt {
                 sourceInformationMarkerEnd($composer)
                 tmp1_group
               }, false, { $composer: Composer?, $changed: Int ->
-                sourceInformationMarkerStart($composer, -2071114805, "C209@12963L9:MainActivity.kt#igbs6g")
+                sourceInformationMarkerStart($composer, -2071114805, "C205@12494L9:MainActivity.kt#igbs6g")
                 <get-demo>()!!.content($composer, 0)
                 sourceInformationMarkerEnd($composer)
               }, $composer, 0b00110000, 0b0100)
               $composer.endReplaceGroup()
             }
             else -> {
-              $composer.startReplaceGroup(-940850111)
+              $composer.startReplaceGroup(-940384863)
               $composer.endReplaceGroup()
             }
           }
