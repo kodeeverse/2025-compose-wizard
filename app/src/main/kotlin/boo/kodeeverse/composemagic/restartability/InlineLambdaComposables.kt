@@ -1,6 +1,6 @@
-@file:Suppress("SameParameterValue")
+@file:Suppress("NOTHING_TO_INLINE")
 
-package boo.kodeeverse.composemagic.stability
+package boo.kodeeverse.composemagic.restartability
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -13,7 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -22,13 +21,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
-import java.lang.System.currentTimeMillis
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 
-@Composable fun StableCallArgumentDemo() {
+@Composable fun InlineLambdaComposableDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -36,7 +33,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT stableCall @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     Text(
       "count: $count",
       modifier = Modifier
@@ -44,14 +41,17 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ArgumentDemo(stableCall())
+    InlineLambdaComposable {
+      CurrentMsText("InlineLambdaContent")
+    }
   }
 }
 
-@Composable fun StableCallWithUnstableTypeArgumentDemo() {
+@Composable fun NoInlineLambdaComposableDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -59,11 +59,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableCallWithUnstableType @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT")
     Text(
       "count: $count",
       modifier = Modifier
@@ -71,14 +67,17 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ArgumentDemo(stableCallWithUnstableTypeParameter<Any>())
+    NoInlineLambdaComposable {
+      CurrentMsText("NoInlineLambdaContent")
+    }
   }
 }
 
-@Composable fun UnstableCallArgumentDemo() {
+@Composable fun NonInlineLambdaComposableDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(
@@ -86,7 +85,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT unstableCall @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     Text(
       "count: $count",
       modifier = Modifier
@@ -94,22 +93,24 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ArgumentDemo(unstableCall())
+    NonInlineLambdaComposable {
+      CurrentMsText("NonInlineLambdaContent")
+    }
   }
 }
 
-@Composable private fun ArgumentDemo(value: Any) {
-  Text(
-    "ArgumentDemo @ $currentRecomposeScopeHash ($value)",
-    fontWeight = FontWeight.Bold,
-  )
+@Composable private inline fun InlineLambdaComposable(content: @Composable () -> Unit) {
+  content()
 }
 
-@Stable private fun stableCall(): Long = currentTimeMillis()
+@Composable private inline fun NoInlineLambdaComposable(noinline content: @Composable () -> Unit) {
+  content()
+}
 
-@Stable private fun <T> stableCallWithUnstableTypeParameter(): Long = currentTimeMillis()
-
-private fun unstableCall(): Long = currentTimeMillis()
+@Composable private fun NonInlineLambdaComposable(content: @Composable () -> Unit) {
+  content()
+}

@@ -21,11 +21,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
-import java.lang.System.currentTimeMillis
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 
 private interface IVirtualComposable {
   @Composable fun Content()
@@ -45,7 +43,7 @@ private open class OpenVirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { IFinalComposable() as IVirtualComposable }.Content()
@@ -58,7 +56,7 @@ private open class OpenVirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { IOpenComposable() as IVirtualComposable }.Content()
@@ -71,7 +69,7 @@ private open class OpenVirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { AbstractFinalComposable() }.Content()
@@ -84,7 +82,7 @@ private open class OpenVirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { AbstractOpenComposable() }.Content()
@@ -97,7 +95,7 @@ private open class OpenVirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { OpenFinalComposable() }.Content()
@@ -110,7 +108,7 @@ private open class OpenVirtualComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     remember { OpenOpenComposable() }.Content()
@@ -121,10 +119,7 @@ private class IFinalComposable : IVirtualComposable {
   @Composable final override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text(
-      "IFinalComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      fontWeight = FontWeight.Bold,
-    )
+    CurrentMsText("IFinalContent")
     Text(
       "count: $count",
       modifier = Modifier
@@ -132,6 +127,7 @@ private class IFinalComposable : IVirtualComposable {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }
@@ -140,10 +136,7 @@ private open class IOpenComposable : IVirtualComposable {
   @Composable open override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text(
-      "IOpenComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      fontWeight = FontWeight.Bold,
-    )
+    CurrentMsText("IOpenContent")
     Text(
       "count: $count",
       modifier = Modifier
@@ -151,6 +144,7 @@ private open class IOpenComposable : IVirtualComposable {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }
@@ -159,12 +153,7 @@ private class AbstractFinalComposable : AbstractVirtualComposable() {
   @Composable final override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text(
-      "AbstractFinalComposable @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      fontWeight = FontWeight.Bold,
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("AbstractFinalContent")
     Text(
       "count: $count",
       modifier = Modifier
@@ -172,6 +161,7 @@ private class AbstractFinalComposable : AbstractVirtualComposable() {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }
@@ -180,12 +170,7 @@ private open class AbstractOpenComposable : AbstractVirtualComposable() {
   @Composable open override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text(
-      "AbstractOpenComposable @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      fontWeight = FontWeight.Bold,
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("AbstractOpenContent")
     Text(
       "count: $count",
       modifier = Modifier
@@ -193,6 +178,7 @@ private open class AbstractOpenComposable : AbstractVirtualComposable() {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }
@@ -201,12 +187,7 @@ private class OpenFinalComposable : OpenVirtualComposable() {
   @Composable final override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text(
-      "OpenFinalComposable @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      fontWeight = FontWeight.Bold,
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("OpenFinalContent")
     Text(
       "count: $count",
       modifier = Modifier
@@ -214,6 +195,7 @@ private class OpenFinalComposable : OpenVirtualComposable() {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }
@@ -222,12 +204,7 @@ private open class OpenOpenComposable : OpenVirtualComposable() {
   @Composable open override fun Content() {
     var count by remember { mutableIntStateOf(0) }
 
-    Text(
-      "OpenOpenComposable @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      fontWeight = FontWeight.Bold,
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("OpenOpenContent")
     Text(
       "count: $count",
       modifier = Modifier
@@ -235,6 +212,7 @@ private open class OpenOpenComposable : OpenVirtualComposable() {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }

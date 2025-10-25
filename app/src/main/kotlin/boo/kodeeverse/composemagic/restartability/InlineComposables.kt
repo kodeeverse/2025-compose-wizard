@@ -21,10 +21,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
-import java.lang.System.currentTimeMillis
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 
 @Composable fun InlineComposableDemo() {
   Column(
@@ -32,7 +31,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     InlineComposable()
@@ -45,7 +44,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     NonInlineComposable()
@@ -55,10 +54,7 @@ import java.lang.System.currentTimeMillis
 @Composable private inline fun InlineComposable() {
   var count by remember { mutableIntStateOf(0) }
 
-  Text(
-    "InlineComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-  )
+  CurrentMsText("InlineContent")
   Text(
     "count: $count",
     modifier = Modifier
@@ -66,16 +62,14 @@ import java.lang.System.currentTimeMillis
       .clickable { count++ }
       .background(color = Color.Green)
       .padding(horizontal = 20.dp, vertical = 10.dp),
+    fontSize = 20.sp,
   )
 }
 
 @Composable private fun NonInlineComposable() {
   var count by remember { mutableIntStateOf(0) }
 
-  Text(
-    "NonInlineComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-  )
+  CurrentMsText("NonInlineContent")
   Text(
     "count: $count",
     modifier = Modifier
@@ -83,5 +77,6 @@ import java.lang.System.currentTimeMillis
       .clickable { count++ }
       .background(color = Color.Green)
       .padding(horizontal = 20.dp, vertical = 10.dp),
+    fontSize = 20.sp,
   )
 }

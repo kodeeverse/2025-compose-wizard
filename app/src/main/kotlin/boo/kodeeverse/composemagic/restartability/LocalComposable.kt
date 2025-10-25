@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
@@ -20,11 +19,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
-import java.lang.System.currentTimeMillis
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 
 fun interface FunctionalComposable {
   @Composable fun Content()
@@ -36,16 +33,13 @@ fun interface FunctionalComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     @Composable fun Local() {
       var count by remember { mutableIntStateOf(0) }
 
-      Text(
-        "LocalComposable.Local @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-        fontWeight = FontWeight.Bold,
-      )
+      CurrentMsText("LocalContent")
       Text(
         "count: $count",
         modifier = Modifier
@@ -53,6 +47,7 @@ fun interface FunctionalComposable {
           .clickable { count++ }
           .background(color = Color.Green)
           .padding(horizontal = 20.dp, vertical = 10.dp),
+        fontSize = 20.sp,
       )
     }
 
@@ -66,20 +61,13 @@ fun interface FunctionalComposable {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     val local = FunctionalComposable {
       var count by remember { mutableIntStateOf(0) }
 
-      Text(
-        "LocalFunctionalComposable.Local @ $currentRecomposeScopeHash\n(${currentTimeMillis()})",
-        modifier = Modifier
-          .fillMaxWidth()
-          .wrapContentWidth(),
-        fontWeight = FontWeight.Bold,
-        textAlign = TextAlign.Center,
-      )
+      CurrentMsText("LocalFunctionalContent")
       Text(
         "count: $count",
         modifier = Modifier
@@ -87,6 +75,7 @@ fun interface FunctionalComposable {
           .clickable { count++ }
           .background(color = Color.Green)
           .padding(horizontal = 20.dp, vertical = 10.dp),
+        fontSize = 20.sp,
       )
     }
 

@@ -21,6 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.currentRecomposeScopeHash
 import java.lang.System.currentTimeMillis
 import kotlin.reflect.KProperty
@@ -56,6 +57,7 @@ private object DelegatingComposable {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
   }
 }
@@ -76,5 +78,6 @@ private object DelegatingComposable2
       .clickable { count++ }
       .background(color = Color.Green)
       .padding(horizontal = 20.dp, vertical = 10.dp),
+    fontSize = 20.sp,
   )
 }

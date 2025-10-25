@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
   id("com.android.application") version "8.13.0"
-  kotlin("android") version "2.2.20"
-  kotlin("plugin.compose") version "2.2.20"
+  kotlin("android") version "2.2.21"
+  kotlin("plugin.compose") version "2.2.21"
 }
 
 android {
@@ -50,5 +50,5 @@ dependencies {
   implementation("androidx.compose.material3:material3:1.5.0-alpha06")
 
   // https://github.com/jisungbin/kotlin-dumper
-  kotlinCompilerPluginClasspath("land.sungbin:kotlin-dumper:0.1.8")
+  // kotlinCompilerPluginClasspath("land.sungbin:kotlin-dumper:0.1.8")
 }

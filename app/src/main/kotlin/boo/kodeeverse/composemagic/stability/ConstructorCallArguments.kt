@@ -23,11 +23,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
-import java.lang.System.currentTimeMillis
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 
 class UnstableClass_ {
   var createdAt: Any = listOf<Nothing>() // unstable marker
@@ -51,10 +49,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT unstableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT unstableClassArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -62,10 +57,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(UnstableClass_())
+    ConstructorCallArgument(UnstableClass_())
   }
 }
 
@@ -77,10 +73,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableClassArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -88,10 +81,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(StableClass_())
+    ConstructorCallArgument(StableClass_())
   }
 }
 
@@ -103,10 +97,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT immutableClass @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT immutableClassArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -114,10 +105,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(ImmutableClass_())
+    ConstructorCallArgument(ImmutableClass_())
   }
 }
 
@@ -129,11 +121,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT immutableClassWithNonStaticArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT immutableClassWithNonStaticArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -141,10 +129,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(ImmutableClassWithAnyParameter(Any()))
+    ConstructorCallArgument(ImmutableClassWithAnyParameter(Any()))
   }
 }
 
@@ -156,11 +145,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT immutableClassWithStaticArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT immutableClassWithStaticArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -168,10 +153,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(ImmutableClassWithAnyParameter(123))
+    ConstructorCallArgument(ImmutableClassWithAnyParameter(123))
   }
 }
 
@@ -183,11 +169,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableClassParameterIntoArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableClassParameterIntoArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -195,10 +177,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(value)
+    ConstructorCallArgument(value)
   }
 }
 
@@ -211,11 +194,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableClassPropertyIntoArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableClassPropertyIntoArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -223,10 +202,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(value)
+    ConstructorCallArgument(value)
   }
 }
 
@@ -238,11 +218,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT immutableClassParameterIntoArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT immutableClassParameterIntoArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -250,10 +226,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(value)
+    ConstructorCallArgument(value)
   }
 }
 
@@ -267,11 +244,7 @@ class UnstableClass_ {
   ) {
     val value = ImmutableClass_()
 
-    Text(
-      "ROOT immutableClassPropertyIntoArgument\n" +
-        "@ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT immutableClassPropertyIntoArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -279,10 +252,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(value)
+    ConstructorCallArgument(value)
   }
 }
 
@@ -294,10 +268,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableBoxing @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableBoxingArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -305,10 +276,11 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(StableBoxingClass(1))
+    ConstructorCallArgument(StableBoxingClass(1))
   }
 }
 
@@ -320,10 +292,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT unstableBoxing @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT unstableBoxingArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -331,20 +300,17 @@ class UnstableClass_ {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticConstructorArgument(UnstableBoxingClass(Any()))
+    ConstructorCallArgument(UnstableBoxingClass(Any()))
   }
 }
 
-@Composable private fun StaticConstructorArgument(value: Any) {
-  Text(
-    "StaticConstructorArgument @ $currentRecomposeScopeHash\n" +
-      "(${currentTimeMillis()}) (${value.hashCode()})",
-    fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
-  )
+@Composable private fun ConstructorCallArgument(value: Any) {
+  used(value)
+  CurrentMsText("ConstructorCallArgument")
 }
 
 internal fun used(a: Any) {}

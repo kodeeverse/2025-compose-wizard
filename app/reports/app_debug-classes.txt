@@ -1,0 +1,8 @@
+unstable class boo.kodeeverse.composemagic.stability.UnstableClass_ {
+  unstable var createdAt: Any
+  <runtime stability> = Unstable
+}
+stable class boo.kodeeverse.composemagic.stability.StableClass_ {
+}
+stable class boo.kodeeverse.composemagic.stability.ImmutableClass_ {
+}

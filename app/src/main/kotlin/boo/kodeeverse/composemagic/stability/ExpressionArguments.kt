@@ -22,10 +22,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 import java.lang.System.currentTimeMillis
 
 private val stableValueProperty = MyStableClass()
@@ -64,11 +63,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT constArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT constArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -76,10 +71,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(1))
+    ExpressionArgument(currentMsCall(1))
   }
 }
 
@@ -91,11 +87,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT enumEntryArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT enumEntryArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -103,10 +95,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(MyEnum.A))
+    ExpressionArgument(currentMsCall(MyEnum.A))
   }
 }
 
@@ -118,11 +111,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT companionObjectArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT companionObjectArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -130,10 +119,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(MyRegularClass.Companion))
+    ExpressionArgument(currentMsCall(MyRegularClass.Companion))
   }
 }
 
@@ -145,11 +135,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableObjectArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableObjectArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -157,10 +143,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(StableObject))
+    ExpressionArgument(currentMsCall(StableObject))
   }
 }
 
@@ -172,11 +159,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT unstableObjectArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT unstableObjectArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -184,10 +167,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(UnstableObject))
+    ExpressionArgument(currentMsCall(UnstableObject))
   }
 }
 
@@ -199,11 +183,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableValuePropertyArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableValuePropertyArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -211,10 +191,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(stableValueProperty))
+    ExpressionArgument(currentMsCall(stableValueProperty))
   }
 }
 
@@ -226,11 +207,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT stableVariablePropertyArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT stableVariablePropertyArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -238,10 +215,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(stableVariableProperty))
+    ExpressionArgument(currentMsCall(stableVariableProperty))
   }
 }
 
@@ -253,11 +231,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT variablePropertyArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT variablePropertyArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -265,10 +239,11 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(variableProperty))
+    ExpressionArgument(currentMsCall(variableProperty))
   }
 }
 
@@ -281,11 +256,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text(
-      "ROOT staticVariableArgument @ $currentRecomposeScopeHash\n" +
-        "(${currentTimeMillis()})",
-      textAlign = TextAlign.Center,
-    )
+    CurrentMsText("ROOT staticVariableArgument")
     Text(
       "count: $count",
       modifier = Modifier
@@ -293,19 +264,16 @@ private open class MyRegularClass {
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    StaticExpressionArgument(currentMsCall(myStaticValue))
+    ExpressionArgument(currentMsCall(myStaticValue))
   }
 }
 
-@Composable private fun StaticExpressionArgument(value: Long) {
-  Text(
-    "StaticExpressionArgument @ $currentRecomposeScopeHash\n($value)",
-    fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
-  )
+@Composable private fun ExpressionArgument(value: Any) {
+  CurrentMsText("ExpressionArgument", customMs = value as Long)
 }
 
 @Stable private fun currentMsCall(value: Any): Long =

@@ -21,10 +21,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
-import java.lang.System.currentTimeMillis
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 
 @Composable fun ReturnValueComposableDemo() {
   Column(
@@ -32,7 +31,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT")
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     ReturnValueComposable()
@@ -42,10 +41,7 @@ import java.lang.System.currentTimeMillis
 @Composable private fun ReturnValueComposable(): Int {
   var count by remember { mutableIntStateOf(0) }
 
-  Text(
-    "ReturnValueComposable @ $currentRecomposeScopeHash (${currentTimeMillis()})",
-    fontWeight = FontWeight.Bold,
-  )
+  CurrentMsText("ReturnValueContent")
   Text(
     "count: $count",
     modifier = Modifier
@@ -53,6 +49,7 @@ import java.lang.System.currentTimeMillis
       .clickable { count++ }
       .background(color = Color.Green)
       .padding(horizontal = 20.dp, vertical = 10.dp),
+    fontSize = 20.sp,
   )
 
   return 0

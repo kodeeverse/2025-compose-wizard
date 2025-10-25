@@ -20,10 +20,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import boo.kodeeverse.composemagic.currentRecomposeScopeHash
+import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.CurrentMsText
 import java.lang.System.currentTimeMillis
 
 @Composable fun EmptyListCallDemo() {
@@ -34,7 +33,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT emptyList @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT emptyList")
     Text(
       "count: $count",
       modifier = Modifier
@@ -42,6 +41,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -57,7 +57,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT listOf @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT listOf")
     Text(
       "count: $count",
       modifier = Modifier
@@ -65,6 +65,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -80,7 +81,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT emptyMap @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT emptyMap")
     Text(
       "count: $count",
       modifier = Modifier
@@ -88,6 +89,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -103,7 +105,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT mapOf @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT mapOf")
     Text(
       "count: $count",
       modifier = Modifier
@@ -111,6 +113,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -126,7 +129,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT emptySet @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT emptySet")
     Text(
       "count: $count",
       modifier = Modifier
@@ -134,6 +137,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -149,7 +153,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT setOf @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT setOf")
     Text(
       "count: $count",
       modifier = Modifier
@@ -157,6 +161,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -172,7 +177,7 @@ import java.lang.System.currentTimeMillis
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    Text("ROOT pair @ $currentRecomposeScopeHash (${currentTimeMillis()})")
+    CurrentMsText("ROOT pair")
     Text(
       "count: $count",
       modifier = Modifier
@@ -180,6 +185,7 @@ import java.lang.System.currentTimeMillis
         .clickable { count++ }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
@@ -188,11 +194,7 @@ import java.lang.System.currentTimeMillis
 }
 
 @Composable private fun KnownStableCallArgument(value: Any) {
-  Text(
-    "KnownStableCallArgument @ $currentRecomposeScopeHash\n(${value})",
-    fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
-  )
+  CurrentMsText("KnownStableCallArgument", customMs = value as Long)
 }
 
 @Stable private fun currentMsCall(value: Any): Long =
