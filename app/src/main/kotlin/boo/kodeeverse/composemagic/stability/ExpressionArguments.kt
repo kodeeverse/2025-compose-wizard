@@ -29,8 +29,11 @@ import java.lang.System.currentTimeMillis
 
 private val stableValueProperty = MyStableClass()
 
-@Stable private var stableVariableProperty: MyStableClass
-  set(_) {}
+@Suppress("RedundantSetter")
+@Stable private var stableVariableProperty: MyStableClass = MyStableClass()
+  set(value) {
+    field = value
+  }
   get() = MyStableClass()
 
 private var variableProperty: MyStableClass
@@ -212,7 +215,10 @@ private open class MyRegularClass {
       "count: $count",
       modifier = Modifier
         .clip(RoundedCornerShape(10.dp))
-        .clickable { count++ }
+        .clickable {
+          count++
+          stableVariableProperty = MyStableClass()
+        }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),
       fontSize = 20.sp,
