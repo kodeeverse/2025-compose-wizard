@@ -1,3 +1,92 @@
+readonly inline fun boo.kodeeverse.composemagic.<get-currentRecomposeScopeHash>()
+inline scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.CurrentMsText(
+  stable text: String
+  stable modifier: Modifier? = @static <expression>
+  stable textStyle: TextStyle? = @static <expression>
+  stable customMs: Long? = @static null
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo()
+scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.ReturnValueComposable()
+readonly fun boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>.<get-delegatingContent>()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo()
+restartable skippable fun boo.kodeeverse.composemagic.restartability.DelegatingComposable.getValue(
+  unused unstable thisRef: Any?
+  unused unstable property: KProperty<*>
+  unused stable <this>: DelegatingComposable
+)
+restartable skippable fun boo.kodeeverse.composemagic.restartability.getValue(
+  unused stable <this>: DelegatingComposable2
+  unused unstable thisRef: Any?
+  unused unstable property: KProperty<*>
+)
+abstract fun boo.kodeeverse.composemagic.restartability.FunctionalComposable.Content(
+  <this>: FunctionalComposable
+)
+scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalComposableDemo.<anonymous>.Local()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo.<anonymous>.<no name provided>.Content(
+  stable <this>: <no name provided>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.LocalFunctionalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.InlineComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.NonInlineComposableDemo()
+inline scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.InlineComposable()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.NonInlineComposable()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.InlineLambdaComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.NoInlineLambdaComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.NonInlineLambdaComposableDemo()
+inline scheme("[0, [0]]") fun boo.kodeeverse.composemagic.restartability.InlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
+)
+inline scheme("[0, [0]]") fun boo.kodeeverse.composemagic.restartability.NoInlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
+)
+restartable skippable scheme("[0, [0]]") fun boo.kodeeverse.composemagic.restartability.NonInlineLambdaComposable(
+  stable content: Function2<Composer, Int, Unit>
+)
+abstract fun boo.kodeeverse.composemagic.restartability.IVirtualComposable.Content(
+  <this>: IVirtualComposable
+)
+abstract fun boo.kodeeverse.composemagic.restartability.AbstractVirtualComposable.Content(
+  stable <this>: AbstractVirtualComposable
+)
+open fun boo.kodeeverse.composemagic.restartability.OpenVirtualComposable.Content(
+  unused stable <this>: OpenVirtualComposable
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.IFinalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.IOpenComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.AbstractFinalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.AbstractOpenComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.OpenFinalComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.OpenOpenComposableDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.IFinalComposable.Content(
+  unused stable <this>: IFinalComposable
+)
+open scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.IOpenComposable.Content(
+  unused stable <this>: IOpenComposable
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.AbstractFinalComposable.Content(
+  unused stable <this>: AbstractFinalComposable
+)
+open scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.AbstractOpenComposable.Content(
+  unused stable <this>: AbstractOpenComposable
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.OpenFinalComposable.Content(
+  unused stable <this>: OpenFinalComposable
+)
+open scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.restartability.OpenOpenComposable.Content(
+  unused stable <this>: OpenOpenComposable
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EmptyListCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ListOfCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EmptyMapCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.MapOfCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EmptySetCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.SetOfCallDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.PairOfCallDemo()
+restartable skippable fun boo.kodeeverse.composemagic.stability.KnownStableCallArgument(
+  unstable value: Any
+)
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UntableClassArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableClassArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ImmutableClassArgumentDemo()
@@ -14,5 +103,23 @@ restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodee
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo()
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo()
 restartable skippable fun boo.kodeeverse.composemagic.stability.ConstructorCallArgument(
+  unstable value: Any
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.ConstArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.EnumEntryArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.CompanionObjectArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableObjectArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableObjectArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableValuePropertyArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.VariablePropertyArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo()
+restartable skippable fun boo.kodeeverse.composemagic.stability.ExpressionArgument(
+  unstable value: Any
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableCallArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.StableCallWithUnstableTypeArgumentDemo()
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo()
+restartable skippable fun boo.kodeeverse.composemagic.stability.CallArgument(
   unstable value: Any
 )

@@ -248,7 +248,7 @@ private open class MyRegularClass {
 }
 
 @Composable fun StaticVariableArgumentDemo() {
-  val myStaticValue = 1234
+  val myStaticValue = "가나다라"
   var count by remember { mutableIntStateOf(0) }
 
   Column(
