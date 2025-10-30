@@ -90,7 +90,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT enumEntryArgument")
+    CurrentMsText("ROOT enumEntryArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -114,7 +114,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT companionObjectArgument")
+    CurrentMsText("ROOT companionObjectArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -138,7 +138,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableObjectArgument")
+    CurrentMsText("ROOT stableObjectArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -162,7 +162,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT unstableObjectArgument")
+    CurrentMsText("ROOT unstableObjectArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -186,7 +186,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableValuePropertyArgument")
+    CurrentMsText("ROOT stableValuePropertyArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -210,7 +210,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableVariablePropertyArgument")
+    CurrentMsText("ROOT stableVariablePropertyArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -237,7 +237,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT variablePropertyArgument")
+    CurrentMsText("ROOT variablePropertyArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -262,7 +262,7 @@ private open class MyRegularClass {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT staticVariableArgument")
+    CurrentMsText("ROOT staticVariableArgument\n")
     Text(
       "count: $count",
       modifier = Modifier

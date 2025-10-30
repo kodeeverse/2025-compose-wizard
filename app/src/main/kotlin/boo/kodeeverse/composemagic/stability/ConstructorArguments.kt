@@ -49,7 +49,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT unstableClassArgument")
+    CurrentMsText("ROOT unstableClassArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -61,7 +61,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(UnstableClass_())
+    ConstructorArgument(UnstableClass_())
   }
 }
 
@@ -73,7 +73,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableClassArgument")
+    CurrentMsText("ROOT stableClassArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -85,7 +85,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(StableClass_())
+    ConstructorArgument(StableClass_())
   }
 }
 
@@ -97,7 +97,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT immutableClassArgument")
+    CurrentMsText("ROOT immutableClassArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -109,7 +109,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(ImmutableClass_())
+    ConstructorArgument(ImmutableClass_())
   }
 }
 
@@ -121,7 +121,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT immutableClassWithNonStaticArgument")
+    CurrentMsText("ROOT immutableClassWithNonStaticArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -133,7 +133,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(ImmutableClassWithAnyParameter(Any()))
+    ConstructorArgument(ImmutableClassWithAnyParameter(Any()))
   }
 }
 
@@ -145,7 +145,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT immutableClassWithStaticArgument")
+    CurrentMsText("ROOT immutableClassWithStaticArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -157,7 +157,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(ImmutableClassWithAnyParameter(123))
+    ConstructorArgument(ImmutableClassWithAnyParameter(123))
   }
 }
 
@@ -169,7 +169,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableClassParameterIntoArgument")
+    CurrentMsText("ROOT stableClassParameterIntoArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -181,7 +181,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(value)
+    ConstructorArgument(value)
   }
 }
 
@@ -194,7 +194,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableClassPropertyIntoArgument")
+    CurrentMsText("ROOT stableClassPropertyIntoArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -206,7 +206,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(value)
+    ConstructorArgument(value)
   }
 }
 
@@ -230,7 +230,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(value)
+    ConstructorArgument(value)
   }
 }
 
@@ -256,7 +256,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(value)
+    ConstructorArgument(value)
   }
 }
 
@@ -268,7 +268,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT stableBoxingArgument")
+    CurrentMsText("ROOT stableBoxingArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -280,7 +280,7 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(StableBoxingClass(1))
+    ConstructorArgument(StableBoxingClass(1))
   }
 }
 
@@ -292,7 +292,7 @@ class UnstableClass_ {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT unstableBoxingArgument")
+    CurrentMsText("ROOT unstableBoxingArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -304,13 +304,13 @@ class UnstableClass_ {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ConstructorCallArgument(UnstableBoxingClass(Any()))
+    ConstructorArgument(UnstableBoxingClass(Any()))
   }
 }
 
-@Composable private fun ConstructorCallArgument(value: Any) {
+@Composable private fun ConstructorArgument(value: Any) {
   used(value)
-  CurrentMsText("ConstructorCallArgument")
+  CurrentMsText("ConstructorArgument")
 }
 
 internal fun used(a: Any) {}

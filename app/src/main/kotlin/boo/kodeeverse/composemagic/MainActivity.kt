@@ -40,6 +40,8 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import boo.kodeeverse.composemagic.realworld.ColorFilterConstructorDemo
+import boo.kodeeverse.composemagic.realworld.ColorFilterTintCallDemo
 import boo.kodeeverse.composemagic.restartability.AbstractFinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.AbstractOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.IFinalComposableDemo
@@ -111,6 +113,7 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   UnstableCallArgument(category = "stability - CallArguments", content = { UnstableCallArgumentDemo() }),
 
   ConstArgument(category = "stability - ExpressionArguments", content = { ConstArgumentDemo() }),
+  StaticVariableArgument(category = "stability - ExpressionArguments", content = { StaticVariableArgumentDemo() }),
   EnumEntryArgument(category = "stability - ExpressionArguments", content = { EnumEntryArgumentDemo() }),
   CompanionObjectArgument(category = "stability - ExpressionArguments", content = { CompanionObjectArgumentDemo() }),
   StableObjectArgument(category = "stability - ExpressionArguments", content = { StableObjectArgumentDemo() }),
@@ -118,7 +121,6 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   StableValuePropertyArgument(category = "stability - ExpressionArguments", content = { StableValuePropertyArgumentDemo() }),
   StableVariablePropertyArgument(category = "stability - ExpressionArguments", content = { StableVariablePropertyArgumentDemo() }),
   VariablePropertyArgument(category = "stability - ExpressionArguments", content = { VariablePropertyArgumentDemo() }),
-  StaticVariableArgument(category = "stability - ExpressionArguments", content = { StaticVariableArgumentDemo() }),
 
   UntableClassArgument(category = "stability - ConstructorCallArguments", content = { UntableClassArgumentDemo() }),
   StableClassArgument(category = "stability - ConstructorCallArguments", content = { StableClassArgumentDemo() }),
@@ -138,7 +140,10 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   MapOfCall(category = "stability - KnownStableCallArguments", content = { MapOfCallDemo() }),
   EmptySetCall(category = "stability - KnownStableCallArguments", content = { EmptySetCallDemo() }),
   SetOfCall(category = "stability - KnownStableCallArguments", content = { SetOfCallDemo() }),
-  PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() });
+  PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() }),
+
+  ColorFilterTintCall(category = "realworld - ColorFilter", content = { ColorFilterTintCallDemo() }),
+  ColorFilterConstructor(category = "realworld - ColorFilter", content = { ColorFilterConstructorDemo() });
 
   companion object {
     val Groups: Map<String, List<Demo>> = entries.groupBy(Demo::category)
