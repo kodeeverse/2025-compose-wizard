@@ -13,7 +13,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             ARG key: CONST Int type=kotlin.Int value=-934660774
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(DelegatingComposableDemo)28@1194L373:DelegatingComposable.kt#5mdrpd"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(DelegatingComposableDemo)29@1229L373:DelegatingComposable.kt#5mdrpd"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -33,7 +33,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                   ARG key: CONST Int type=kotlin.Int value=-934660774
                   ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo (DelegatingComposable.kt:27)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo (DelegatingComposable.kt:28)"
             CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout' type=kotlin.Unit origin=null
               ARG modifier: CALL 'public final fun wrapContentSize (<this>: androidx.compose.ui.Modifier, align: androidx.compose.ui.Alignment, unbounded: kotlin.Boolean): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
                 ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[androidx.compose.ui.Modifier]' type=androidx.compose.ui.Modifier.Companion
@@ -56,7 +56,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
                         ARG key: CONST Int type=kotlin.Int value=1260178170
-                        ARG sourceInformation: CONST String type=kotlin.String value="C33@1380L25,33@1366L66,34@1437L53,37@1546L17:DelegatingComposable.kt#5mdrpd"
+                        ARG sourceInformation: CONST String type=kotlin.String value="C34@1415L25,34@1401L66,35@1472L53,38@1581L17:DelegatingComposable.kt#5mdrpd"
                       COMPOSITE type=kotlin.Unit origin=null
                         CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG text: STRING_CONCATENATION type=kotlin.String
@@ -148,7 +148,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                               CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                                 ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>.<get-delegatingContent>' type=androidx.compose.runtime.Composer? origin=null
                                 ARG key: CONST Int type=kotlin.Int value=122453620
-                                ARG sourceInformation: CONST String type=kotlin.String value="C(<get-delegatingContent>)36@1521L20:DelegatingComposable.kt#5mdrpd"
+                                ARG sourceInformation: CONST String type=kotlin.String value="C(<get-delegatingContent>)37@1556L20:DelegatingComposable.kt#5mdrpd"
                               WHEN type=kotlin.Unit origin=IF
                                 BRANCH
                                   if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
@@ -156,7 +156,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                                     ARG key: CONST Int type=kotlin.Int value=122453620
                                     ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>.<get-delegatingContent>' type=kotlin.Int origin=null
                                     ARG dirty2: CONST Int type=kotlin.Int value=-1
-                                    ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>.<get-delegatingContent> (DelegatingComposable.kt:36)"
+                                    ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>.<get-delegatingContent> (DelegatingComposable.kt:37)"
                               CALL 'public final fun getValue (thisRef: kotlin.Any?, property: kotlin.reflect.KProperty<*>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit [operator] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposable' type=kotlin.Unit origin=null
                                 ARG <this>: GET_VAR 'val delegatingContent$delegate: boo.kodeeverse.composemagic.restartability.DelegatingComposable [val] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposableDemo.<anonymous>' type=boo.kodeeverse.composemagic.restartability.DelegatingComposable origin=null
                                 ARG thisRef: CONST Null type=kotlin.Nothing? value=null
@@ -234,7 +234,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
               ARG key: CONST Int type=kotlin.Int value=1843861788
           CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
             ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposable.getValue' type=androidx.compose.runtime.Composer? origin=null
-            ARG sourceInformation: CONST String type=kotlin.String value="C(getValue)N(thisRef,property)45@2016L33,48@2092L25,47@2055L131,55@2306L11,51@2191L229:DelegatingComposable.kt#5mdrpd"
+            ARG sourceInformation: CONST String type=kotlin.String value="C(getValue)N(thisRef,property)46@2051L33,49@2127L25,48@2090L131,56@2341L11,52@2226L253:DelegatingComposable.kt#5mdrpd"
         WHEN type=kotlin.Unit origin=IF
           BRANCH
             if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -256,7 +256,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                     ARG key: CONST Int type=kotlin.Int value=1843861788
                     ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.DelegatingComposable.getValue' type=kotlin.Int origin=null
                     ARG dirty2: CONST Int type=kotlin.Int value=-1
-                    ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.DelegatingComposable.getValue (DelegatingComposable.kt:44)"
+                    ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.DelegatingComposable.getValue (DelegatingComposable.kt:45)"
               LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
                 VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
                   BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -409,11 +409,8 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                     ARG v: CONST Long type=kotlin.Long value=0
                 ARG autoSize: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                   CONST Null type=kotlin.Nothing? value=null
-                ARG fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-                  CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-                    TYPE_ARG T: kotlin.Long
-                    TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-                    ARG v: CONST Long type=kotlin.Long value=0
+                ARG fontSize: CALL 'public final fun <get-sp> (<this>: kotlin.Int): androidx.compose.ui.unit.TextUnit declared in androidx.compose.ui.unit' type=androidx.compose.ui.unit.TextUnit origin=GET_PROPERTY
+                  ARG <this>: CONST Int type=kotlin.Int value=20
                 ARG fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                   CONST Null type=kotlin.Nothing? value=null
                 ARG fontWeight: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
@@ -450,9 +447,9 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                 ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                   CONST Null type=kotlin.Nothing? value=null
                 ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.DelegatingComposable.getValue' type=androidx.compose.runtime.Composer? origin=null
-                ARG $changed: CONST Int type=kotlin.Int value=0
+                ARG $changed: CONST Int type=kotlin.Int value=24576
                 ARG $changed1: CONST Int type=kotlin.Int value=0
-                ARG $default: CONST Int type=kotlin.Int value=262140
+                ARG $default: CONST Int type=kotlin.Int value=262124
               WHEN type=kotlin.Unit origin=IF
                 BRANCH
                   if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
@@ -541,7 +538,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             ARG key: CONST Int type=kotlin.Int value=-31843114
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.getValue' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(getValue)N(thisRef,property)65@2586L33,68@2658L25,67@2623L125,75@2858L11,71@2751L215:DelegatingComposable.kt#5mdrpd"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(getValue)N(thisRef,property)67@2645L33,70@2717L25,69@2682L125,77@2917L11,73@2810L237:DelegatingComposable.kt#5mdrpd"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -563,7 +560,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                   ARG key: CONST Int type=kotlin.Int value=-31843114
                   ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.getValue' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.getValue (DelegatingComposable.kt:64)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.getValue (DelegatingComposable.kt:66)"
             LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
               VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
                 BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -716,11 +713,8 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                   ARG v: CONST Long type=kotlin.Long value=0
               ARG autoSize: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                 CONST Null type=kotlin.Nothing? value=null
-              ARG fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-                CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-                  TYPE_ARG T: kotlin.Long
-                  TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-                  ARG v: CONST Long type=kotlin.Long value=0
+              ARG fontSize: CALL 'public final fun <get-sp> (<this>: kotlin.Int): androidx.compose.ui.unit.TextUnit declared in androidx.compose.ui.unit' type=androidx.compose.ui.unit.TextUnit origin=GET_PROPERTY
+                ARG <this>: CONST Int type=kotlin.Int value=20
               ARG fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                 CONST Null type=kotlin.Nothing? value=null
               ARG fontWeight: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
@@ -757,9 +751,9 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
               ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                 CONST Null type=kotlin.Nothing? value=null
               ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.getValue' type=androidx.compose.runtime.Composer? origin=null
-              ARG $changed: CONST Int type=kotlin.Int value=0
+              ARG $changed: CONST Int type=kotlin.Int value=24576
               ARG $changed1: CONST Int type=kotlin.Int value=0
-              ARG $default: CONST Int type=kotlin.Int value=262140
+              ARG $default: CONST Int type=kotlin.Int value=262124
             WHEN type=kotlin.Unit origin=IF
               BRANCH
                 if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null

@@ -29,15 +29,18 @@ import java.lang.System.currentTimeMillis
 
 private val stableValueProperty = MyStableClass()
 
-@Suppress("RedundantSetter")
+private val unstableValueBoundsStableTypeProperty: MyStableClass = MyUnstableClass()
+
 @Stable private var stableVariableProperty: MyStableClass = MyStableClass()
   set(value) {
-    field = value
+    field = MyStableClass()
   }
   get() = MyStableClass()
 
-private var variableProperty: MyStableClass
-  set(_) {}
+private var variableProperty: MyStableClass = MyStableClass()
+  set(value) {
+    field = MyStableClass()
+  }
   get() = MyStableClass()
 
 private enum class MyEnum {
@@ -50,12 +53,12 @@ private object UnstableObject {
   var a: Any = listOf(1) // unstable maker
 }
 
-@Stable private class MyStableClass
+@Stable private open class MyStableClass
 
-private open class MyRegularClass {
+private open class MyUnstableClass : MyStableClass() {
   var a: Any = listOf(1) // unstable maker
 
-  companion object : MyRegularClass()
+  companion object : MyUnstableClass()
 }
 
 @Composable fun ConstArgumentDemo() {
@@ -126,7 +129,7 @@ private open class MyRegularClass {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ExpressionArgument(currentMsCall(MyRegularClass.Companion))
+    ExpressionArgument(currentMsCall(MyUnstableClass.Companion))
   }
 }
 
@@ -202,6 +205,30 @@ private open class MyRegularClass {
   }
 }
 
+@Composable fun UnstableValueBoundsStableTypePropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    CurrentMsText("ROOT unstableValueBoundsStableTypePropertyArgument\n")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ExpressionArgument(currentMsCall(unstableValueBoundsStableTypeProperty))
+  }
+}
+
 @Composable fun StableVariablePropertyArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -216,8 +243,8 @@ private open class MyRegularClass {
       modifier = Modifier
         .clip(RoundedCornerShape(10.dp))
         .clickable {
-          count++
           stableVariableProperty = MyStableClass()
+          count++
         }
         .background(color = Color.Green)
         .padding(horizontal = 20.dp, vertical = 10.dp),

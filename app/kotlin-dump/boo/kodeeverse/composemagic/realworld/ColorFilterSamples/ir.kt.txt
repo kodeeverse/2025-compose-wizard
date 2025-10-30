@@ -1,0 +1,136 @@
+@Stable
+val Src: BlendMode = Companion.Src
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun ColorFilterConstructorArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-524095497)
+  sourceInformation($composer, "C(ColorFilterConstructorArgumentDemo)33@1381L661:ColorFilterSamples.kt#hjhfvy")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-524095497, $changed, -1, "boo.kodeeverse.composemagic.realworld.ColorFilterConstructorArgumentDemo (ColorFilterSamples.kt:32)")
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1733396337, "C38@1566L33,40@1605L54,45@1779L11,41@1664L253,50@1922L53,52@1981L57:ColorFilterSamples.kt#hjhfvy")
+      var count by {
+        val count$delegate = <block>{
+          sourceInformationMarkerStart($composer, -775368018, "CC(remember):ColorFilterSamples.kt#9igjgp")
+          val tmp0_group = $composer.cache(false) {
+            mutableIntStateOf(0)
+          }
+          sourceInformationMarkerEnd($composer)
+          tmp0_group
+        }
+        get() {
+          return count$delegate.getValue(null, ::count$delegate)
+        }
+        set(<set-?>: Int) {
+          return count$delegate.setValue(null, ::count$delegate, <set-?>)
+        }
+      }
+      CurrentMsText("ROOT colorFilterConstructorArgument
+", null, null, null, $composer, 0b0110, 0b1110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -775361224, "CC(remember):ColorFilterSamples.kt#9igjgp")
+        val tmp1_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp1_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, 20.sp, null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b0110000000000000, 0, 0b00111111111111101100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      ColorFilterArgument(BlendModeColorFilter(Companion.Red, Src), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    ColorFilterConstructorArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun ColorFilterCallArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-898285223)
+  sourceInformation($composer, "C(ColorFilterCallArgumentDemo)57@2096L650:ColorFilterSamples.kt#hjhfvy")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-898285223, $changed, -1, "boo.kodeeverse.composemagic.realworld.ColorFilterCallArgumentDemo (ColorFilterSamples.kt:56)")
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 2070943526, "C62@2281L33,64@2320L47,69@2487L11,65@2372L253,74@2630L53,76@2689L53:ColorFilterSamples.kt#hjhfvy")
+      var count by {
+        val count$delegate = <block>{
+          sourceInformationMarkerStart($composer, -764479388, "CC(remember):ColorFilterSamples.kt#9igjgp")
+          val tmp0_group = $composer.cache(false) {
+            mutableIntStateOf(0)
+          }
+          sourceInformationMarkerEnd($composer)
+          tmp0_group
+        }
+        get() {
+          return count$delegate.getValue(null, ::count$delegate)
+        }
+        set(<set-?>: Int) {
+          return count$delegate.setValue(null, ::count$delegate, <set-?>)
+        }
+      }
+      CurrentMsText("ROOT colorFilterCallArgument
+", null, null, null, $composer, 0b0110, 0b1110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -764472818, "CC(remember):ColorFilterSamples.kt#9igjgp")
+        val tmp1_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp1_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, 20.sp, null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b0110000000000000, 0, 0b00111111111111101100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      ColorFilterArgument(Companion.tint(Companion.Red, Src), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    ColorFilterCallArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+private fun ColorFilterArgument(value: Any, $composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1505856374)
+  sourceInformation($composer, "C(ColorFilterArgument)N(value)82@2824L36:ColorFilterSamples.kt#hjhfvy")
+  val $dirty = $changed
+  if ($changed and 0b0110 == 0) {
+    $dirty = $dirty or if ($composer.changedInstance(value)) 0b0100 else 0b0010
+  }
+  if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-1505856374, $dirty, -1, "boo.kodeeverse.composemagic.realworld.ColorFilterArgument (ColorFilterSamples.kt:80)")
+    }
+    used(value)
+    CurrentMsText("ColorFilterArgument", null, null, null, $composer, 0b0110, 0b1110)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    ColorFilterArgument(value, $composer, updateChangedFlags($changed or 0b0001))
+  }
+}

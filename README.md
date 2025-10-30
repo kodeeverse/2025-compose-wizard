@@ -10,5 +10,4 @@
 ### How to build?
 
 app 모듈의 `kotlinCompilerPluginClasspath("land.sungbin:kotlin-dumper:~~~")` 의존성을
-비활성화하세요.
-
+비활성화해 주세요.

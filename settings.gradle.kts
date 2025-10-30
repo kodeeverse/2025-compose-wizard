@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "ComposeMagic"
+rootProject.name = "2025-compose-wizard"
 
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 

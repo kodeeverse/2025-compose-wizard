@@ -15,7 +15,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             ARG key: CONST Int type=kotlin.Int value=1316367892
         CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
           ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo' type=androidx.compose.runtime.Composer? origin=null
-          ARG sourceInformation: CONST String type=kotlin.String value="C(ReturnValueComposableDemo)29@1199L329:ReturnValueComposable.kt#5mdrpd"
+          ARG sourceInformation: CONST String type=kotlin.String value="C(ReturnValueComposableDemo)28@1132L284:ReturnValueComposable.kt#5mdrpd"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public abstract fun shouldExecute (parametersChanged: kotlin.Boolean, flags: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
@@ -35,7 +35,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                   ARG key: CONST Int type=kotlin.Int value=1316367892
                   ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo' type=kotlin.Int origin=null
                   ARG dirty2: CONST Int type=kotlin.Int value=-1
-                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo (ReturnValueComposable.kt:28)"
+                  ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo (ReturnValueComposable.kt:27)"
             CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout' type=kotlin.Unit origin=null
               ARG modifier: CALL 'public final fun wrapContentSize (<this>: androidx.compose.ui.Modifier, align: androidx.compose.ui.Alignment, unbounded: kotlin.Boolean): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
                 ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[androidx.compose.ui.Modifier]' type=androidx.compose.ui.Modifier.Companion
@@ -57,71 +57,20 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                     BLOCK type=kotlin.Unit origin=null
                       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                        ARG key: CONST Int type=kotlin.Int value=-1061268180
-                        ARG sourceInformation: CONST String type=kotlin.String value="C34@1385L25,34@1371L66,35@1442L53,37@1501L23:ReturnValueComposable.kt#5mdrpd"
+                        ARG key: CONST Int type=kotlin.Int value=-1061269575
+                        ARG sourceInformation: CONST String type=kotlin.String value="C33@1304L21,34@1330L53,36@1389L23:ReturnValueComposable.kt#5mdrpd"
                       COMPOSITE type=kotlin.Unit origin=null
-                        CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
-                          ARG text: STRING_CONCATENATION type=kotlin.String
-                            CONST String type=kotlin.String value="ROOT @ "
-                            CALL 'public final fun <get-currentRecomposeScopeHash> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.String [inline] declared in boo.kodeeverse.composemagic' type=kotlin.String origin=GET_PROPERTY
-                              ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                              ARG $changed: CONST Int type=kotlin.Int value=0
-                            CONST String type=kotlin.String value=" ("
-                            CALL 'public open fun currentTimeMillis (): kotlin.Long declared in java.lang.System' type=kotlin.Long origin=null
-                            CONST String type=kotlin.String value=")"
+                        CALL 'public final fun CurrentMsText (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, textStyle: androidx.compose.ui.text.TextStyle?, customMs: kotlin.Long?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in boo.kodeeverse.composemagic' type=kotlin.Unit origin=null
+                          ARG text: CONST String type=kotlin.String value="ROOT"
                           ARG modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
-                          ARG color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
-                            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
-                              TYPE_ARG T: kotlin.Long
-                              TYPE_ARG R: androidx.compose.ui.graphics.Color
-                              ARG v: CONST Long type=kotlin.Long value=0
-                          ARG autoSize: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                          ARG textStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
-                          ARG fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-                            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-                              TYPE_ARG T: kotlin.Long
-                              TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-                              ARG v: CONST Long type=kotlin.Long value=0
-                          ARG fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
-                          ARG fontWeight: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
-                          ARG fontFamily: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
-                          ARG letterSpacing: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-                            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-                              TYPE_ARG T: kotlin.Long
-                              TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-                              ARG v: CONST Long type=kotlin.Long value=0
-                          ARG textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
-                          ARG textAlign: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
-                          ARG lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-                            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-                              TYPE_ARG T: kotlin.Long
-                              TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-                              ARG v: CONST Long type=kotlin.Long value=0
-                          ARG overflow: COMPOSITE type=androidx.compose.ui.text.style.TextOverflow origin=DEFAULT_VALUE
-                            CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.text.style.TextOverflow origin=null
-                              TYPE_ARG T: kotlin.Int
-                              TYPE_ARG R: androidx.compose.ui.text.style.TextOverflow
-                              ARG v: CONST Int type=kotlin.Int value=0
-                          ARG softWrap: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
-                            CONST Boolean type=kotlin.Boolean value=false
-                          ARG maxLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
-                            CONST Int type=kotlin.Int value=0
-                          ARG minLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
-                            CONST Int type=kotlin.Int value=0
-                          ARG onTextLayout: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-                            CONST Null type=kotlin.Nothing? value=null
-                          ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+                          ARG customMs: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
                             CONST Null type=kotlin.Nothing? value=null
                           ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposableDemo.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
-                          ARG $changed: CONST Int type=kotlin.Int value=0
-                          ARG $changed1: CONST Int type=kotlin.Int value=0
-                          ARG $default: CONST Int type=kotlin.Int value=262142
+                          ARG $changed: CONST Int type=kotlin.Int value=6
+                          ARG $default: CONST Int type=kotlin.Int value=14
                         CALL 'public final fun HorizontalDivider (modifier: androidx.compose.ui.Modifier?, thickness: androidx.compose.ui.unit.Dp, color: androidx.compose.ui.graphics.Color, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
                           ARG modifier: CALL 'public final fun fillMaxWidth (<this>: androidx.compose.ui.Modifier, fraction: kotlin.Float): androidx.compose.ui.Modifier declared in androidx.compose.foundation.layout' type=androidx.compose.ui.Modifier origin=null
                             ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[androidx.compose.ui.Modifier]' type=androidx.compose.ui.Modifier.Companion
@@ -192,7 +141,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
       CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
         ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=androidx.compose.runtime.Composer? origin=null
         ARG key: CONST Int type=kotlin.Int value=-60095794
-        ARG sourceInformation: CONST String type=kotlin.String value="C(ReturnValueComposable)42@1602L33,45@1675L25,44@1639L126,52@1875L11,48@1768L215:ReturnValueComposable.kt#5mdrpd"
+        ARG sourceInformation: CONST String type=kotlin.String value="C(ReturnValueComposable)41@1490L33,43@1527L35,48@1672L11,44@1565L237:ReturnValueComposable.kt#5mdrpd"
       WHEN type=kotlin.Unit origin=IF
         BRANCH
           if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime' type=kotlin.Boolean origin=null
@@ -200,7 +149,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             ARG key: CONST Int type=kotlin.Int value=-60095794
             ARG dirty1: GET_VAR '$changed: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=kotlin.Int origin=null
             ARG dirty2: CONST Int type=kotlin.Int value=-1
-            ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.ReturnValueComposable (ReturnValueComposable.kt:41)"
+            ARG info: CONST String type=kotlin.String value="boo.kodeeverse.composemagic.restartability.ReturnValueComposable (ReturnValueComposable.kt:40)"
       LOCAL_DELEGATED_PROPERTY name:count type:kotlin.Int flags:var
         VAR PROPERTY_DELEGATE name:count$delegate type:androidx.compose.runtime.MutableIntState [val]
           BLOCK type=androidx.compose.runtime.MutableIntState origin=null
@@ -238,68 +187,17 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
                 ARG thisObj: CONST Null type=kotlin.Nothing? value=null
                 ARG property: LOCAL_DELEGATED_PROPERTY_REFERENCE 'var count: kotlin.Int by (...)' delegate='val count$delegate: androidx.compose.runtime.MutableIntState [val] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' getter='local final fun <get-count> (): kotlin.Int declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' setter='local final fun <set-count> (<set-?>: kotlin.Int): kotlin.Unit declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=kotlin.reflect.KMutableProperty0<kotlin.Int> origin=PROPERTY_REFERENCE_FOR_DELEGATE
                 ARG value: GET_VAR '<set-?>: kotlin.Int declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable.<set-count>' type=kotlin.Int origin=null
-      CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
-        ARG text: STRING_CONCATENATION type=kotlin.String
-          CONST String type=kotlin.String value="ReturnValueComposable @ "
-          CALL 'public final fun <get-currentRecomposeScopeHash> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.String [inline] declared in boo.kodeeverse.composemagic' type=kotlin.String origin=GET_PROPERTY
-            ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=androidx.compose.runtime.Composer? origin=null
-            ARG $changed: CONST Int type=kotlin.Int value=0
-          CONST String type=kotlin.String value=" ("
-          CALL 'public open fun currentTimeMillis (): kotlin.Long declared in java.lang.System' type=kotlin.Long origin=null
-          CONST String type=kotlin.String value=")"
+      CALL 'public final fun CurrentMsText (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, textStyle: androidx.compose.ui.text.TextStyle?, customMs: kotlin.Long?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in boo.kodeeverse.composemagic' type=kotlin.Unit origin=null
+        ARG text: CONST String type=kotlin.String value="ReturnValueContent"
         ARG modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
           CONST Null type=kotlin.Nothing? value=null
-        ARG color: COMPOSITE type=androidx.compose.ui.graphics.Color origin=DEFAULT_VALUE
-          CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.graphics.Color origin=null
-            TYPE_ARG T: kotlin.Long
-            TYPE_ARG R: androidx.compose.ui.graphics.Color
-            ARG v: CONST Long type=kotlin.Long value=0
-        ARG autoSize: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+        ARG textStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
           CONST Null type=kotlin.Nothing? value=null
-        ARG fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-          CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-            TYPE_ARG T: kotlin.Long
-            TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-            ARG v: CONST Long type=kotlin.Long value=0
-        ARG fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-          CONST Null type=kotlin.Nothing? value=null
-        ARG fontWeight: CALL 'public final fun <get-Bold> (): androidx.compose.ui.text.font.FontWeight declared in androidx.compose.ui.text.font.FontWeight.Companion' type=androidx.compose.ui.text.font.FontWeight origin=GET_PROPERTY
-          ARG <this>: GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Companion modality:FINAL visibility:public [companion] superTypes:[kotlin.Any]' type=androidx.compose.ui.text.font.FontWeight.Companion
-        ARG fontFamily: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-          CONST Null type=kotlin.Nothing? value=null
-        ARG letterSpacing: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-          CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-            TYPE_ARG T: kotlin.Long
-            TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-            ARG v: CONST Long type=kotlin.Long value=0
-        ARG textDecoration: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-          CONST Null type=kotlin.Nothing? value=null
-        ARG textAlign: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-          CONST Null type=kotlin.Nothing? value=null
-        ARG lineHeight: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-          CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-            TYPE_ARG T: kotlin.Long
-            TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-            ARG v: CONST Long type=kotlin.Long value=0
-        ARG overflow: COMPOSITE type=androidx.compose.ui.text.style.TextOverflow origin=DEFAULT_VALUE
-          CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.text.style.TextOverflow origin=null
-            TYPE_ARG T: kotlin.Int
-            TYPE_ARG R: androidx.compose.ui.text.style.TextOverflow
-            ARG v: CONST Int type=kotlin.Int value=0
-        ARG softWrap: COMPOSITE type=kotlin.Boolean origin=DEFAULT_VALUE
-          CONST Boolean type=kotlin.Boolean value=false
-        ARG maxLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
-          CONST Int type=kotlin.Int value=0
-        ARG minLines: COMPOSITE type=kotlin.Int origin=DEFAULT_VALUE
-          CONST Int type=kotlin.Int value=0
-        ARG onTextLayout: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
-          CONST Null type=kotlin.Nothing? value=null
-        ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+        ARG customMs: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
           CONST Null type=kotlin.Nothing? value=null
         ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=androidx.compose.runtime.Composer? origin=null
-        ARG $changed: CONST Int type=kotlin.Int value=1572864
-        ARG $changed1: CONST Int type=kotlin.Int value=0
-        ARG $default: CONST Int type=kotlin.Int value=262078
+        ARG $changed: CONST Int type=kotlin.Int value=6
+        ARG $default: CONST Int type=kotlin.Int value=14
       CALL 'public final fun Text (text: kotlin.String, modifier: androidx.compose.ui.Modifier?, color: androidx.compose.ui.graphics.Color, autoSize: androidx.compose.foundation.text.TextAutoSize?, fontSize: androidx.compose.ui.unit.TextUnit, fontStyle: androidx.compose.ui.text.font.FontStyle?, fontWeight: androidx.compose.ui.text.font.FontWeight?, fontFamily: androidx.compose.ui.text.font.FontFamily?, letterSpacing: androidx.compose.ui.unit.TextUnit, textDecoration: androidx.compose.ui.text.style.TextDecoration?, textAlign: androidx.compose.ui.text.style.TextAlign?, lineHeight: androidx.compose.ui.unit.TextUnit, overflow: androidx.compose.ui.text.style.TextOverflow, softWrap: kotlin.Boolean, maxLines: kotlin.Int, minLines: kotlin.Int, onTextLayout: kotlin.Function1<androidx.compose.ui.text.TextLayoutResult, kotlin.Unit>?, style: androidx.compose.ui.text.TextStyle?, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $changed1: kotlin.Int, $default: kotlin.Int): kotlin.Unit declared in androidx.compose.material3' type=kotlin.Unit origin=null
         ARG text: STRING_CONCATENATION type=kotlin.String
           CONST String type=kotlin.String value="count: "
@@ -315,7 +213,7 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
               ARG onClick: BLOCK type=kotlin.Function0<kotlin.Unit> origin=null
                 CALL 'public final fun sourceInformationMarkerStart (composer: androidx.compose.runtime.Composer, key: kotlin.Int, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime' type=kotlin.Unit origin=null
                   ARG composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=androidx.compose.runtime.Composer? origin=null
-                  ARG key: CONST Int type=kotlin.Int value=-1917472839
+                  ARG key: CONST Int type=kotlin.Int value=-1917475751
                   ARG sourceInformation: CONST String type=kotlin.String value="CC(remember):ReturnValueComposable.kt#9igjgp"
                 VAR IR_TEMPORARY_VARIABLE name:tmp2_group type:kotlin.Function0<kotlin.Unit> [val]
                   CALL 'public final fun cache <T> (<this>: androidx.compose.runtime.Composer, invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.cache>): T of androidx.compose.runtime.cache [inline] declared in androidx.compose.runtime' type=kotlin.Function0<kotlin.Unit> origin=null
@@ -353,11 +251,8 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
             ARG v: CONST Long type=kotlin.Long value=0
         ARG autoSize: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
           CONST Null type=kotlin.Nothing? value=null
-        ARG fontSize: COMPOSITE type=androidx.compose.ui.unit.TextUnit origin=DEFAULT_VALUE
-          CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=androidx.compose.ui.unit.TextUnit origin=null
-            TYPE_ARG T: kotlin.Long
-            TYPE_ARG R: androidx.compose.ui.unit.TextUnit
-            ARG v: CONST Long type=kotlin.Long value=0
+        ARG fontSize: CALL 'public final fun <get-sp> (<this>: kotlin.Int): androidx.compose.ui.unit.TextUnit declared in androidx.compose.ui.unit' type=androidx.compose.ui.unit.TextUnit origin=GET_PROPERTY
+          ARG <this>: CONST Int type=kotlin.Int value=20
         ARG fontStyle: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
           CONST Null type=kotlin.Nothing? value=null
         ARG fontWeight: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
@@ -394,9 +289,9 @@ FILE fqName:boo.kodeeverse.composemagic.restartability fileName:/Users/jisungbin
         ARG style: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
           CONST Null type=kotlin.Nothing? value=null
         ARG $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in boo.kodeeverse.composemagic.restartability.ReturnValueComposable' type=androidx.compose.runtime.Composer? origin=null
-        ARG $changed: CONST Int type=kotlin.Int value=0
+        ARG $changed: CONST Int type=kotlin.Int value=24576
         ARG $changed1: CONST Int type=kotlin.Int value=0
-        ARG $default: CONST Int type=kotlin.Int value=262140
+        ARG $default: CONST Int type=kotlin.Int value=262124
       VAR IR_TEMPORARY_VARIABLE name:tmp0 type:kotlin.Int [val]
         CONST Int type=kotlin.Int value=0
       WHEN type=kotlin.Unit origin=IF

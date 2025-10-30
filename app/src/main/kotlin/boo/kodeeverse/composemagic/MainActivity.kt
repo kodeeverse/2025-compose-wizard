@@ -40,8 +40,8 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import boo.kodeeverse.composemagic.realworld.ColorFilterConstructorDemo
-import boo.kodeeverse.composemagic.realworld.ColorFilterTintCallDemo
+import boo.kodeeverse.composemagic.realworld.ColorFilterCallArgumentDemo
+import boo.kodeeverse.composemagic.realworld.ColorFilterConstructorArgumentDemo
 import boo.kodeeverse.composemagic.restartability.AbstractFinalComposableDemo
 import boo.kodeeverse.composemagic.restartability.AbstractOpenComposableDemo
 import boo.kodeeverse.composemagic.restartability.IFinalComposableDemo
@@ -83,8 +83,9 @@ import boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableCallArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.UnstableObjectArgumentDemo
-import boo.kodeeverse.composemagic.stability.UntableClassArgumentDemo
+import boo.kodeeverse.composemagic.stability.UnstableValueBoundsStableTypePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.VariablePropertyArgumentDemo
 import java.lang.System.currentTimeMillis
 
@@ -119,20 +120,21 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   StableObjectArgument(category = "stability - ExpressionArguments", content = { StableObjectArgumentDemo() }),
   UnstableObjectArgument(category = "stability - ExpressionArguments", content = { UnstableObjectArgumentDemo() }),
   StableValuePropertyArgument(category = "stability - ExpressionArguments", content = { StableValuePropertyArgumentDemo() }),
+  UnstableValueBoundsStableTypePropertyArgument(category = "stability - ExpressionArguments", content = { UnstableValueBoundsStableTypePropertyArgumentDemo() }),
   StableVariablePropertyArgument(category = "stability - ExpressionArguments", content = { StableVariablePropertyArgumentDemo() }),
   VariablePropertyArgument(category = "stability - ExpressionArguments", content = { VariablePropertyArgumentDemo() }),
 
-  UntableClassArgument(category = "stability - ConstructorCallArguments", content = { UntableClassArgumentDemo() }),
-  StableClassArgument(category = "stability - ConstructorCallArguments", content = { StableClassArgumentDemo() }),
-  ImmutableClassArgument(category = "stability - ConstructorCallArguments", content = { ImmutableClassArgumentDemo() }),
-  ImmutableWithStaticArgumentClassArgument(category = "stability - ConstructorCallArguments", content = { ImmutableWithStaticArgumentClassArgumentDemo() }),
-  ImmutableWithNonStaticArgumentClassArgument(category = "stability - ConstructorCallArguments", content = { ImmutableWithNonStaticArgumentClassArgumentDemo() }),
-  StableClassParameterIntoArgument(category = "stability - ConstructorCallArguments", content = { StableClassParameterIntoArgumentDemo() }),
-  StableClassPropertyIntoArgument(category = "stability - ConstructorCallArguments", content = { StableClassPropertyIntoArgumentDemo() }),
-  ImmutableClassParameterIntoArgument(category = "stability - ConstructorCallArguments", content = { ImmutableClassParameterIntoArgumentDemo() }),
-  ImmutableClassPropertyIntoArgument(category = "stability - ConstructorCallArguments", content = { ImmutableClassPropertyIntoArgumentDemo() }),
-  StableBoxingClassArgument(category = "stability - ConstructorCallArguments", content = { StableBoxingClassArgumentDemo() }),
-  UnstableBoxingClassArgument(category = "stability - ConstructorCallArguments", content = { UnstableBoxingClassArgumentDemo() }),
+  UnstableClassArgument(category = "stability - ConstructorArguments", content = { UnstableClassArgumentDemo() }),
+  StableClassArgument(category = "stability - ConstructorArguments", content = { StableClassArgumentDemo() }),
+  ImmutableClassArgument(category = "stability - ConstructorArguments", content = { ImmutableClassArgumentDemo() }),
+  ImmutableWithStaticArgumentClassArgument(category = "stability - ConstructorArguments", content = { ImmutableWithStaticArgumentClassArgumentDemo() }),
+  ImmutableWithNonStaticArgumentClassArgument(category = "stability - ConstructorArguments", content = { ImmutableWithNonStaticArgumentClassArgumentDemo() }),
+  StableClassParameterIntoArgument(category = "stability - ConstructorArguments", content = { StableClassParameterIntoArgumentDemo() }),
+  StableClassPropertyIntoArgument(category = "stability - ConstructorArguments", content = { StableClassPropertyIntoArgumentDemo() }),
+  ImmutableClassParameterIntoArgument(category = "stability - ConstructorArguments", content = { ImmutableClassParameterIntoArgumentDemo() }),
+  ImmutableClassPropertyIntoArgument(category = "stability - ConstructorArguments", content = { ImmutableClassPropertyIntoArgumentDemo() }),
+  StableBoxingClassArgument(category = "stability - ConstructorArguments", content = { StableBoxingClassArgumentDemo() }),
+  UnstableBoxingClassArgument(category = "stability - ConstructorArguments", content = { UnstableBoxingClassArgumentDemo() }),
 
   EmptyListCall(category = "stability - KnownStableCallArguments", content = { EmptyListCallDemo() }),
   ListOfCall(category = "stability - KnownStableCallArguments", content = { ListOfCallDemo() }),
@@ -142,8 +144,8 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   SetOfCall(category = "stability - KnownStableCallArguments", content = { SetOfCallDemo() }),
   PairOfCall(category = "stability - KnownStableCallArguments", content = { PairOfCallDemo() }),
 
-  ColorFilterTintCall(category = "realworld - ColorFilter", content = { ColorFilterTintCallDemo() }),
-  ColorFilterConstructor(category = "realworld - ColorFilter", content = { ColorFilterConstructorDemo() });
+  ColorFilterCallArgument(category = "stability - RealWorldSample", content = { ColorFilterCallArgumentDemo() }),
+  ColorFilterConstructorArgument(category = "stability - RealWorldSample", content = { ColorFilterConstructorArgumentDemo() });
 
   companion object {
     val Groups: Map<String, List<Demo>> = entries.groupBy(Demo::category)
@@ -213,6 +215,7 @@ class MainActivity : ComponentActivity() {
           Box(
             modifier = Modifier
               .fillMaxSize()
+              .background(color = Color.White)
               .systemBarsPadding(),
             contentAlignment = { size: IntSize, space: IntSize, _: LayoutDirection ->
               val regionHeight = space.height / 3

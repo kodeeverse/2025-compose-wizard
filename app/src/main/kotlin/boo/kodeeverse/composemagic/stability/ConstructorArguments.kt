@@ -41,7 +41,7 @@ class UnstableClass_ {
 
 @Immutable private class ImmutableClassWithAnyParameter(val value: Any)
 
-@Composable fun UntableClassArgumentDemo() {
+@Composable fun UnstableClassArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
   Column(

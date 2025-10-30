@@ -28,17 +28,17 @@ import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.CurrentMsText
 import boo.kodeeverse.composemagic.stability.used
 
-@Stable private val stableBlendMode = BlendMode.Overlay
+@Stable private val blendModeSrc = BlendMode.Src
 
-@Composable fun ColorFilterTintCallDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
+@Composable fun ColorFilterCallArgumentDemo() {
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT tintCall")
+    var count by remember { mutableIntStateOf(0) }
+
+    CurrentMsText("ROOT colorFilterCallArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -50,19 +50,19 @@ import boo.kodeeverse.composemagic.stability.used
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ColorFilterArgument(ColorFilter.tint(Color.Red))
+    ColorFilterArgument(ColorFilter.tint(Color.Red, blendModeSrc))
   }
 }
 
-@Composable fun ColorFilterConstructorDemo() {
-  var count by remember { mutableIntStateOf(0) }
-
+@Composable fun ColorFilterConstructorArgumentDemo() {
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT constructorCall")
+    var count by remember { mutableIntStateOf(0) }
+
+    CurrentMsText("ROOT colorFilterConstructorArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -74,11 +74,11 @@ import boo.kodeeverse.composemagic.stability.used
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ColorFilterArgument(BlendModeColorFilter(Color.Red, stableBlendMode))
+    ColorFilterArgument(BlendModeColorFilter(Color.Red, blendModeSrc))
   }
 }
 
-@Composable internal fun ColorFilterArgument(value: Any) {
+@Composable private fun ColorFilterArgument(value: Any) {
   used(value)
   CurrentMsText("ColorFilterArgument")
 }
