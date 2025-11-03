@@ -33,16 +33,26 @@ private object UnstableObject {
 private open class MyStableClass 
 private open class MyUnstableClass : MyStableClass {
   var a: Any = listOf(1)
-  object Companion : MyUnstableClass 
+  object Companion : MyUnstableClass {
+    val stableValuePropertyInCompanionObject: MyStableClass = MyStableClass()
+    @Stable
+    var stableVariablePropertyInCompanionObject: MyStableClass = MyStableClass()
+      get() {
+        return MyStableClass()
+      }
+      set(value) {
+        <this>.stableVariablePropertyInCompanionObject = MyStableClass()
+      }
+  }
 }
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun ConstArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-587058040)
-  sourceInformation($composer, "C(ConstArgumentDemo)64@1972L33,66@2009L569:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(ConstArgumentDemo)74@2409L33,76@2446L569:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-587058040, $changed, -1, "boo.kodeeverse.composemagic.stability.ConstArgumentDemo (ExpressionArguments.kt:63)")
+      traceEventStart(-587058040, $changed, -1, "boo.kodeeverse.composemagic.stability.ConstArgumentDemo (ExpressionArguments.kt:73)")
     }
     var count by {
       val count$delegate = <block>{
@@ -61,7 +71,7 @@ fun ConstArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -1275824612, "C71@2181L35,76@2336L11,72@2221L253,81@2479L53,83@2538L36:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -1275824612, "C81@2618L35,86@2773L11,82@2658L253,91@2916L53,93@2975L36:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT constArgument", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
         onClick = sourceInformationMarkerStart($composer, -318245719, "CC(remember):ExpressionArguments.kt#9igjgp")
@@ -93,10 +103,10 @@ fun ConstArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StaticVariableArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(1899350859)
-  sourceInformation($composer, "C(StaticVariableArgumentDemo)89@2673L33,91@2710L592:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(StaticVariableArgumentDemo)99@3110L33,101@3147L592:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(1899350859, $changed, -1, "boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo (ExpressionArguments.kt:87)")
+      traceEventStart(1899350859, $changed, -1, "boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo (ExpressionArguments.kt:97)")
     }
     val myStaticValue = "가나다라"
     var count by {
@@ -116,7 +126,7 @@ fun StaticVariableArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -1687885586, "C96@2882L46,101@3048L11,97@2933L253,106@3191L53,108@3250L48:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -1687885586, "C106@3319L46,111@3485L11,107@3370L253,116@3628L53,118@3687L48:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT staticVariableArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -149,10 +159,10 @@ fun StaticVariableArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun EnumEntryArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(1834903062)
-  sourceInformation($composer, "C(EnumEntryArgumentDemo)113@3363L33,115@3400L582:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(EnumEntryArgumentDemo)123@3800L33,125@3837L582:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(1834903062, $changed, -1, "boo.kodeeverse.composemagic.stability.EnumEntryArgumentDemo (ExpressionArguments.kt:112)")
+      traceEventStart(1834903062, $changed, -1, "boo.kodeeverse.composemagic.stability.EnumEntryArgumentDemo (ExpressionArguments.kt:122)")
     }
     var count by {
       val count$delegate = <block>{
@@ -171,7 +181,7 @@ fun EnumEntryArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -961167775, "C120@3572L41,125@3733L11,121@3618L253,130@3876L53,132@3935L43:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -961167775, "C130@4009L41,135@4170L11,131@4055L253,140@4313L53,142@4372L43:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT enumEntryArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -204,10 +214,10 @@ fun EnumEntryArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun CompanionObjectArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-465588208)
-  sourceInformation($composer, "C(CompanionObjectArgumentDemo)137@4049L33,139@4086L605:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(CompanionObjectArgumentDemo)147@4486L33,149@4523L605:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-465588208, $changed, -1, "boo.kodeeverse.composemagic.stability.CompanionObjectArgumentDemo (ExpressionArguments.kt:136)")
+      traceEventStart(-465588208, $changed, -1, "boo.kodeeverse.composemagic.stability.CompanionObjectArgumentDemo (ExpressionArguments.kt:146)")
     }
     var count by {
       val count$delegate = <block>{
@@ -226,7 +236,7 @@ fun CompanionObjectArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1629486448, "C144@4258L47,149@4425L11,145@4310L253,154@4568L53,156@4627L60:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 1629486448, "C154@4695L47,159@4862L11,155@4747L253,164@5005L53,166@5064L60:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT companionObjectArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -259,10 +269,10 @@ fun CompanionObjectArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableObjectArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(193026587)
-  sourceInformation($composer, "C(StableObjectArgumentDemo)161@4755L33,163@4792L589:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(StableObjectArgumentDemo)171@5192L33,173@5229L589:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(193026587, $changed, -1, "boo.kodeeverse.composemagic.stability.StableObjectArgumentDemo (ExpressionArguments.kt:160)")
+      traceEventStart(193026587, $changed, -1, "boo.kodeeverse.composemagic.stability.StableObjectArgumentDemo (ExpressionArguments.kt:170)")
     }
     var count by {
       val count$delegate = <block>{
@@ -281,7 +291,7 @@ fun StableObjectArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 576408897, "C168@4964L44,173@5128L11,169@5013L253,178@5271L53,180@5330L47:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 576408897, "C178@5401L44,183@5565L11,179@5450L253,188@5708L53,190@5767L47:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT stableObjectArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -314,10 +324,10 @@ fun StableObjectArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun UnstableObjectArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-1266461516)
-  sourceInformation($composer, "C(UnstableObjectArgumentDemo)185@5447L33,187@5484L593:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(UnstableObjectArgumentDemo)195@5884L33,197@5921L593:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-1266461516, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableObjectArgumentDemo (ExpressionArguments.kt:184)")
+      traceEventStart(-1266461516, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableObjectArgumentDemo (ExpressionArguments.kt:194)")
     }
     var count by {
       val count$delegate = <block>{
@@ -336,7 +346,7 @@ fun UnstableObjectArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -1217496316, "C192@5656L46,197@5822L11,193@5707L253,202@5965L53,204@6024L49:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -1217496316, "C202@6093L46,207@6259L11,203@6144L253,212@6402L53,214@6461L49:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT unstableObjectArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -369,10 +379,10 @@ fun UnstableObjectArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableValuePropertyArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-604377968)
-  sourceInformation($composer, "C(StableValuePropertyArgumentDemo)209@6148L33,211@6185L603:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(StableValuePropertyArgumentDemo)219@6585L33,221@6622L603:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-604377968, $changed, -1, "boo.kodeeverse.composemagic.stability.StableValuePropertyArgumentDemo (ExpressionArguments.kt:208)")
+      traceEventStart(-604377968, $changed, -1, "boo.kodeeverse.composemagic.stability.StableValuePropertyArgumentDemo (ExpressionArguments.kt:218)")
     }
     var count by {
       val count$delegate = <block>{
@@ -391,7 +401,7 @@ fun StableValuePropertyArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1984641970, "C216@6357L51,221@6528L11,217@6413L253,226@6671L53,228@6730L54:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 1984641970, "C226@6794L51,231@6965L11,227@6850L253,236@7108L53,238@7167L54:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT stableValuePropertyArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -424,10 +434,10 @@ fun StableValuePropertyArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableValueLocalPropertyArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-1587739189)
-  sourceInformation($composer, "C(StableValueLocalPropertyArgumentDemo)233@6864L33,236@6945L608:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(StableValueLocalPropertyArgumentDemo)243@7301L33,246@7382L608:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-1587739189, $changed, -1, "boo.kodeeverse.composemagic.stability.StableValueLocalPropertyArgumentDemo (ExpressionArguments.kt:232)")
+      traceEventStart(-1587739189, $changed, -1, "boo.kodeeverse.composemagic.stability.StableValueLocalPropertyArgumentDemo (ExpressionArguments.kt:242)")
     }
     var count by {
       val count$delegate = <block>{
@@ -447,7 +457,7 @@ fun StableValueLocalPropertyArgumentDemo($composer: Composer?, $changed: Int) {
     }
     val stableValueProperty = MyStableClass()
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1758037214, "C241@7117L56,246@7293L11,242@7178L253,251@7436L53,253@7495L54:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 1758037214, "C251@7554L56,256@7730L11,252@7615L253,261@7873L53,263@7932L54:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT StableValueLocalPropertyArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -478,12 +488,68 @@ fun StableValueLocalPropertyArgumentDemo($composer: Composer?, $changed: Int) {
 }
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
-fun UnstableValueBoundsStableTypePropertyArgumentDemo($composer: Composer?, $changed: Int) {
-  $composer = $composer.startRestartGroup(-1988460639)
-  sourceInformation($composer, "C(UnstableValueBoundsStableTypePropertyArgumentDemo)258@7642L33,260@7679L639:ExpressionArguments.kt#b558il")
+fun StableValueInCompanionObjectPropertyArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(616723430)
+  sourceInformation($composer, "C(StableValueInCompanionObjectPropertyArgumentDemo)268@8078L33,270@8115L632:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-1988460639, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableValueBoundsStableTypePropertyArgumentDemo (ExpressionArguments.kt:257)")
+      traceEventStart(616723430, $changed, -1, "boo.kodeeverse.composemagic.stability.StableValueInCompanionObjectPropertyArgumentDemo (ExpressionArguments.kt:267)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, -34268281, "CC(remember):ExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, -1077354805, "C275@8287L63,280@8470L11,276@8355L253,285@8613L53,287@8672L71:ExpressionArguments.kt#b558il")
+      CurrentMsText("ROOT
+stableValueInCompanionPropertyArgument
+", null, null, null, $composer, 0b0110, 0b1110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, 935083355, "CC(remember):ExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, 20.sp, null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b0110000000000000, 0, 0b00111111111111101100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      ExpressionArgument(currentMsCall(Companion.stableValuePropertyInCompanionObject), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StableValueInCompanionObjectPropertyArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun UnstableValueBoundsStableTypePropertyArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1988460639)
+  sourceInformation($composer, "C(UnstableValueBoundsStableTypePropertyArgumentDemo)292@8836L33,294@8873L640:ExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(-1988460639, $changed, -1, "boo.kodeeverse.composemagic.stability.UnstableValueBoundsStableTypePropertyArgumentDemo (ExpressionArguments.kt:291)")
     }
     var count by {
       val count$delegate = <block>{
@@ -502,11 +568,12 @@ fun UnstableValueBoundsStableTypePropertyArgumentDemo($composer: Composer?, $cha
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1788479709, "C265@7851L69,270@8040L11,266@7925L253,275@8183L53,277@8242L72:ExpressionArguments.kt#b558il")
-      CurrentMsText("ROOT unstableValueBoundsStableTypePropertyArgument
+      sourceInformationMarkerStart($composer, 1788479740, "C299@9045L70,304@9235L11,300@9120L253,309@9378L53,311@9437L72:ExpressionArguments.kt#b558il")
+      CurrentMsText("ROOT
+unstableValueBoundsStableTypePropertyArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
-        onClick = sourceInformationMarkerStart($composer, 334793154, "CC(remember):ExpressionArguments.kt#9igjgp")
+        onClick = sourceInformationMarkerStart($composer, 334793186, "CC(remember):ExpressionArguments.kt#9igjgp")
         val tmp0_group = $composer.cache(false) {
           {
             <get-count>()++
@@ -535,10 +602,10 @@ fun UnstableValueBoundsStableTypePropertyArgumentDemo($composer: Composer?, $cha
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun StableVariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-2028002803)
-  sourceInformation($composer, "C(StableVariablePropertyArgumentDemo)282@8392L33,284@8429L678:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(StableVariablePropertyArgumentDemo)316@9587L33,318@9624L678:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-2028002803, $changed, -1, "boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo (ExpressionArguments.kt:281)")
+      traceEventStart(-2028002803, $changed, -1, "boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo (ExpressionArguments.kt:315)")
     }
     var count by {
       val count$delegate = <block>{
@@ -557,7 +624,7 @@ fun StableVariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -578472106, "C289@8601L54,294@8775L80,290@8660L322,302@8987L53,304@9046L57:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -578472106, "C323@9796L54,328@9970L80,324@9855L322,336@10182L53,338@10241L57:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT stableVariablePropertyArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -589,12 +656,69 @@ fun StableVariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
 }
 @Composable
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
-fun VariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
-  $composer = $composer.startRestartGroup(609541170)
-  sourceInformation($composer, "C(VariablePropertyArgumentDemo)309@9175L33,311@9212L597:ExpressionArguments.kt#b558il")
+fun StableVariableInCompanionObjectPropertyArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(-1219934199)
+  sourceInformation($composer, "C(StableVariableInCompanionObjectPropertyArgumentDemo)343@10393L33,345@10430L707:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(609541170, $changed, -1, "boo.kodeeverse.composemagic.stability.VariablePropertyArgumentDemo (ExpressionArguments.kt:308)")
+      traceEventStart(-1219934199, $changed, -1, "boo.kodeeverse.composemagic.stability.StableVariableInCompanionObjectPropertyArgumentDemo (ExpressionArguments.kt:342)")
+    }
+    var count by {
+      val count$delegate = <block>{
+        sourceInformationMarkerStart($composer, 169309002, "CC(remember):ExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          mutableIntStateOf(0)
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      }
+      get() {
+        return count$delegate.getValue(null, ::count$delegate)
+      }
+      set(<set-?>: Int) {
+        return count$delegate.setValue(null, ::count$delegate, <set-?>)
+      }
+    }
+    Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
+      sourceInformationMarkerStart($composer, 1190036785, "C350@10602L66,355@10788L80,351@10673L322,363@11000L53,365@11059L74:ExpressionArguments.kt#b558il")
+      CurrentMsText("ROOT
+stableVariableInCompanionPropertyArgument
+", null, null, null, $composer, 0b0110, 0b1110)
+      Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
+        onClick = sourceInformationMarkerStart($composer, -1347079537, "CC(remember):ExpressionArguments.kt#9igjgp")
+        val tmp0_group = $composer.cache(false) {
+          {
+            stableVariableProperty = MyStableClass()
+            <get-count>()++
+          }
+        }
+        sourceInformationMarkerEnd($composer)
+        tmp0_group
+      ).background(
+        color = Companion.Green
+      ).padding(20.dp, 10.dp), <unsafe-coerce>(0L), null, 20.sp, null, null, null, <unsafe-coerce>(0L), null, null, <unsafe-coerce>(0L), <unsafe-coerce>(0), false, 0, 0, null, null, $composer, 0b0110000000000000, 0, 0b00111111111111101100)
+      HorizontalDivider(Companion.fillMaxWidth(), <unsafe-coerce>(0.0f), <unsafe-coerce>(0L), $composer, 0b0110, 0b0110)
+      ExpressionArgument(currentMsCall(Companion.stableVariablePropertyInCompanionObject), $composer, 0b0110)
+      sourceInformationMarkerEnd($composer)
+    }, $composer, 0b000110110110, 0)
+    if (isTraceInProgress()) {
+      traceEventEnd()
+    }
+  } else {
+    $composer.skipToGroupEnd()
+  }
+  $composer.endRestartGroup()?.updateScope { $composer: Composer?, $force: Int ->
+    StableVariableInCompanionObjectPropertyArgumentDemo($composer, updateChangedFlags($changed or 0b0001))
+  }
+}
+@Composable
+@ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+fun VariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
+  $composer = $composer.startRestartGroup(609541170)
+  sourceInformation($composer, "C(VariablePropertyArgumentDemo)370@11205L33,372@11242L597:ExpressionArguments.kt#b558il")
+  if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
+    if (isTraceInProgress()) {
+      traceEventStart(609541170, $changed, -1, "boo.kodeeverse.composemagic.stability.VariablePropertyArgumentDemo (ExpressionArguments.kt:369)")
     }
     var count by {
       val count$delegate = <block>{
@@ -613,7 +737,7 @@ fun VariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
       }
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 1414665666, "C316@9384L48,321@9552L11,317@9437L253,326@9695L53,328@9754L51:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 1414665666, "C377@11414L48,382@11582L11,378@11467L253,387@11725L53,389@11784L51:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT variablePropertyArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -646,10 +770,10 @@ fun VariablePropertyArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun RememberStableVariableArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(1511667461)
-  sourceInformation($composer, "C(RememberStableVariableArgumentDemo)333@9883L33,334@9931L28,336@9963L592:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(RememberStableVariableArgumentDemo)394@11913L33,395@11961L28,397@11993L592:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(1511667461, $changed, -1, "boo.kodeeverse.composemagic.stability.RememberStableVariableArgumentDemo (ExpressionArguments.kt:332)")
+      traceEventStart(1511667461, $changed, -1, "boo.kodeeverse.composemagic.stability.RememberStableVariableArgumentDemo (ExpressionArguments.kt:393)")
     }
     var count by {
       val count$delegate = <block>{
@@ -676,7 +800,7 @@ fun RememberStableVariableArgumentDemo($composer: Composer?, $changed: Int) {
       tmp1_group
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, -298691340, "C341@10135L54,346@10309L11,342@10194L253,351@10452L53,353@10511L40:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, -298691340, "C402@12165L54,407@12339L11,403@12224L253,412@12482L53,414@12541L40:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT rememberStableVariableArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -709,10 +833,10 @@ fun RememberStableVariableArgumentDemo($composer: Composer?, $changed: Int) {
 @ComposableTarget(applier = "androidx.compose.ui.UiComposable")
 fun RememberUnstableVariableArgumentDemo($composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(-1968117730)
-  sourceInformation($composer, "C(RememberUnstableVariableArgumentDemo)358@10631L33,359@10679L18,361@10701L594:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(RememberUnstableVariableArgumentDemo)419@12661L33,420@12709L18,422@12731L594:ExpressionArguments.kt#b558il")
   if ($composer.shouldExecute($changed != 0, $changed and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(-1968117730, $changed, -1, "boo.kodeeverse.composemagic.stability.RememberUnstableVariableArgumentDemo (ExpressionArguments.kt:357)")
+      traceEventStart(-1968117730, $changed, -1, "boo.kodeeverse.composemagic.stability.RememberUnstableVariableArgumentDemo (ExpressionArguments.kt:418)")
     }
     var count by {
       val count$delegate = <block>{
@@ -739,7 +863,7 @@ fun RememberUnstableVariableArgumentDemo($composer: Composer?, $changed: Int) {
       tmp1_group
     }
     Column(Companion.wrapContentSize(), Arrangement.spacedBy(10.dp), Companion.CenterHorizontally, { $composer: Composer?, $changed: Int ->
-      sourceInformationMarkerStart($composer, 24648697, "C366@10873L56,371@11049L11,367@10934L253,376@11192L53,378@11251L40:ExpressionArguments.kt#b558il")
+      sourceInformationMarkerStart($composer, 24648697, "C427@12903L56,432@13079L11,428@12964L253,437@13222L53,439@13281L40:ExpressionArguments.kt#b558il")
       CurrentMsText("ROOT rememberUnstableVariableArgument
 ", null, null, null, $composer, 0b0110, 0b1110)
       Text("count: ${<get-count>()}", Companion.clip(RoundedCornerShape(10.dp)).clickable(
@@ -771,14 +895,14 @@ fun RememberUnstableVariableArgumentDemo($composer: Composer?, $changed: Int) {
 @Composable
 private fun ExpressionArgument(value: Any, $composer: Composer?, $changed: Int) {
   $composer = $composer.startRestartGroup(2083390132)
-  sourceInformation($composer, "C(ExpressionArgument)N(value)383@11358L61:ExpressionArguments.kt#b558il")
+  sourceInformation($composer, "C(ExpressionArgument)N(value)444@13388L61:ExpressionArguments.kt#b558il")
   val $dirty = $changed
   if ($changed and 0b0110 == 0) {
     $dirty = $dirty or if ($composer.changedInstance(value)) 0b0100 else 0b0010
   }
   if ($composer.shouldExecute($dirty and 0b0011 != 0b0010, $dirty and 0b0001)) {
     if (isTraceInProgress()) {
-      traceEventStart(2083390132, $dirty, -1, "boo.kodeeverse.composemagic.stability.ExpressionArgument (ExpressionArguments.kt:382)")
+      traceEventStart(2083390132, $dirty, -1, "boo.kodeeverse.composemagic.stability.ExpressionArgument (ExpressionArguments.kt:443)")
     }
     CurrentMsText("ExpressionArgument", null, null, value as Long, $composer, 0b0110 or 0b0001110000000000 and $dirty shl 0b1001, 0b0110)
     if (isTraceInProgress()) {

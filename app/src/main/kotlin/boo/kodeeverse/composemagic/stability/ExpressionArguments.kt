@@ -25,13 +25,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.CurrentMsText
+import boo.kodeeverse.composemagic.stability.MyUnstableClass.Companion.stableValuePropertyInCompanionObject
+import boo.kodeeverse.composemagic.stability.MyUnstableClass.Companion.stableVariablePropertyInCompanionObject
 import java.lang.System.currentTimeMillis
 
 private val stableValueProperty = MyStableClass()
 
 private val unstableValueBoundsStableTypeProperty: MyStableClass = MyUnstableClass()
 
-@Stable private var stableVariableProperty: MyStableClass = MyStableClass()
+@Stable private var stableVariableProperty = MyStableClass()
   set(value) {
     field = MyStableClass()
   }
@@ -58,7 +60,15 @@ private object UnstableObject {
 private open class MyUnstableClass : MyStableClass() {
   var a: Any = listOf(1) // unstable maker
 
-  companion object : MyUnstableClass()
+  companion object : MyUnstableClass() {
+    val stableValuePropertyInCompanionObject = MyStableClass()
+
+    @Stable var stableVariablePropertyInCompanionObject = MyStableClass()
+      set(value) {
+        field = MyStableClass()
+      }
+      get() = MyStableClass()
+  }
 }
 
 @Composable fun ConstArgumentDemo() {
@@ -255,6 +265,30 @@ private open class MyUnstableClass : MyStableClass() {
   }
 }
 
+@Composable fun StableValueInCompanionObjectPropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    CurrentMsText("ROOT\nstableValueInCompanionPropertyArgument\n")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ExpressionArgument(currentMsCall(stableValuePropertyInCompanionObject))
+  }
+}
+
 @Composable fun UnstableValueBoundsStableTypePropertyArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -263,7 +297,7 @@ private open class MyUnstableClass : MyStableClass() {
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT unstableValueBoundsStableTypePropertyArgument\n")
+    CurrentMsText("ROOT\nunstableValueBoundsStableTypePropertyArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -303,6 +337,33 @@ private open class MyUnstableClass : MyStableClass() {
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
     ExpressionArgument(currentMsCall(stableVariableProperty))
+  }
+}
+
+@Composable fun StableVariableInCompanionObjectPropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    CurrentMsText("ROOT\nstableVariableInCompanionPropertyArgument\n")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable {
+          stableVariableProperty = MyStableClass()
+          count++
+        }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ExpressionArgument(currentMsCall(stableVariablePropertyInCompanionObject))
   }
 }
 
