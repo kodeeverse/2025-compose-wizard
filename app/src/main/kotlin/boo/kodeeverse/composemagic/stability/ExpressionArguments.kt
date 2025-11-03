@@ -85,6 +85,31 @@ private open class MyUnstableClass : MyStableClass() {
   }
 }
 
+@Composable fun StaticVariableArgumentDemo() {
+  val myStaticValue = "가나다라"
+  var count by remember { mutableIntStateOf(0) }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    CurrentMsText("ROOT staticVariableArgument\n")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ExpressionArgument(currentMsCall(myStaticValue))
+  }
+}
+
 @Composable fun EnumEntryArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -205,6 +230,31 @@ private open class MyUnstableClass : MyStableClass() {
   }
 }
 
+@Composable fun StableValueLocalPropertyArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+  val stableValueProperty = MyStableClass()
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    CurrentMsText("ROOT StableValueLocalPropertyArgument\n")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ExpressionArgument(currentMsCall(stableValueProperty))
+  }
+}
+
 @Composable fun UnstableValueBoundsStableTypePropertyArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
 
@@ -280,16 +330,16 @@ private open class MyUnstableClass : MyStableClass() {
   }
 }
 
-@Composable fun StaticVariableArgumentDemo() {
-  val myStaticValue = "가나다라"
+@Composable fun RememberStableVariableArgumentDemo() {
   var count by remember { mutableIntStateOf(0) }
+  val value = remember { MyStableClass() }
 
   Column(
     modifier = Modifier.wrapContentSize(),
     verticalArrangement = Arrangement.spacedBy(10.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
   ) {
-    CurrentMsText("ROOT staticVariableArgument\n")
+    CurrentMsText("ROOT rememberStableVariableArgument\n")
     Text(
       "count: $count",
       modifier = Modifier
@@ -301,7 +351,32 @@ private open class MyUnstableClass : MyStableClass() {
     )
     HorizontalDivider(modifier = Modifier.fillMaxWidth())
 
-    ExpressionArgument(currentMsCall(myStaticValue))
+    ExpressionArgument(currentMsCall(value))
+  }
+}
+
+@Composable fun RememberUnstableVariableArgumentDemo() {
+  var count by remember { mutableIntStateOf(0) }
+  val value = remember { Any() }
+
+  Column(
+    modifier = Modifier.wrapContentSize(),
+    verticalArrangement = Arrangement.spacedBy(10.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    CurrentMsText("ROOT rememberUnstableVariableArgument\n")
+    Text(
+      "count: $count",
+      modifier = Modifier
+        .clip(RoundedCornerShape(10.dp))
+        .clickable { count++ }
+        .background(color = Color.Green)
+        .padding(horizontal = 20.dp, vertical = 10.dp),
+      fontSize = 20.sp,
+    )
+    HorizontalDivider(modifier = Modifier.fillMaxWidth())
+
+    ExpressionArgument(currentMsCall(value))
   }
 }
 

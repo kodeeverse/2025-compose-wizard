@@ -70,6 +70,8 @@ import boo.kodeeverse.composemagic.stability.ImmutableWithStaticArgumentClassArg
 import boo.kodeeverse.composemagic.stability.ListOfCallDemo
 import boo.kodeeverse.composemagic.stability.MapOfCallDemo
 import boo.kodeeverse.composemagic.stability.PairOfCallDemo
+import boo.kodeeverse.composemagic.stability.RememberStableVariableArgumentDemo
+import boo.kodeeverse.composemagic.stability.RememberUnstableVariableArgumentDemo
 import boo.kodeeverse.composemagic.stability.SetOfCallDemo
 import boo.kodeeverse.composemagic.stability.StableBoxingClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableCallArgumentDemo
@@ -78,6 +80,7 @@ import boo.kodeeverse.composemagic.stability.StableClassArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassParameterIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableClassPropertyIntoArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableObjectArgumentDemo
+import boo.kodeeverse.composemagic.stability.StableValueLocalPropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableValuePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StableVariablePropertyArgumentDemo
 import boo.kodeeverse.composemagic.stability.StaticVariableArgumentDemo
@@ -120,9 +123,12 @@ private enum class Demo(val category: String, val content: @Composable () -> Uni
   StableObjectArgument(category = "stability - ExpressionArguments", content = { StableObjectArgumentDemo() }),
   UnstableObjectArgument(category = "stability - ExpressionArguments", content = { UnstableObjectArgumentDemo() }),
   StableValuePropertyArgument(category = "stability - ExpressionArguments", content = { StableValuePropertyArgumentDemo() }),
+  StableValueLocalPropertyArgument(category = "stability - ExpressionArguments", content = { StableValueLocalPropertyArgumentDemo() }),
   UnstableValueBoundsStableTypePropertyArgument(category = "stability - ExpressionArguments", content = { UnstableValueBoundsStableTypePropertyArgumentDemo() }),
   StableVariablePropertyArgument(category = "stability - ExpressionArguments", content = { StableVariablePropertyArgumentDemo() }),
   VariablePropertyArgument(category = "stability - ExpressionArguments", content = { VariablePropertyArgumentDemo() }),
+  RememberStableVariableArgument(category = "stability - ExpressionArguments", content = { RememberStableVariableArgumentDemo() }),
+  RememberUnstableVariableArgument(category = "stability - ExpressionArguments", content = { RememberUnstableVariableArgumentDemo() }),
 
   UnstableClassArgument(category = "stability - ConstructorArguments", content = { UnstableClassArgumentDemo() }),
   StableClassArgument(category = "stability - ConstructorArguments", content = { StableClassArgumentDemo() }),
