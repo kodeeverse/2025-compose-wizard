@@ -182,7 +182,7 @@ class MainActivity : ComponentActivity() {
               .fillMaxSize()
               .background(color = Color.Gray)
               .statusBarsPadding()
-              .background(color = Color.White),
+              .background(color = Color(0xFFFAFAFA)),
             state = scrollState,
             horizontalAlignment = Alignment.CenterHorizontally,
           ) {
@@ -225,7 +225,7 @@ class MainActivity : ComponentActivity() {
           Box(
             modifier = Modifier
               .fillMaxSize()
-              .background(color = Color.White)
+              .background(color = Color(0xFFFAFAFA))
               .systemBarsPadding(),
             contentAlignment = { size: IntSize, space: IntSize, _: LayoutDirection ->
               val regionHeight = space.height / 3
