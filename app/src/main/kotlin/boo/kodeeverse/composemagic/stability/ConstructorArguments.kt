@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.CurrentMsText
+import java.lang.System.currentTimeMillis
 
 class UnstableClass_ {
   var createdAt: Any = listOf<Nothing>() // unstable marker
@@ -309,8 +310,8 @@ class UnstableClass_ {
 }
 
 @Composable private fun ConstructorArgument(value: Any) {
-  used(value)
-  CurrentMsText("ConstructorArgument")
+  CurrentMsText(
+    "ConstructorArgument",
+    customMs = currentTimeMillis() + value.hashCode(),
+  )
 }
-
-internal fun used(a: Any) {}

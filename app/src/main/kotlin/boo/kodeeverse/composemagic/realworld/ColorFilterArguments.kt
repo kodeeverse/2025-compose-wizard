@@ -26,7 +26,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import boo.kodeeverse.composemagic.CurrentMsText
-import boo.kodeeverse.composemagic.stability.used
+import java.lang.System.currentTimeMillis
 
 @Stable private val blendModeSrc = BlendMode.Src
 
@@ -79,6 +79,5 @@ import boo.kodeeverse.composemagic.stability.used
 }
 
 @Composable private fun ColorFilterArgument(value: Any) {
-  used(value)
-  CurrentMsText("ColorFilterArgument")
+  CurrentMsText("ColorFilterArgument", customMs = currentTimeMillis() + value.hashCode())
 }
